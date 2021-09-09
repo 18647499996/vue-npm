@@ -25,8 +25,13 @@ import 'lib-flexible/flexible.js'
 // filters
 import './filters'
 
+// 引入微信包
 const wx = require("weixin-js-sdk")
 window.wx = wx
+
+// 引入echarts
+const echarts = require('echarts')
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)

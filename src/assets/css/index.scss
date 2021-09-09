@@ -29,3 +29,11 @@ body .app {
   border-radius: 8px;
 }
 
+.app-center{
+  display: flex;
+  /*主轴上居中*/
+  justify-content: center;
+  /*侧轴上居中*/
+  align-items: center;
+}
+

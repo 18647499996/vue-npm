@@ -82,6 +82,54 @@ export const constantRouterMap = [
     }
   },
 
+  {
+    path: '/AttestationSucceedActivity',
+    name: 'AttestationSucceedActivity',
+    component: () => import('@/views/AttestationSucceedActivity'),
+    meta: {
+      title: '认证成功',
+      keepAlive: false
+    }
+  },
+
+  {
+    path: '/UnverifiedActivity',
+    name: 'UnverifiedActivity',
+    component: () => import('@/views/UnverifiedActivity'),
+    meta: {
+      title: '电商品牌保护法',
+      keepAlive: false
+    }
+  },
+
+  {
+    path: '/ReportDetailsActivity',
+    name: 'ReportDetailsActivity',
+    component: () => import('@/views/ReportDetailsActivity'),
+    meta: {
+      title: '报告详情',
+      keepAlive: false
+    }
+  },
+
+  {
+    path: '/ReportDetailsUserActivity',
+    name: 'ReportDetailsUserActivity',
+    component: () => import('@/views/ReportDetailsUserActivity'),
+    meta: {
+      title: '报告详情（用户）',
+      keepAlive: false
+    }
+  },
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,15 +182,7 @@ export const constantRouterMap = [
     }
   },
 
-  {
-    path: '/my_property',
-    name: 'my_property',
-    component: () => import('@/views/my/my_property'),
-    meta: {
-      title: '我的物业',
-      keepAlive: false
-    }
-  },
+
   {
     path: '/property_bill',
     name: 'property_bill',
@@ -224,24 +264,8 @@ export const constantRouterMap = [
       keepAlive: false
     }
   },
-  {
-    path: '/convenience_service',
-    name: 'convenience_service',
-    component: () => import('@/views/convenienceservice/convenience_service'),
-    meta: {
-      title: '便民服务',
-      keepAlive: false
-    }
-  },
-  {
-    path: '/repairs_record',
-    name: 'repairs_record',
-    component: () => import('@/views/repairsrecord/repairs_record'),
-    meta: {
-      title: '报修记录',
-      keepAlive: false
-    }
-  },
+
+
   {
     path: '/add_repairs',
     name: 'add_repairs',
@@ -333,15 +357,7 @@ export const constantRouterMap = [
       keepAlive: false
     }
   },
-  {
-    path: '/feed_back_activity',
-    name: 'feed_back_activity',
-    component: () => import('@/views/feedback/FeedbackActivity'),
-    meta: {
-      title: '帮助与反馈',
-      keepAlive: false
-    }
-  },
+
 
   {
     path: '/message_activity',
