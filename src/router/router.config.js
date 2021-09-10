@@ -7,7 +7,7 @@ export const constantRouterMap = [
 
   {
     path: '',
-    redirect: '/BrandActivity',
+    redirect: '/LoginActivity',
     meta: {
       title: '品牌保护法',
       keepAlive: false
@@ -122,30 +122,31 @@ export const constantRouterMap = [
     }
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('@/views/home/home'),
+    path: '/HomeActivity',
+    name: 'HomeActivity',
+    component: () => import('@/views/HomeActivity'),
     meta: {
-      title: '信服到家',
+      title: '首页',
       keepAlive: false
     }
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   {
     path: '/luckDraw',

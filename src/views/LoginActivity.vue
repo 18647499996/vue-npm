@@ -53,7 +53,7 @@
 
     <!--    登录按钮-->
     <van-row class='row-login'>
-      <van-button class='btn-login' color='#1970F3' round>登录</van-button>
+      <van-button class='btn-login' color='#1970F3' round @click='onClickLogin'>登录</van-button>
     </van-row>
 
 
@@ -96,7 +96,11 @@ export default {
 
   },
 
-  methods: {}
+  methods: {
+    onClickLogin(){
+      this.$router.push('HomeActivity')
+    }
+  }
 }
 </script>
 <style scoped>
