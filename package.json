@@ -1,14 +1,24 @@
 {
-  "name": "xin-fu",
+  "name": "liudonghan",
   "version": "2.1.0",
   "description": "A vue h5 template with Vant UI",
   "author": "18647499996@sina.cn",
+  "main": "dist/index.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "stage": "vue-cli-service build --mode staging",
     "lint": "vue-clivue-service lint"
+  },
+  "keywords": ["wxmp", "rsa", "jsencrypt", "js", "long"],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neohan666/wxmp-rsa.git"
   },
   "dependencies": {
     "axios": "^0.21.1",

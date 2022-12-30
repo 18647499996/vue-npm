@@ -19,7 +19,7 @@ const createRouter = () =>
     // base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
     routes: constantRouterMap, // 设置路由页面
-    mode:'history', // 路由地址url取消#符号
+    // mode:'history', // 路由地址url取消#符号
   })
 
 const router = createRouter()
