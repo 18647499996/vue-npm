@@ -2,7 +2,6 @@ import axios from 'axios'
 import store from '@/store'
 import router from '@/router'
 
-import { MessageBox, Message } from 'element-ui'
 import { getToken, setToken, removeToken, setSkiShop,getSkipShop,setActive,getActive} from '@/utils/auth'
 import { Toast } from 'vant'
 // 根据环境不同引入不同api地址

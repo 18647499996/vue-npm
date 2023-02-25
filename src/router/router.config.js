@@ -132,6 +132,26 @@ export const constantRouterMap = [
     }
   },
 
+  {
+    path: '/DemoActivity',
+    name: 'DemoActivity',
+    component: () => import('@/views/DemoActivity'),
+    meta: {
+      title: "刻尺",
+      keepAlive: false
+    }
+  },
+
+  {
+    path: '/RulerActivity',
+    name: 'RulerActivity',
+    component: () => import('@/views/RulerActivity'),
+    meta: {
+      title: "最新",
+      keepAlive: false
+    }
+  },
+
 
 
 

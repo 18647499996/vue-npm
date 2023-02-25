@@ -1,27 +1,34 @@
 {
   "name": "liudonghan",
-  "version": "2.1.0",
-  "description": "A vue h5 template with Vant UI",
+  "version": "2.2.5",
+  "description": "刘冬涵专用npm包管理器",
   "author": "18647499996@sina.cn",
-  "main": "dist/index.js",
-  "private": true,
+  "main": "src/utils/index.js",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "stage": "vue-cli-service build --mode staging",
     "lint": "vue-clivue-service lint"
   },
-  "keywords": ["wxmp", "rsa", "jsencrypt", "js", "long"],
+  "keywords": [
+    "wxmp",
+    "rsa",
+    "jsencrypt",
+    "js",
+    "long"
+  ],
   "license": "MIT",
   "files": [
-    "dist"
+    "src/utils"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/neohan666/wxmp-rsa.git"
+    "url": "git://github.com/18647499996/vue-npm.git"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "better-scroll": "^2.5.0",
     "core-js": "^3.6.4",
     "echarts": "^5.2.0",
     "element-china-area-data": "^5.0.2",
