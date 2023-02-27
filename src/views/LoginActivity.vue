@@ -90,36 +90,40 @@ export default {
       index: 0,
       username: '',
       passwrod: '',
-      list:[{
-        "_index": "news_record",
-        "_type": "_doc",
-        "_id": "9876",
-        "_score": null,
-        "_source": {
-          "contentType": "1",
-          "body": "{\"ID\":\"144115242414481713-1677314157-55710844\",\"conversationID\":\"C2Csupplier_2103376451\",\"conversationType\":\"C2C\",\"time\":1677314158,\"sequence\":1635570001,\"clientSequence\":1635570001,\"random\":55710844,\"priority\":\"Normal\",\"nick\":\"黄秋棉\",\"avatar\":\"https:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/VvdjslBWYWkQYKrAKRjdCvQ0mXZaRKD1KBvgqcJzyqRRON30Vaiclk7sbW9iakdQ7RszS54wpkIF8Myyia2jR3asQ\/132\",\"isPeerRead\":false,\"nameCard\":\"\",\"_elements\":[{\"type\":\"TIMTextElem\",\"content\":{\"text\":\"fdsf\"}}],\"isPlaceMessage\":0,\"isRevoked\":false,\"from\":\"user_2103315655\",\"to\":\"supplier_2103376451\",\"flow\":\"out\",\"isSystemMessage\":false,\"protocol\":\"JSON\",\"isResend\":false,\"isRead\":true,\"status\":\"success\",\"_onlineOnlyFlag\":false,\"_groupAtInfoList\":[],\"_relayFlag\":false,\"atUserList\":[],\"cloudCustomData\":\"\",\"isDeleted\":false,\"isModified\":false,\"_isExcludedFromUnreadCount\":false,\"_isExcludedFromLastMessage\":false,\"clientTime\":1677314157,\"senderTinyID\":\"144115242414481713\",\"readReceiptInfo\":{},\"needReadReceipt\":false,\"version\":0,\"isBroadcastMessage\":false,\"payload\":{\"text\":\"fdsf\"},\"type\":\"TIMTextElem\"}",
-          "fromID": "user_2103315655",
-          "targetID": "supplier_2103376451",
-          "createTimeInMillis": "2023-02-25 16:35:58.000",
-          "platform": "h5",
-          "targetType": "single",
-          "filePath": "",
-          "fromName": "黄秋棉",
-          "targetName": "王涵品牌旗舰店",
-          "serverMessageId": "144115242414481713-1677314157-55710844",
-          "targetAppkey": "out",
-          "fromAppkey": "C2Csupplier_2103376451",
-          "source": "api",
-          "isRevoked": false,
-          "priority": "Normal",
-          "isPeerRead": false,
-          "cloudCustomData": "",
-          "updated_at": "2023-02-25 16:36:01",
-          "created_at": "2023-02-25 16:36:01",
-          "id": 9876
-        },
-        "sort": ["2023-02-25 16:35:58.000"]
-      }]
+      list:[
+        {
+          "_index":"news_record",
+          "_type":"_doc",
+          "_id":"9935",
+          "_score":null,
+          "_source":{
+            "contentType":2,
+            "body":"{\"id\":\"user_2102961110\",\"type\":4,\"orderInfo\":{\"id\":\"12990639788861176\",\"describe\":\"\\u4eb2\\uff0c\\u8bf7\\u60a8\\u6838\\u5bf9\\u8ba2\\u5355\\u4fe1\\u606f\",\"status\":1,\"shop_id\":81756,\"shop_name\":\"\\u738b\\u6db5\\u54c1\\u724c\\u65d7\\u8230\\u5e97\",\"shop_image\":\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221221\\\/20221221013323-615.jpg\",\"order_sn\":\"XF2202302271143337525\",\"created_at\":\"2023\\\/2\\\/27 11:43:33\",\"receivers_names\":\"\\u5218**\",\"receivers_phone\":\"186*****996\",\"receivers_provinces\":\"\\u5317\\u4eac\",\"receivers_citys\":\"\\u5317\\u4eac\\u5e02\",\"receivers_districts\":\"***\",\"receivers_address\":\"****\",\"shop_goods\":[{\"id\":12990639788975568,\"title\":\"\\u826f\\u54c1\\u94fa\\u5b50\\u624b\\u6495\\u9762\\u53052\\u65a4\\u88c5\",\"thumb\":\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221228\\\/20221228064708-617.png\",\"sku_id\":92363,\"sku_num\":1,\"spu_id\":1158800,\"order_child_id\":12990639788861176,\"price\":10,\"price_new\":0,\"refunds_status\":1,\"json\":\"{\\\"tag_list\\\":[\\\"\\\\u4e03\\\\u5929\\\\u65e0\\\\u7406\\\\u7531\\\\u9000\\\\u6362\\\",\\\"\\\\u5305\\\\u90ae\\\",\\\"24\\\\u5c0f\\\\u65f6\\\\u5185\\\\u53d1\\\\u8d27\\\"],\\\"goods_attributes\\\":[{\\\"id\\\":21679,\\\"name\\\":\\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u957f\\\\uff09\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":21680,\\\"name\\\":\\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u9ad8\\\\uff09\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":21681,\\\"name\\\":\\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u5bbd\\\\uff09\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":21691,\\\"name\\\":\\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u957f\\\\uff09\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":21692,\\\"name\\\":\\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u9ad8\\\\uff09\\\",\\\"value\\\":\\\"1\\\"},{\\\"id\\\":21693,\\\"name\\\":\\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u5bbd\\\\uff09\\\",\\\"value\\\":\\\"1\\\"}],\\\"is_accept\\\":1}\",\"activity_type\":\"N\",\"teams_id\":0,\"order_child_goods_sn\":\"XF3202302271143336474\",\"is_accept\":1,\"price_pay\":0,\"price_order_line\":15,\"status\":2,\"is_create_bill\":0,\"create_bill_error\":null,\"presell_amount\":0,\"goods_presale\":null,\"price_wholesale\":0,\"presell_split_account\":null,\"original_order_child_goods_sn\":null,\"price_im_equity\":0,\"im_equity_company\":null,\"is_wholesale\":false}],\"receivers_village\":\"*****\",\"merchant_id\":1004}}",
+            "fromID":"supplier_2103376451",
+            "targetID":"user_2102961110",
+            "createTimeInMillis":"2023-02-27 11:02:34",
+            "platform":"api",
+            "targetType":"C2C",
+            "filePath":"",
+            "fromName":"王涵品牌旗舰店",
+            "targetName":"汇法-刘冬涵",
+            "serverMessageId":"1069255377_1726499746_1677469414",
+            "targetAppkey":"out",
+            "fromAppkey":"",
+            "source":"api",
+            "isRevoked":"",
+            "priority":"",
+            "isPeerRead":"",
+            "cloudCustomData":"",
+            "updated_at":"2023-02-27 11:43:34",
+            "created_at":"2023-02-27 11:43:34",
+            "id":9935
+          },
+          "sort":[
+            "2023-02-27 11:02:34"
+          ]
+        }
+      ]
 
     }
   },
