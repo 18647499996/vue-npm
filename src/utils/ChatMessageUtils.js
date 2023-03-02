@@ -22,35 +22,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = bodyModel['faceURL']
           transformModel['nickName'] = bodyModel['nickName']
           transformModel['senderTimeMillis'] = bodyModel['timestamp']
-          switch (messageModel['contentType']) {
-            case 1:
-              transformModel['messageContent']['elemType'] = 'text'
-              transformModel['messageContent']['elemValue'] = bodyModel['textElem']['text']
-              break
-            case 2:
-              transformModel['messageContent']['elemType'] = 'custom'
-              transformModel['messageContent']['elemValue'] = ''
-              transformModel['messageContent']['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['customElem']['data']))
-              transformModel['messageContent']['customType'] = bodyModel['customElem']['data']['type']
-              break
-            case 3:
-              transformModel['messageContent']['elemType'] = 'image'
-              transformModel['messageContent']['elemValue'] = messageModel['filePath']
-              transformModel['messageContent']['imageList'] = bodyModel['imageElem']['imageList']
-              break
-            case 4:
-              transformModel['messageContent']['elemType'] = 'voice'
-              transformModel['messageContent']['elemValue'] = messageModel['filePath']
-              transformModel['messageContent']['duration'] = bodyModel['soundElem']['duration']
-              break
-            case 7:
-              transformModel['messageContent']['elemType'] = 'location'
-              transformModel['messageContent']['elemValue'] = ''
-              transformModel['messageContent']['locationInfo'] = JSON.parse(bodyModel['locationElem']['desc'])
-              transformModel['messageContent']['longitude'] = bodyModel['locationElem']['longitude']
-              transformModel['messageContent']['latitude'] = bodyModel['locationElem']['latitude']
-              break
-          }
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
           break
         case 'Android':
           transformModel['messageStatus'] = bodyModel['message']['messageStatus']
@@ -58,35 +30,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = bodyModel['message']['faceUrl']
           transformModel['nickName'] = bodyModel['message']['nickName']
           transformModel['senderTimeMillis'] = bodyModel['message']['serverTime']
-          switch (messageModel['contentType']) {
-            case '1':
-              transformModel['messageContent']['elemType'] = 'text'
-              transformModel['messageContent']['elemValue'] = commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['textContentBytes'])
-              break
-            case '2':
-              transformModel['messageContent']['elemType'] = 'custom'
-              transformModel['messageContent']['elemValue'] = ''
-              transformModel['messageContent']['customInfo'] = getCustomMessageContent(JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data'])))
-              transformModel['messageContent']['customType'] = JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data']))['type']
-              break
-            case '3':
-              transformModel['messageContent']['elemType'] = 'image'
-              transformModel['messageContent']['elemValue'] = messageModel['filePath']
-              transformModel['messageContent']['imageList'] = bodyModel['message']['messageBaseElements'][0]
-              break
-            case '4':
-              transformModel['messageContent']['elemType'] = 'voice'
-              transformModel['messageContent']['elemValue'] = messageModel['filePath']
-              transformModel['messageContent']['duration'] = bodyModel['message']['messageBaseElements'][0]['soundDuration']
-              break
-            case '7':
-              transformModel['messageContent']['elemType'] = 'location'
-              transformModel['messageContent']['elemValue'] = ''
-              transformModel['messageContent']['locationInfo'] = JSON.parse(bodyModel['message']['messageBaseElements'][0]['description'])
-              transformModel['messageContent']['longitude'] = bodyModel['message']['messageBaseElements'][0]['longitude']
-              transformModel['messageContent']['latitude'] = bodyModel['message']['messageBaseElements'][0]['latitude']
-              break
-          }
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
           break
         case 'web':
         case 'h5':
@@ -95,23 +39,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = bodyModel['avatar']
           transformModel['nickName'] = bodyModel['nick']
           transformModel['senderTimeMillis'] = bodyModel['time']
-          switch (messageModel['contentType']) {
-            case '1':
-              transformModel['messageContent']['elemType'] = 'text'
-              transformModel['messageContent']['elemValue'] = bodyModel['payload']['text']
-              break
-            case '2':
-              transformModel['messageContent']['elemType'] = 'custom'
-              transformModel['messageContent']['elemValue'] = ''
-              transformModel['messageContent']['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['payload']['data']))
-              transformModel['messageContent']['customType'] = JSON.parse(bodyModel['payload']['data'])['type']
-              break
-            case '3':
-              transformModel['messageContent']['elemType'] = 'image'
-              transformModel['messageContent']['elemValue'] = messageModel['filePath']
-              transformModel['messageContent']['imageList'] = bodyModel['payload']['imageInfoArray']
-              break
-          }
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
           break
         case 'api':
           transformModel['messageStatus'] = 2
@@ -119,10 +47,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = ''
           transformModel['nickName'] = '系统通知'
           transformModel['senderTimeMillis'] = 0
-          transformModel['messageContent']['elemType'] = 'custom'
-          transformModel['messageContent']['elemValue'] = ''
-          transformModel['messageContent']['customInfo'] = getCustomMessageContent(bodyModel)
-          transformModel['messageContent']['customType'] = bodyModel['type']
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
           break
 
       }
@@ -169,6 +94,35 @@ export function pushChatMessageData(message, platform, filePath, targetId, targe
   }
 }
 
+export function getConversationList(data) {
+  try {
+    let conversationList = []
+    for (let i = 0; i < data.length; i++) {
+      // todo 新数据结构体
+      const conversationModel = {
+        messageContent: {}
+      }
+      const messageModel = data[i]['wheat_news_rocerd']
+      const bodyModel = JSON.parse(messageModel['body'])
+      conversationModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+      conversationModel['messageContent']['nickname'] = bodyModel['nick']
+      conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
+      conversationModel['conversationType'] = 1 === data[i]['conversation_type'] ? 'single' : 'group'
+      conversationModel['showName'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['name'] : data[i]['wheat_user']['nickname']
+      conversationModel['faceUrl'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['avatar'] : data[i]['wheat_user']['head_portrait']
+      conversationModel['cid'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['im_biaoshi'] : data[i]['wheat_user']['username']
+      conversationModel['conversationId'] = bodyModel['conversationID']
+      conversationModel['id'] = data[i]['id']
+      conversationModel['unreadCount'] = data[i]['unread']
+      conversationList.push(conversationModel)
+    }
+    return conversationList
+  } catch (e) {
+    console.log('获取会话列表异常：', e)
+  }
+
+}
+
 /**
  * todo 获取接收消息数据
  * @param data 消息数据
@@ -176,6 +130,109 @@ export function pushChatMessageData(message, platform, filePath, targetId, targe
  */
 export function getReceiveMessage(data) {
   return data
+}
+
+/**
+ * todo 获取消息体
+ * @param platform 终端平台 ios、android、web、h5、api
+ * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 7.位置
+ * @param filePath 文件路径
+ * @param bodyModel body数据
+ * @returns {{}}
+ */
+function getMessageContent(platform, contentType, filePath, bodyModel) {
+  const messageContent = {}
+  switch (platform) {
+    case 'IOS':
+      switch (contentType) {
+        case 1:
+          messageContent['elemType'] = 'text'
+          messageContent['elemValue'] = bodyModel['textElem']['text']
+          break
+        case 2:
+          messageContent['elemType'] = 'custom'
+          messageContent['elemValue'] = ''
+          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['customElem']['data']))
+          messageContent['customType'] = bodyModel['customElem']['data']['type']
+          break
+        case 3:
+          messageContent['elemType'] = 'image'
+          messageContent['elemValue'] = filePath
+          messageContent['imageList'] = bodyModel['imageElem']['imageList']
+          break
+        case 4:
+          messageContent['elemType'] = 'voice'
+          messageContent['elemValue'] = filePath
+          messageContent['duration'] = bodyModel['soundElem']['duration']
+          break
+        case 7:
+          messageContent['elemType'] = 'location'
+          messageContent['elemValue'] = ''
+          messageContent['locationInfo'] = JSON.parse(bodyModel['locationElem']['desc'])
+          messageContent['longitude'] = bodyModel['locationElem']['longitude']
+          messageContent['latitude'] = bodyModel['locationElem']['latitude']
+          break
+      }
+      break
+    case 'Android':
+      switch (contentType) {
+        case '1':
+          messageContent['elemType'] = 'text'
+          messageContent['elemValue'] = commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['textContentBytes'])
+          break
+        case '2':
+          messageContent['elemType'] = 'custom'
+          messageContent['elemValue'] = ''
+          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data'])))
+          messageContent['customType'] = JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data']))['type']
+          break
+        case '3':
+          messageContent['elemType'] = 'image'
+          messageContent['elemValue'] = filePath
+          messageContent['imageList'] = bodyModel['message']['messageBaseElements'][0]
+          break
+        case '4':
+          messageContent['elemType'] = 'voice'
+          messageContent['elemValue'] = filePath
+          messageContent['duration'] = bodyModel['message']['messageBaseElements'][0]['soundDuration']
+          break
+        case '7':
+          messageContent['elemType'] = 'location'
+          messageContent['elemValue'] = ''
+          messageContent['locationInfo'] = JSON.parse(bodyModel['message']['messageBaseElements'][0]['description'])
+          messageContent['longitude'] = bodyModel['message']['messageBaseElements'][0]['longitude']
+          messageContent['latitude'] = bodyModel['message']['messageBaseElements'][0]['latitude']
+          break
+      }
+      break
+    case 'web':
+    case 'h5':
+      switch (contentType) {
+        case '1':
+          messageContent['elemType'] = 'text'
+          messageContent['elemValue'] = bodyModel['payload']['text']
+          break
+        case '2':
+          messageContent['elemType'] = 'custom'
+          messageContent['elemValue'] = ''
+          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['payload']['data']))
+          messageContent['customType'] = JSON.parse(bodyModel['payload']['data'])['type']
+          break
+        case '3':
+          messageContent['elemType'] = 'image'
+          messageContent['elemValue'] = filePath
+          messageContent['imageList'] = bodyModel['payload']['imageInfoArray']
+          break
+      }
+      break
+    case 'api':
+      messageContent['elemType'] = 'custom'
+      messageContent['elemValue'] = ''
+      messageContent['customInfo'] = getCustomMessageContent(bodyModel)
+      messageContent['customType'] = bodyModel['type']
+      break
+  }
+  return messageContent
 }
 
 /**
@@ -237,7 +294,7 @@ function getMessageSendStatus(status) {
 }
 
 /**
- * 格式化消息类型
+ * 格式化消息类型（ 将消息类型String 转换 int ）
  * @param elemType
  * @returns {string}
  */
@@ -259,5 +316,8 @@ import commonUtils from '../utils/CommonUtils'
 export default {
   transformMessageList,
   pushChatMessageData,
-  getReceiveMessage
+  getConversationList,
+  getReceiveMessage,
+  getCustomMessageContent,
+  getMessageContent
 }
