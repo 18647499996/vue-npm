@@ -88,6 +88,17 @@ export function parseTime(time, cFormat) {
   return time_str
 }
 
+/**
+ * todo 年月日时分秒转时间戳
+ * @param dateStr 时间格式字符串
+ * @returns {number}
+ */
+export function getTimestamp(dateStr){
+  const date = new Date(dateStr)
+  return date.getTime() / 1000
+}
+
 export default {
-  formatTime
+  formatTime,
+  getTimestamp
 }

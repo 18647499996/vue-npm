@@ -94,6 +94,11 @@ export function pushChatMessageData(message, platform, filePath, targetId, targe
   }
 }
 
+/**
+ * todo 获取会话列表
+ * @param data
+ * @returns {*[]}
+ */
 export function getConversationList(data) {
   try {
     let conversationList = []
@@ -104,37 +109,93 @@ export function getConversationList(data) {
       }
       const messageModel = data[i]['wheat_news_rocerd']
       const bodyModel = JSON.parse(messageModel['body'])
-      conversationModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
-      conversationModel['messageContent']['nickname'] = bodyModel['nick']
-      conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
+      conversationModel['platform'] = messageModel['platform']
       conversationModel['conversationType'] = 1 === data[i]['conversation_type'] ? 'single' : 'group'
       conversationModel['showName'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['name'] : data[i]['wheat_user']['nickname']
       conversationModel['faceUrl'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['avatar'] : data[i]['wheat_user']['head_portrait']
       conversationModel['cid'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['im_biaoshi'] : data[i]['wheat_user']['username']
-      conversationModel['conversationId'] = bodyModel['conversationID']
       conversationModel['id'] = data[i]['id']
       conversationModel['unreadCount'] = data[i]['unread']
+      conversationModel['senderTimeMillis'] = formatUtils.getTimestamp(messageModel['createTimeInMillis'])
+      conversationModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+      switch (messageModel['platform']) {
+        case 'IOS':
+          conversationModel['messageContent']['faceUrl'] = bodyModel['faceURL']
+          conversationModel['messageContent']['nickName'] = bodyModel['nickName']
+          break
+        case 'Android':
+          conversationModel['messageContent']['faceUrl'] = bodyModel['message']['faceUrl']
+          conversationModel['messageContent']['nickName'] = bodyModel['message']['nickName']
+          break
+        case 'web':
+        case 'h5':
+          conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
+          conversationModel['messageContent']['nickname'] = bodyModel['nick']
+          break
+        case 'api':
+          conversationModel['messageContent']['faceUrl'] = data[i]['wheat_user']['head_portrait']
+          conversationModel['messageContent']['nickname'] = data[i]['wheat_user']['nickname']
+          break
+      }
       conversationList.push(conversationModel)
     }
     return conversationList
   } catch (e) {
     console.log('获取会话列表异常：', e)
   }
+}
 
+/**
+ * todo 显示会话内容描述
+ * @param elemType
+ * @param dec
+ * @returns {string|*}
+ */
+export function getConversationContentDec(elemType, dec) {
+  switch (elemType) {
+    case 'txt':
+      return dec
+    case 'custom':
+      return '[自定义消息]'
+    case 'image':
+      return '[图片]'
+    case 'voice':
+      return '[语音]'
+    case 'location':
+      return '[位置]'
+  }
 }
 
 /**
  * todo 获取接收消息数据
  * @param data 消息数据
- * @returns {Array} 聊天数组
+ * @returns {{}} 聊天数组
  */
-export function getReceiveMessage(data) {
-  return data
+export function transformReceiveMessage(data) {
+  try {
+    const transformReceiveModel = {}
+    transformReceiveModel['messageStatus'] = 2
+    transformReceiveModel['senderUserID'] = data['from']
+    transformReceiveModel['faceUrl'] = data['avatar']
+    transformReceiveModel['nickName'] = data['nick']
+    transformReceiveModel['senderTimeMillis'] = data['clientTime']
+    transformReceiveModel['platform'] = 'receive'
+    transformReceiveModel['contentType'] = transformElemType(data['type'])
+    transformReceiveModel['id'] = data['ID']
+    transformReceiveModel['messageCreateTime'] = data['time']
+    transformReceiveModel['conversationType'] = 'C2C' === data['type'] ? 'single' : 'group'
+    transformReceiveModel['isRead'] = data['isRead']
+    transformReceiveModel['messageContent'] = getMessageContent('receive', transformElemType(data['type']), '', data['payload'])
+    return transformReceiveModel
+  } catch (e) {
+    console.log('接收消息转换异常：', e)
+  }
+
 }
 
 /**
  * todo 获取消息体
- * @param platform 终端平台 ios、android、web、h5、api
+ * @param platform 终端平台 ios、android、web、h5、api、receive
  * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 7.位置
  * @param filePath 文件路径
  * @param bodyModel body数据
@@ -231,6 +292,37 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
       messageContent['customInfo'] = getCustomMessageContent(bodyModel)
       messageContent['customType'] = bodyModel['type']
       break
+    case 'receive':
+      switch (contentType) {
+        case '1':
+          messageContent['elemType'] = 'text'
+          messageContent['elemValue'] = bodyModel['text']
+          break
+        case '2':
+          messageContent['elemType'] = 'custom'
+          messageContent['elemValue'] = ''
+          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['data']))
+          messageContent['customType'] = JSON.parse(bodyModel['data'])['type']
+          break
+        case '3':
+          messageContent['elemType'] = 'image'
+          messageContent['elemValue'] = bodyModel['imageInfoArray'][0]['imageUrl']
+          messageContent['imageList'] = bodyModel['imageInfoArray']
+          break
+        case '4':
+          messageContent['elemType'] = 'voice'
+          messageContent['elemValue'] = bodyModel['url']
+          messageContent['duration'] = bodyModel['second']
+          break
+        case '7':
+          messageContent['elemType'] = 'location'
+          messageContent['elemValue'] = ''
+          messageContent['locationInfo'] = JSON.parse(bodyModel['description'])
+          messageContent['longitude'] = bodyModel['longitude']
+          messageContent['latitude'] = bodyModel['latitude']
+          break
+      }
+      break
   }
   return messageContent
 }
@@ -306,18 +398,24 @@ function transformElemType(elemType) {
       return '2'
     case 'TIMImageElem':
       return '3'
+    case 'TIMSoundElem':
+      return '4'
+    case 'TIMLocationElem':
+      return '7'
     default:
       return '0'
   }
 }
 
 import commonUtils from '../utils/CommonUtils'
+import formatUtils from '../utils/FormatUtils'
 
 export default {
   transformMessageList,
   pushChatMessageData,
   getConversationList,
-  getReceiveMessage,
+  transformReceiveMessage,
   getCustomMessageContent,
-  getMessageContent
+  getMessageContent,
+  getConversationContentDec
 }

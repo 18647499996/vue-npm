@@ -1,6 +1,6 @@
 {
   "name": "liudonghan",
-  "version": "2.3.3",
+  "version": "2.3.7",
   "description": "刘冬涵专用npm包管理器",
   "author": "18647499996@sina.cn",
   "main": "src/utils/index.js",
