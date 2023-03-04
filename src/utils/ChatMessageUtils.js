@@ -190,7 +190,85 @@ export function transformReceiveMessage(data) {
   } catch (e) {
     console.log('接收消息转换异常：', e)
   }
+}
 
+/**
+ * 消息发送限制
+ * TODO 1.首先循环取出当天所有的聊天记录
+ * TODO 2.根据当天聊天记查询是否有对方发送的消息
+ * TODO 3.如果有则当天发送消息无限制
+ * TODO 4.如果当天没有对方发送消息则只允许发送一条消息
+ * TODO 5.群聊发送无限制
+ * @param friendList 好友列表
+ * @param messageList 消息列表
+ * @param targetId 接收人ID
+ * @param fromId 发送人ID
+ * @param conversationType 会话类型 'single' : 'group'
+ * @returns {boolean}
+ */
+export function isConstraintMessageSend(friendList, messageList, targetId, fromId, conversationType) {
+  switch (conversationType) {
+    case 'single':
+      let isFriend = false
+      let isReceive = false
+      let isFirst = false
+      for (let i = 0; i < friendList.length; i++) {
+        // 是否好友
+        if (friendList[i]['touid'] === targetId) {
+          isFriend = true
+        }
+      }
+      let currentDate = formatUtils.getDateFormat(new Date().getTime(), 'yyyy年MM月dd日')
+      for (let i = 0; i < messageList.length; i++) {
+        // 查询当日消息
+        if (currentDate === formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd')) {
+          // 是否有接收消息
+          if (messageList[i]['senderUserID'] === targetId) {
+            isReceive = true
+          }
+          if (messageList[i]['senderUserID'] === fromId) {
+            // 是否有发送成功消息
+            if (messageList[i]['messageStatus'] !== 2) {
+              isFirst = true
+            }
+          }
+        } else {
+          isFirst = true
+        }
+      }
+      console.log('isFriend：' + isFriend + ' ---- ' + 'isReceive：' + isReceive + ' ------ ' + 'isFirst：' + isFirst)
+      return isFriend || isReceive || isFirst
+    case 'group':
+      return true
+  }
+}
+
+/**
+ * todo 消息列表时间显示规则
+ * @param position 索引
+ * @param messageCount 消息数量
+ * @param messageList 消息列表
+ * @param currentTimeStamp 当前消息时间
+ * @returns {boolean}
+ */
+export function isShowMessageTime(position, messageCount, messageList, currentTimeStamp) {
+  if (messageCount === 20) {
+    if (position % 20 === 0) {
+      return true
+    } else {
+      // 如果两条消息之间的间隔超过五分钟则显示时间
+      const lastTimeStamp = messageList[position - 1]['senderTimeMillis'] * 1000
+      return currentTimeStamp - lastTimeStamp > 300000
+    }
+  } else {
+    if (position === 0 || position === messageCount || (position - messageCount) % 20 === 0) {
+      return true
+    } else {
+      const lastTimeStamp = messageList[position - 1]['senderTimeMillis'] * 1000
+      // 如果两条消息之间的间隔超过五分钟则显示时间
+      return currentTimeStamp - lastTimeStamp > 300000
+    }
+  }
 }
 
 /**
@@ -417,5 +495,7 @@ export default {
   transformReceiveMessage,
   getCustomMessageContent,
   getMessageContent,
-  getConversationContentDec
+  getConversationContentDec,
+  isConstraintMessageSend,
+  isShowMessageTime
 }

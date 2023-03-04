@@ -82,6 +82,7 @@
 
 import utils from '../utils/index'
 import { transformUTF8 } from '../utils/CommonUtils'
+import { showMessageTime } from '../utils/FormatUtils'
 
 export default {
   components: {},
@@ -355,17 +356,207 @@ export default {
         'revoker': null,
         'payload': { 'text': '试试' },
         'type': 'TIMTextElem'
-      }
+      },
+      message:[
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "57"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677821808,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10046,
+          "messageCreateTime": "2023-03-03 13:36:48.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "58"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677821909,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10047,
+          "messageCreateTime": "2023-03-03 13:38:29.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "59"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677822021,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10048,
+          "messageCreateTime": "2023-03-03 13:40:21.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "60"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677822078,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10049,
+          "messageCreateTime": "2023-03-03 13:41:18.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "61"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677822175,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10050,
+          "messageCreateTime": "2023-03-03 13:42:55.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "62"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677823419,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10053,
+          "messageCreateTime": "2023-03-03 14:03:39.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "64"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677824175,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10054,
+          "messageCreateTime": "2023-03-03 14:16:15.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "image",
+            "elemValue": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
+            "imageList": [
+              {
+                "instanceID": 5726879,
+                "sizeType": 1,
+                "type": 0,
+                "size": 1237,
+                "width": 65,
+                "height": 65,
+                "imageUrl": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
+                "url": "blob:http://localhost:8080/9e4bb111-c534-4eac-81a2-cd5faa076d5b"
+              },
+              {
+                "instanceID": 7492882,
+                "sizeType": 3,
+                "type": 1,
+                "size": 0,
+                "width": 65,
+                "height": 65,
+                "imageUrl": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
+                "url": "blob:http://localhost:8080/9e4bb111-c534-4eac-81a2-cd5faa076d5b"
+              },
+              {
+                "instanceID": 6856205,
+                "sizeType": 2,
+                "type": 2,
+                "size": 0,
+                "width": 65,
+                "height": 65,
+                "imageUrl": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
+                "url": "blob:http://localhost:8080/9e4bb111-c534-4eac-81a2-cd5faa076d5b"
+              }
+            ]
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677825005,
+          "platform": "web",
+          "contentType": "3",
+          "id": 10055,
+          "messageCreateTime": "2023-03-03 14:30:05.000",
+          "conversationType": "single",
+          "isRead": ""
+        },
+        {
+          "messageContent": {
+            "elemType": "text",
+            "elemValue": "222"
+          },
+          "messageStatus": 2,
+          "senderUserID": "supplier_2103376451",
+          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
+          "nickName": "王涵品牌旗舰店",
+          "senderTimeMillis": 1677825198,
+          "platform": "web",
+          "contentType": "1",
+          "id": 10058,
+          "messageCreateTime": "2023-03-03 14:33:18.000",
+          "conversationType": "single",
+          "isRead": ""
+        }
+      ]
     }
   },
   created() {
 
   },
   mounted() {
-    // console.log('组件', utils.CommonUtils.isNext('ssss哈哈哈哈哈哈'))
-    console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
-    console.log('接收消息：',utils.ChatMessageUtils.transformReceiveMessage(this.rec))
-    // console.log('获取数据',  utils.CommonUtils.byteToString([123,34,103,111,111,100,115,73,110,102,111,34,58,123,34,103,111,111,100,115,95,97,99,116,105,118,105,116,121,34,58,34,78,34,44,34,103,111,111,100,115,95,99,111,110,102,105,103,34,58,34,-28,-67,-100,-27,-109,-127,-25,-79,-69,-27,-98,-117,32,-26,-126,-84,-25,-106,-111,46,46,46,34,44,34,103,111,111,100,115,95,99,111,118,101,114,34,58,34,104,116,116,112,115,58,47,47,115,104,97,110,103,104,97,105,112,99,45,49,51,48,55,54,49,49,49,51,51,46,99,111,115,46,97,112,45,115,104,97,110,103,104,97,105,46,109,121,113,99,108,111,117,100,46,99,111,109,47,112,114,111,100,117,99,116,47,50,48,50,50,48,56,50,52,47,50,48,50,50,48,56,50,52,48,57,52,54,48,52,45,55,48,55,46,106,112,103,34,44,34,103,111,111,100,115,95,110,97,109,101,34,58,34,-25,-108,-75,-27,-67,-79,-24,-81,-102,-25,-92,-68,-26,-126,-90,-27,-101,-94,-27,-100,-122,52,56,48,103,-26,-100,-120,-23,-91,-68,-25,-92,-68,-25,-101,-110,-27,-71,-65,-27,-68,-113,-24,-101,-117,-23,-69,-124,-24,-114,-78,-24,-109,-119,-27,-92,-102,-27,-113,-93,-27,-111,-77,-26,-100,-120,-23,-91,-68,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,32,-26,-104,-81,-28,-72,-83,-25,-89,-117,-23,-128,-127,-25,-92,-68,34,44,34,103,111,111,100,115,95,110,117,109,34,58,34,49,34,44,34,103,111,111,100,115,95,112,114,105,99,101,34,58,34,56,57,34,44,34,105,115,95,119,104,111,108,101,115,97,108,101,34,58,102,97,108,115,101,44,34,115,107,117,95,105,100,34,58,34,76,75,95,57,48,57,56,57,34,44,34,115,112,117,95,105,100,34,58,34,76,71,95,49,49,53,56,52,57,55,34,44,34,115,117,112,112,108,105,101,114,95,104,101,97,100,34,58,34,104,116,116,112,58,47,47,49,49,52,46,49,49,51,46,49,52,52,46,49,55,53,58,56,49,48,57,47,112,117,98,108,105,99,115,47,105,109,103,115,47,117,112,100,97,116,97,115,47,50,48,50,50,48,52,50,53,47,47,50,48,50,50,48,52,50,53,49,54,51,53,51,56,51,54,54,46,106,112,103,34,44,34,115,117,112,112,108,105,101,114,95,105,100,34,58,34,54,56,54,54,57,34,44,34,115,117,112,112,108,105,101,114,95,110,97,109,101,34,58,34,-27,-116,-105,-28,-70,-84,-26,-75,-117,-24,-81,-107,-27,-70,-105,-23,-109,-70,34,44,34,116,97,103,95,108,105,115,116,34,58,91,34,-28,-72,-125,-27,-92,-87,-26,-105,-96,-25,-112,-122,-25,-108,-79,-23,-128,-128,-26,-115,-94,34,44,34,-27,-116,-123,-23,-126,-82,34,44,34,50,52,-27,-80,-113,-26,-105,-74,-27,-122,-123,-27,-113,-111,-24,-76,-89,34,93,125,44,34,105,100,34,58,34,64,84,71,83,35,50,67,86,70,84,75,72,77,84,34,44,34,116,121,112,101,34,58,51,125]))
+    // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
+    // console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
+    // console.log('接收消息：',utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
+    for (let i = 0; i < this.message.length; i++) {
+      console.log('是否显示：',utils.ChatMessageUtils.isShowMessageTime(i,this.message.length,this.message,this.message[i]['senderTimeMillis'] * 1000))
+    }
   },
 
   methods: {
