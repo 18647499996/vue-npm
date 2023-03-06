@@ -218,7 +218,7 @@ export function isConstraintMessageSend(friendList, messageList, targetId, fromI
           isFriend = true
         }
       }
-      let currentDate = formatUtils.getDateFormat(new Date().getTime(), 'yyyy年MM月dd日')
+      let currentDate = formatUtils.getDateFormat(new Date().getTime(), 'yyyy-MM-dd')
       for (let i = 0; i < messageList.length; i++) {
         // 查询当日消息
         if (currentDate === formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd')) {
@@ -272,7 +272,7 @@ export function isShowMessageTime(position, messageCount, messageList, currentTi
 }
 
 /**
- * todo 获取消息体
+ * 获取消息体
  * @param platform 终端平台 ios、android、web、h5、api、receive
  * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 7.位置
  * @param filePath 文件路径
@@ -407,19 +407,19 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
 
 /**
  * 获取自定义消息结构
- * 01.站内邀请 （ 发送群组名片信息 ）
- * 02.订单消息 （ 发送用户订单信息 ）
- * 03.商品消息 （ 发送商家商品信息 ）
- * 04.订单推送 （ 用户下单 服务器通过极光 REST API 分别发送一条订单推送至商家和用户 ）
- * 05.退款推送 （ 服务器通过极光 REST API 接口 发送退款消息通知商家端 ）
- * 06.拉黑消息 （ 当对方将你拉黑之后，发送消息时创建一条本地拉黑消息提示"消息已发出，但被对方拒收"）
- * 07.透传消息 （ 透传类型"cmd_type"：1.拉黑通知 ）
- * 08.限制消息 （ 当双方未进行相互关注"非好友关系" 24小时内（ 如果对方未回复情况下 ）只能发送一条消息
- * 09.群组限制 （ 当用户被踢出群聊、退出群聊 发送群组异常消息提示 ）
- * 10.问诊消息 （ 医护端创建一条问诊消息发送给患者端 ）
- * 11.文章消息 （ 用户发送文章类型消息 ）
- * 12.名片消息 （ 用户发送名片类型消息 ）
- * 13.存证消息 （ 汇存证链接消息 ）
+ * todo 01.站内邀请 （ 发送群组名片信息 ）
+ * todo 02.订单消息 （ 发送用户订单信息 ）
+ * todo 03.商品消息 （ 发送商家商品信息 ）
+ * todo 04.订单推送 （ 用户下单 服务器通过极光 REST API 分别发送一条订单推送至商家和用户 ）
+ * todo 05.退款推送 （ 服务器通过极光 REST API 接口 发送退款消息通知商家端 ）
+ * todo 06.拉黑消息 （ 当对方将你拉黑之后，发送消息时创建一条本地拉黑消息提示"消息已发出，但被对方拒收"）
+ * todo 07.透传消息 （ 透传类型"cmd_type"：1.拉黑通知 ）
+ * todo 08.限制消息 （ 当双方未进行相互关注"非好友关系" 24小时内（ 如果对方未回复情况下 ）只能发送一条消息
+ * todo 09.群组限制 （ 当用户被踢出群聊、退出群聊 发送群组异常消息提示 ）
+ * todo 10.问诊消息 （ 医护端创建一条问诊消息发送给患者端 ）
+ * todo 11.文章消息 （ 用户发送文章类型消息 ）
+ * todo 12.名片消息 （ 用户发送名片类型消息 ）
+ * todo 13.存证消息 （ 汇存证链接消息 ）
  * @param messageModelElementElementElement 自定义消息体
  * @returns {*}
  */
