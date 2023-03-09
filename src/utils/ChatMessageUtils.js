@@ -120,6 +120,7 @@ export function getConversationList(data) {
       conversationModel['id'] = data[i]['id']
       conversationModel['unreadCount'] = data[i]['unread']
       conversationModel['senderTimeMillis'] = formatUtils.getTimestamp(messageModel['createTimeInMillis'])
+      conversationModel['updateTime'] = data[i]['updated_at']
       conversationModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
       switch (messageModel['platform']) {
         case 'IOS':
@@ -274,6 +275,31 @@ export function isShowMessageTime(position, messageCount, messageList, currentTi
   }
 }
 
+
+/**
+ * todo 获取用户身份
+ * @param targetId 用户ID
+ * @returns {string}
+ */
+export function getUserRoute(targetId) {
+  if ('' === targetId) {
+    return ''
+  }
+  const route = targetId.split('_')[0]
+  switch (route) {
+    case 'user':
+      return '个人'
+    case 'comGroup':
+      return '企业'
+    case 'supplier':
+      return '商户'
+    case 'platform':
+      return '平台'
+    default:
+      return '群组'
+  }
+}
+
 /**
  * 获取消息体
  * @param platform 终端平台 ios、android、web、h5、api、receive
@@ -284,7 +310,7 @@ export function isShowMessageTime(position, messageCount, messageList, currentTi
  */
 function getMessageContent(platform, contentType, filePath, bodyModel) {
   const messageContent = {}
-  if (undefined === bodyModel){
+  if (undefined === bodyModel) {
     return null
   }
   switch (platform) {
@@ -503,5 +529,6 @@ export default {
   getMessageContent,
   getConversationContentDec,
   isConstraintMessageSend,
-  isShowMessageTime
+  isShowMessageTime,
+  getUserRoute
 }
