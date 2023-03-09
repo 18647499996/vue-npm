@@ -551,7 +551,7 @@ export default {
   },
   mounted() {
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
-    // console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
+    console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
     // console.log('接收消息：',utils.ChatMessageUtils.transformReceiveMessage(this.rec))
     // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
     for (let i = 0; i < this.message.length; i++) {

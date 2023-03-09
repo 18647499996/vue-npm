@@ -114,6 +114,9 @@ export function getConversationList(data) {
       conversationModel['showName'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['name'] : data[i]['wheat_user']['nickname']
       conversationModel['faceUrl'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['avatar'] : data[i]['wheat_user']['head_portrait']
       conversationModel['cid'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['im_biaoshi'] : data[i]['wheat_user']['username']
+      conversationModel['fromName'] = undefined === data[i]['fromName'] ? '' : data[i]['fromName']
+      conversationModel['fromId'] = data[i]['userId']
+      conversationModel['userId'] = data[i]['userId'].split('_')[1]
       conversationModel['id'] = data[i]['id']
       conversationModel['unreadCount'] = data[i]['unread']
       conversationModel['senderTimeMillis'] = formatUtils.getTimestamp(messageModel['createTimeInMillis'])
@@ -281,6 +284,9 @@ export function isShowMessageTime(position, messageCount, messageList, currentTi
  */
 function getMessageContent(platform, contentType, filePath, bodyModel) {
   const messageContent = {}
+  if (undefined === bodyModel){
+    return null
+  }
   switch (platform) {
     case 'IOS':
       switch (contentType) {
