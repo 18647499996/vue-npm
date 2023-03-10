@@ -310,33 +310,34 @@ export function getUserRoute(targetId) {
  */
 function getMessageContent(platform, contentType, filePath, bodyModel) {
   const messageContent = {}
-  if (undefined === bodyModel) {
-    return null
-  }
+  // if (undefined === bodyModel) {
+  //   return null
+  // }
   switch (platform) {
     case 'IOS':
       switch (contentType) {
-        case 1:
+        case '1':
+          console.log('消息：',contentType)
           messageContent['elemType'] = 'text'
           messageContent['elemValue'] = bodyModel['textElem']['text']
           break
-        case 2:
+        case '2':
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
           messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['customElem']['data']))
           messageContent['customType'] = bodyModel['customElem']['data']['type']
           break
-        case 3:
+        case '3':
           messageContent['elemType'] = 'image'
           messageContent['elemValue'] = filePath
           messageContent['imageList'] = bodyModel['imageElem']['imageList']
           break
-        case 4:
+        case '4':
           messageContent['elemType'] = 'voice'
           messageContent['elemValue'] = filePath
           messageContent['duration'] = bodyModel['soundElem']['duration']
           break
-        case 7:
+        case '7':
           messageContent['elemType'] = 'location'
           messageContent['elemValue'] = ''
           messageContent['locationInfo'] = JSON.parse(bodyModel['locationElem']['desc'])

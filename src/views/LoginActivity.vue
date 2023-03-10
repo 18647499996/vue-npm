@@ -543,6 +543,47 @@ export default {
           "conversationType": "single",
           "isRead": ""
         }
+      ],
+      messageList:[
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "10187",
+          "_score": null,
+          "_source": {
+            "contentType": 1,
+            "body": "{\"random\":36239279,\"isExcludedFromLastMessage\":false,\"nickName\":\"135****3184\",\"status\":2,\"groupID\":\"comGroup_214\",\"isBroadcastMessage\":false,\"elemType\":1,\"isRead\":true,\"isPeerRead\":true,\"needReadReceipt\":false,\"supportMessageExtension\":false,\"isSelf\":true,\"priority\":2,\"timestamp\":1678426711,\"localCustomInt\":0,\"seq\":12,\"sender\":\"user_2103387846\",\"textElem\":{\"text\":\"你好\"},\"offlinePushInfo\":{\"AndroidVIVOClassification\":1,\"ignoreIOSBadge\":false,\"iOSPushType\":0,\"ext\":\"{\\\"targetName\\\":\\\"哇哈哈集团\\\",\\\"conversationType\\\":\\\"group\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"comGroup_214\\\"}\",\"title\":\"哇哈哈集团\",\"AndroidOPPOChannelID\":\"25084\",\"disablePush\":false,\"desc\":\"你好\"},\"faceURL\":\"https:\\\/\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\/APPLE\\\/Image\\\/Portrait\\\/1667274960382.jpg\",\"isExcludedFromUnreadCount\":false,\"msgID\":\"144115242417726427-1678426710-36239279\"}",
+            "content": "你好",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 6s",
+            "uid": "2103387846",
+            "fromID": "user_2103387846",
+            "targetID": "comGroup_214",
+            "createTimeInMillis": "2023-03-10 13:38:31.000",
+            "platform": "IOS",
+            "targetType": "group",
+            "filePath": "",
+            "fromName": "135****3184",
+            "targetName": "哇哈哈集团",
+            "serverMessageId": "144115242417726427-1678426710-36239279",
+            "targetAppkey": "1400664826",
+            "fromAppkey": "group_comGroup_214",
+            "source": "api",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "",
+            "status": 1,
+            "is_latest": 1,
+            "ip": 1697109714,
+            "updated_at": "2023-03-10 13:38:32",
+            "created_at": "2023-03-10 13:38:32",
+            "id": 10187
+          },
+          "sort": [
+            "2023-03-10 13:38:31.000"
+          ]
+        }
       ]
     }
   },
@@ -552,7 +593,8 @@ export default {
   mounted() {
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
     console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
-    // console.log('接收消息：',utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    console.log('接收消息：',utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    console.log('消息列表：',utils.ChatMessageUtils.transformMessageList(this.messageList))
     // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
     for (let i = 0; i < this.message.length; i++) {
       console.log('是否显示：',utils.ChatMessageUtils.isShowMessageTime(i,this.message.length,this.message,this.message[i]['senderTimeMillis'] * 1000))
