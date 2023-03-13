@@ -357,231 +357,89 @@ export default {
         'payload': { 'text': '试试' },
         'type': 'TIMTextElem'
       },
-      message:[
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "57"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677821808,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10046,
-          "messageCreateTime": "2023-03-03 13:36:48.000",
-          "conversationType": "single",
-          "isRead": ""
+      message: [{
+        'messageContent': {
+          'elemType': 'image',
+          'elemValue': 'https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/6d40-user_2103315655/a8cabb29dc894240f6ac50c426d792d6-151206.jpeg?imageMogr2/&imageView2/3/w/720/h/720',
+          'imageList': [{
+            'instanceID': 4514717,
+            'sizeType': 1,
+            'type': 0,
+            'size': 1870698,
+            'width': 2664,
+            'height': 5920,
+            'imageUrl': 'https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/6d40-user_2103315655/a8cabb29dc894240f6ac50c426d792d6-151206.jpeg?imageMogr2/',
+            'url': 'blob:https://testh5.xinfushenghuo.cn/64fe4210-159a-4cbf-9bc1-9b311f7c777d'
+          }, {
+            'instanceID': 3932952,
+            'sizeType': 3,
+            'type': 1,
+            'size': 0,
+            'width': 198,
+            'height': 440,
+            'imageUrl': 'https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/6d40-user_2103315655/a8cabb29dc894240f6ac50c426d792d6-151206.jpeg?imageMogr2/&imageView2/3/w/198/h/198',
+            'url': 'blob:https://testh5.xinfushenghuo.cn/64fe4210-159a-4cbf-9bc1-9b311f7c777d'
+          }, {
+            'instanceID': 3151043,
+            'sizeType': 2,
+            'type': 2,
+            'size': 0,
+            'width': 720,
+            'height': 1600,
+            'imageUrl': 'https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/6d40-user_2103315655/a8cabb29dc894240f6ac50c426d792d6-151206.jpeg?imageMogr2/&imageView2/3/w/720/h/720',
+            'url': 'blob:https://testh5.xinfushenghuo.cn/64fe4210-159a-4cbf-9bc1-9b311f7c777d'
+          }]
         },
+        'messageStatus': 2,
+        'senderUserID': 'user_2103315655',
+        'faceUrl': 'https://thirdwx.qlogo.cn/mmopen/vi_32/VvdjslBWYWkQYKrAKRjdCvQ0mXZaRKD1KBvgqcJzyqRRON30Vaiclk7sbW9iakdQ7RszS54wpkIF8Myyia2jR3asQ/132',
+        'nickName': '黄秋棉',
+        'senderTimeMillis': 1678328051,
+        'platform': 'h5',
+        'contentType': '3',
+        'id': 10156,
+        'messageCreateTime': '2023-03-09 10:14:11.000',
+        'conversationType': 'single',
+        'isRead': false
+      }],
+      messageList: [
         {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "58"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '10187',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'body': '{"random":36239279,"isExcludedFromLastMessage":false,"nickName":"135****3184","status":2,"groupID":"comGroup_214","isBroadcastMessage":false,"elemType":1,"isRead":true,"isPeerRead":true,"needReadReceipt":false,"supportMessageExtension":false,"isSelf":true,"priority":2,"timestamp":1678426711,"localCustomInt":0,"seq":12,"sender":"user_2103387846","textElem":{"text":"你好"},"offlinePushInfo":{"AndroidVIVOClassification":1,"ignoreIOSBadge":false,"iOSPushType":0,"ext":"{\\"targetName\\":\\"哇哈哈集团\\",\\"conversationType\\":\\"group\\",\\"type\\":\\"1\\",\\"targetId\\":\\"comGroup_214\\"}","title":"哇哈哈集团","AndroidOPPOChannelID":"25084","disablePush":false,"desc":"你好"},"faceURL":"https:\\\/\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\/APPLE\\\/Image\\\/Portrait\\\/1667274960382.jpg","isExcludedFromUnreadCount":false,"msgID":"144115242417726427-1678426710-36239279"}',
+            'content': '你好',
+            'manufacturer': 'APPLE',
+            'phoneModel': 'iPhone 6s',
+            'uid': '2103387846',
+            'fromID': 'user_2103387846',
+            'targetID': 'comGroup_214',
+            'createTimeInMillis': '2023-03-10 13:38:31.000',
+            'platform': 'IOS',
+            'targetType': 'group',
+            'filePath': '',
+            'fromName': '135****3184',
+            'targetName': '哇哈哈集团',
+            'serverMessageId': '144115242417726427-1678426710-36239279',
+            'targetAppkey': '1400664826',
+            'fromAppkey': 'group_comGroup_214',
+            'source': 'api',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 1697109714,
+            'updated_at': '2023-03-10 13:38:32',
+            'created_at': '2023-03-10 13:38:32',
+            'id': 10187
           },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677821909,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10047,
-          "messageCreateTime": "2023-03-03 13:38:29.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "59"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677822021,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10048,
-          "messageCreateTime": "2023-03-03 13:40:21.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "60"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677822078,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10049,
-          "messageCreateTime": "2023-03-03 13:41:18.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "61"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677822175,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10050,
-          "messageCreateTime": "2023-03-03 13:42:55.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "62"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677823419,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10053,
-          "messageCreateTime": "2023-03-03 14:03:39.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "64"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677824175,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10054,
-          "messageCreateTime": "2023-03-03 14:16:15.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "image",
-            "elemValue": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
-            "imageList": [
-              {
-                "instanceID": 5726879,
-                "sizeType": 1,
-                "type": 0,
-                "size": 1237,
-                "width": 65,
-                "height": 65,
-                "imageUrl": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
-                "url": "blob:http://localhost:8080/9e4bb111-c534-4eac-81a2-cd5faa076d5b"
-              },
-              {
-                "instanceID": 7492882,
-                "sizeType": 3,
-                "type": 1,
-                "size": 0,
-                "width": 65,
-                "height": 65,
-                "imageUrl": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
-                "url": "blob:http://localhost:8080/9e4bb111-c534-4eac-81a2-cd5faa076d5b"
-              },
-              {
-                "instanceID": 6856205,
-                "sizeType": 2,
-                "type": 2,
-                "size": 0,
-                "width": 65,
-                "height": 65,
-                "imageUrl": "https://cos.ap-shanghai.myqcloud.com/0785-shanghai-007-sharedv4-04-1303031839/b9e1-1400664826/9f9a-supplier_2103376451/47cbf6b252c2f92261a4cdc0e0fc8486-579343.png?imageMogr2/",
-                "url": "blob:http://localhost:8080/9e4bb111-c534-4eac-81a2-cd5faa076d5b"
-              }
-            ]
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677825005,
-          "platform": "web",
-          "contentType": "3",
-          "id": 10055,
-          "messageCreateTime": "2023-03-03 14:30:05.000",
-          "conversationType": "single",
-          "isRead": ""
-        },
-        {
-          "messageContent": {
-            "elemType": "text",
-            "elemValue": "222"
-          },
-          "messageStatus": 2,
-          "senderUserID": "supplier_2103376451",
-          "faceUrl": "http://shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com/product/20221221/20221221013323-615.jpg",
-          "nickName": "王涵品牌旗舰店",
-          "senderTimeMillis": 1677825198,
-          "platform": "web",
-          "contentType": "1",
-          "id": 10058,
-          "messageCreateTime": "2023-03-03 14:33:18.000",
-          "conversationType": "single",
-          "isRead": ""
-        }
-      ],
-      messageList:[
-        {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "10187",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "body": "{\"random\":36239279,\"isExcludedFromLastMessage\":false,\"nickName\":\"135****3184\",\"status\":2,\"groupID\":\"comGroup_214\",\"isBroadcastMessage\":false,\"elemType\":1,\"isRead\":true,\"isPeerRead\":true,\"needReadReceipt\":false,\"supportMessageExtension\":false,\"isSelf\":true,\"priority\":2,\"timestamp\":1678426711,\"localCustomInt\":0,\"seq\":12,\"sender\":\"user_2103387846\",\"textElem\":{\"text\":\"你好\"},\"offlinePushInfo\":{\"AndroidVIVOClassification\":1,\"ignoreIOSBadge\":false,\"iOSPushType\":0,\"ext\":\"{\\\"targetName\\\":\\\"哇哈哈集团\\\",\\\"conversationType\\\":\\\"group\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"comGroup_214\\\"}\",\"title\":\"哇哈哈集团\",\"AndroidOPPOChannelID\":\"25084\",\"disablePush\":false,\"desc\":\"你好\"},\"faceURL\":\"https:\\\/\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\/APPLE\\\/Image\\\/Portrait\\\/1667274960382.jpg\",\"isExcludedFromUnreadCount\":false,\"msgID\":\"144115242417726427-1678426710-36239279\"}",
-            "content": "你好",
-            "manufacturer": "APPLE",
-            "phoneModel": "iPhone 6s",
-            "uid": "2103387846",
-            "fromID": "user_2103387846",
-            "targetID": "comGroup_214",
-            "createTimeInMillis": "2023-03-10 13:38:31.000",
-            "platform": "IOS",
-            "targetType": "group",
-            "filePath": "",
-            "fromName": "135****3184",
-            "targetName": "哇哈哈集团",
-            "serverMessageId": "144115242417726427-1678426710-36239279",
-            "targetAppkey": "1400664826",
-            "fromAppkey": "group_comGroup_214",
-            "source": "api",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "",
-            "status": 1,
-            "is_latest": 1,
-            "ip": 1697109714,
-            "updated_at": "2023-03-10 13:38:32",
-            "created_at": "2023-03-10 13:38:32",
-            "id": 10187
-          },
-          "sort": [
-            "2023-03-10 13:38:31.000"
+          'sort': [
+            '2023-03-10 13:38:31.000'
           ]
         }
       ]
@@ -593,12 +451,12 @@ export default {
   mounted() {
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
     console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
-    console.log('接收消息：',utils.ChatMessageUtils.transformReceiveMessage(this.rec))
-    console.log('消息列表：',utils.ChatMessageUtils.transformMessageList(this.messageList))
-    // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
-    for (let i = 0; i < this.message.length; i++) {
-      console.log('是否显示：',utils.ChatMessageUtils.isShowMessageTime(i,this.message.length,this.message,this.message[i]['senderTimeMillis'] * 1000))
-    }
+    console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
+    console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
+    // for (let i = 0; i < this.message.length; i++) {
+    //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
+    // }
   },
 
   methods: {

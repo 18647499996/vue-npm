@@ -5,6 +5,8 @@
  * @param data 消息数据
  * @returns {*}
  */
+import fa from 'element-ui/src/locale/lang/fa'
+
 export function transformMessageList(data) {
   try {
     let transformList = []
@@ -213,9 +215,12 @@ export function transformReceiveMessage(data) {
 export function isConstraintMessageSend(friendList, messageList, targetId, fromId, conversationType) {
   switch (conversationType) {
     case 'single':
+      // 是否好友
       let isFriend = false
+      // 当天是否接收过消息
       let isReceive = false
-      let isFirst = false
+      // 当天是否发送过消息
+      let isFirst = true
       for (let i = 0; i < friendList.length; i++) {
         // 是否好友
         if (friendList[i]['touid'] === targetId) {
@@ -225,19 +230,20 @@ export function isConstraintMessageSend(friendList, messageList, targetId, fromI
       let currentDate = formatUtils.getDateFormat(new Date().getTime(), 'yyyy-MM-dd')
       for (let i = 0; i < messageList.length; i++) {
         // 查询当日消息
+        console.log('当日时间：' + currentDate + ' ------- ' + '消息时间：' + formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd'))
         if (currentDate === formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd')) {
           // 是否有接收消息
           if (messageList[i]['senderUserID'] === targetId) {
             isReceive = true
           }
+          console.log('发送人ID：' + messageList[i]['senderUserID'] + ' -------- 当前发送人ID：' + fromId)
           if (messageList[i]['senderUserID'] === fromId) {
             // 是否有发送成功消息
-            if (messageList[i]['messageStatus'] !== 2) {
-              isFirst = true
+            console.log('消息状态：' + messageList[i]['messageStatus'])
+            if (messageList[i]['messageStatus'] === 2) {
+              isFirst = false
             }
           }
-        } else {
-          isFirst = true
         }
       }
       console.log('isFriend：' + isFriend + ' ---- ' + 'isReceive：' + isReceive + ' ------ ' + 'isFirst：' + isFirst)
@@ -310,9 +316,9 @@ export function getUserRoute(targetId) {
  */
 function getMessageContent(platform, contentType, filePath, bodyModel) {
   const messageContent = {}
-  // if (undefined === bodyModel) {
-  //   return null
-  // }
+  if (undefined === bodyModel) {
+    return null
+  }
   switch (platform) {
     case 'IOS':
       switch (contentType) {
