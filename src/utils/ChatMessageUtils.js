@@ -121,6 +121,8 @@ export function getConversationList(data) {
       conversationModel['userId'] = data[i]['userId'].split('_')[1]
       conversationModel['id'] = data[i]['id']
       conversationModel['unreadCount'] = data[i]['unread']
+      conversationModel['isTop'] = data[i]['sorts']
+      conversationModel['isDisturb'] = data[i]['is_disturb']
       conversationModel['senderTimeMillis'] = formatUtils.getTimestamp(messageModel['createTimeInMillis'])
       conversationModel['updateTime'] = data[i]['updated_at']
       conversationModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
