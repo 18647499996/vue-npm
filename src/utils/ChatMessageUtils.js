@@ -1,5 +1,13 @@
 /**
  * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
+ * todo 格式化Chat消息数据
  * todo 根据platform消息来源终端类型（ android、ios、web、api ）
  * todo 根据消息类型elemType（ 1.文本 2.自定义 3.图片 4.语音 7.位置）
  * @param data 消息数据
@@ -141,8 +149,8 @@ export function getConversationList(data) {
           conversationModel['messageContent']['nickname'] = bodyModel['nick']
           break
         case 'api':
-          conversationModel['messageContent']['faceUrl'] = data[i]['wheat_user']['head_portrait']
-          conversationModel['messageContent']['nickname'] = data[i]['wheat_user']['nickname']
+          conversationModel['messageContent']['faceUrl'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['avatar'] : data[i]['wheat_user']['head_portrait']
+          conversationModel['messageContent']['nickname'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['name'] : data[i]['wheat_user']['nickname']
           break
       }
       conversationList.push(conversationModel)
@@ -324,28 +332,27 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
   switch (platform) {
     case 'IOS':
       switch (contentType) {
-        case '1':
-          console.log('消息：',contentType)
+        case 1:
           messageContent['elemType'] = 'text'
           messageContent['elemValue'] = bodyModel['textElem']['text']
           break
-        case '2':
+        case 2:
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
           messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['customElem']['data']))
           messageContent['customType'] = bodyModel['customElem']['data']['type']
           break
-        case '3':
+        case 3:
           messageContent['elemType'] = 'image'
           messageContent['elemValue'] = filePath
           messageContent['imageList'] = bodyModel['imageElem']['imageList']
           break
-        case '4':
+        case 4:
           messageContent['elemType'] = 'voice'
           messageContent['elemValue'] = filePath
           messageContent['duration'] = bodyModel['soundElem']['duration']
           break
-        case '7':
+        case 7:
           messageContent['elemType'] = 'location'
           messageContent['elemValue'] = ''
           messageContent['locationInfo'] = JSON.parse(bodyModel['locationElem']['desc'])
@@ -356,27 +363,27 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
       break
     case 'Android':
       switch (contentType) {
-        case '1':
+        case 1:
           messageContent['elemType'] = 'text'
           messageContent['elemValue'] = commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['textContentBytes'])
           break
-        case '2':
+        case 2:
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
           messageContent['customInfo'] = getCustomMessageContent(JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data'])))
           messageContent['customType'] = JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data']))['type']
           break
-        case '3':
+        case 3:
           messageContent['elemType'] = 'image'
           messageContent['elemValue'] = filePath
           messageContent['imageList'] = bodyModel['message']['messageBaseElements'][0]
           break
-        case '4':
+        case 4:
           messageContent['elemType'] = 'voice'
           messageContent['elemValue'] = filePath
           messageContent['duration'] = bodyModel['message']['messageBaseElements'][0]['soundDuration']
           break
-        case '7':
+        case 7:
           messageContent['elemType'] = 'location'
           messageContent['elemValue'] = ''
           messageContent['locationInfo'] = JSON.parse(bodyModel['message']['messageBaseElements'][0]['description'])
@@ -388,17 +395,17 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
     case 'web':
     case 'h5':
       switch (contentType) {
-        case '1':
+        case 1:
           messageContent['elemType'] = 'text'
           messageContent['elemValue'] = bodyModel['payload']['text']
           break
-        case '2':
+        case 2:
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
           messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['payload']['data']))
           messageContent['customType'] = JSON.parse(bodyModel['payload']['data'])['type']
           break
-        case '3':
+        case 3:
           messageContent['elemType'] = 'image'
           messageContent['elemValue'] = filePath
           messageContent['imageList'] = bodyModel['payload']['imageInfoArray']
@@ -406,34 +413,44 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
       }
       break
     case 'api':
-      messageContent['elemType'] = 'custom'
-      messageContent['elemValue'] = ''
-      messageContent['customInfo'] = getCustomMessageContent(bodyModel)
-      messageContent['customType'] = bodyModel['type']
+      switch (contentType) {
+        case 2:
+          messageContent['elemType'] = 'custom'
+          messageContent['elemValue'] = ''
+          messageContent['customInfo'] = getCustomMessageContent(bodyModel)
+          messageContent['customType'] = bodyModel['type']
+          break
+        case 10:
+          messageContent['elemType'] = 'groupTips'
+          messageContent['elemValue'] = bodyModel['text']
+          messageContent['customInfo'] = ''
+          messageContent['customType'] = ''
+          break
+      }
       break
     case 'receive':
       switch (contentType) {
-        case '1':
+        case 1:
           messageContent['elemType'] = 'text'
           messageContent['elemValue'] = bodyModel['text']
           break
-        case '2':
+        case 2:
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
           messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['data']))
           messageContent['customType'] = JSON.parse(bodyModel['data'])['type']
           break
-        case '3':
+        case 3:
           messageContent['elemType'] = 'image'
           messageContent['elemValue'] = bodyModel['imageInfoArray'][0]['imageUrl']
           messageContent['imageList'] = bodyModel['imageInfoArray']
           break
-        case '4':
+        case 4:
           messageContent['elemType'] = 'voice'
           messageContent['elemValue'] = bodyModel['url']
           messageContent['duration'] = bodyModel['second']
           break
-        case '7':
+        case 7:
           messageContent['elemType'] = 'location'
           messageContent['elemValue'] = ''
           messageContent['locationInfo'] = JSON.parse(bodyModel['description'])
@@ -507,22 +524,22 @@ function getMessageSendStatus(status) {
 /**
  * 格式化消息类型（ 将消息类型String 转换 int ）
  * @param elemType
- * @returns {string}
+ * @returns {int}
  */
 function transformElemType(elemType) {
   switch (elemType) {
     case 'TIMTextElem':
-      return '1'
+      return 1
     case 'TIMCustomElem':
-      return '2'
+      return 2
     case 'TIMImageElem':
-      return '3'
+      return 3
     case 'TIMSoundElem':
-      return '4'
+      return 4
     case 'TIMLocationElem':
-      return '7'
+      return 7
     default:
-      return '0'
+      return 0
   }
 }
 

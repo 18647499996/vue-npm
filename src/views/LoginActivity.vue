@@ -112,7 +112,7 @@ export default {
           'wheat_group': null,
           'wheat_news_rocerd': {
             'id': 9980,
-            'contentType': '1',
+            'contentType': 1,
             'targetID': 'user_2103414643',
             'fromID': 'supplier_2103376451',
             'body': '{"ID":"144115242419884113-1677639731-62706936","conversationID":"C2Cuser_2103414643","conversationType":"C2C","time":1677639731,"sequence":1102070001,"clientSequence":1102070001,"random":62706936,"priority":"Normal","nick":"王涵品牌旗舰店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221221\/20221221013323-615.jpg","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMTextElem","content":{"text":"是"}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103376451","to":"user_2103414643","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"success","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1677639731,"senderTinyID":"144115242419884113","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"text":"是"},"type":"TIMTextElem"}',
@@ -156,7 +156,7 @@ export default {
           'wheat_group': null,
           'wheat_news_rocerd': {
             'id': 10001,
-            'contentType': '1',
+            'contentType': 1,
             'targetID': 'supplier_2103376451',
             'fromID': 'user_2102961110',
             'body': '{"message":{"clientTime":1677739545,"excludedFromLastMessage":false,"excludedFromUnreadCount":false,"faceUrl":"https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795","friendRemark":"","groupID":"","hasSentReceipt":false,"isBroadcastMessage":false,"isForward":false,"isMessageSender":true,"isPeerRead":false,"isSelfRead":true,"lifeTime":1,"localCustomNumber":0,"localCustomString":"","messageBaseElements":[{"textContentBytes":[-27,-113,-115,-27,-113,-115,-27,-92,-115,-27,-92,-115],"elementType":1}],"messageGroupAtInfoList":[],"messageStatus":2,"messageType":1,"messageVersion":0,"msgID":"144115242414458059-1677739545-1945397108","nameCard":"","needReadReceipt":false,"nickName":"汇法-刘冬涵","offlinePushInfo":{"androidConfig":{"description":"","notifyMode":0,"oppoChannelID":"","soundFilePath":"","title":"","vivoClassification":1},"apnsConfig":{"badgeMode":0,"description":"","iOSPushType":0,"soundFilePath":"","title":""},"description":"反反复复","extension":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],"pushFlag":0,"title":"汇法-刘冬涵"},"platform":2,"priority":0,"random":1945397108,"receiptPeerRead":false,"receiptReadCount":0,"receiptUnreadCount":-1,"receiverTinyID":144115242419884113,"receiverUserID":"supplier_2103376451","revokerTinyID":0,"revokerUserID":"","senderTinyID":144115242414458059,"senderUserID":"user_2102961110","seq":50311392,"serverTime":1677739546,"supportMessageExtension":false,"targetGroupMemberList":[]}}',
@@ -200,7 +200,7 @@ export default {
           'wheat_group': null,
           'wheat_news_rocerd': {
             'id': 9943,
-            'contentType': '1',
+            'contentType': 1,
             'targetID': 'user_2103375461',
             'fromID': 'supplier_2103376451',
             'body': '{"message":{"clientTime":1677481589,"excludedFromLastMessage":false,"excludedFromUnreadCount":false,"faceUrl":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221221\/20221221013323-615.jpg","friendRemark":"","groupID":"","hasSentReceipt":false,"isBroadcastMessage":false,"isForward":false,"isMessageSender":true,"isPeerRead":false,"isSelfRead":true,"lifeTime":1,"localCustomNumber":0,"localCustomString":"","messageBaseElements":[{"textContentBytes":[-27,-109,-90,-27,-109,-90],"elementType":1}],"messageGroupAtInfoList":[],"messageStatus":2,"messageType":1,"messageVersion":0,"msgID":"144115242419884113-1677481589-3757968210","nameCard":"","needReadReceipt":false,"nickName":"王涵品牌旗舰店","offlinePushInfo":{"androidConfig":{"description":"","notifyMode":0,"oppoChannelID":"","soundFilePath":"","title":"","vivoClassification":1},"apnsConfig":{"badgeMode":0,"description":"","iOSPushType":0,"soundFilePath":"","title":""},"description":"哦哦","extension":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,115,117,112,112,108,105,101,114,95,50,49,48,51,51,55,54,52,53,49,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-25,-114,-117,-26,-74,-75,-27,-109,-127,-25,-119,-116,-26,-105,-105,-24,-120,-80,-27,-70,-105,34,44,34,116,121,112,101,34,58,49,125],"pushFlag":0,"title":"王涵品牌旗舰店"},"platform":2,"priority":0,"random":3757968210,"receiptPeerRead":false,"receiptReadCount":0,"receiptUnreadCount":-1,"receiverTinyID":144115242414440804,"receiverUserID":"user_2103375461","revokerTinyID":0,"revokerUserID":"","senderTinyID":144115242419884113,"senderUserID":"supplier_2103376451","seq":3024610209,"serverTime":1677481590,"supportMessageExtension":false,"targetGroupMemberList":[]}}',
@@ -244,7 +244,7 @@ export default {
           'wheat_group': null,
           'wheat_news_rocerd': {
             'id': 9938,
-            'contentType': '2',
+            'contentType': 2,
             'targetID': 'supplier_2103376451',
             'fromID': 'administrator',
             'body': '{"SyncOtherMachine":1,"MsgRandom":4076695529,"To_Account":"supplier_2103376451","From_Account":"administrator","MsgBody":[{"MsgType":"TIMCustomElem","MsgContent":{"Data":"{\\"id\\":\\"user_2103414643\\",\\"type\\":4,\\"orderInfo\\":{\\"id\\":\\"12990145532647736\\",\\"describe\\":\\"\\\\u4eb2\\\\uff0c\\\\u8bf7\\\\u60a8\\\\u6838\\\\u5bf9\\\\u8ba2\\\\u5355\\\\u4fe1\\\\u606f\\",\\"status\\":1,\\"shop_id\\":81756,\\"shop_name\\":\\"\\\\u738b\\\\u6db5\\\\u54c1\\\\u724c\\\\u65d7\\\\u8230\\\\u5e97\\",\\"shop_image\\":\\"http:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20221221\\\\\\\/20221221013323-615.jpg\\",\\"order_sn\\":\\"XF2202302271459570260\\",\\"created_at\\":\\"2023\\\\\\\/2\\\\\\\/27 14:59:57\\",\\"receivers_names\\":\\"\\\\u82a6\\",\\"receivers_phone\\":\\"150*****500\\",\\"receivers_provinces\\":\\"\\\\u5317\\\\u4eac\\",\\"receivers_citys\\":\\"\\\\u5317\\\\u4eac\\\\u5e02\\",\\"receivers_districts\\":\\"***\\",\\"receivers_address\\":\\"********************************************************************************************************************************************************************************************************************\\",\\"shop_goods\\":[{\\"id\\":12990145531875520,\\"title\\":\\"\\\\u624b\\\\u6495\\\\u9762\\\\u5305\\\\u3010\\\\u6b63\\\\u54c14\\\\u65a4\\\\u88c5\\\\u3011\\",\\"thumb\\":\\"http:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20221220\\\\\\\/20221220101919-989.png\\",\\"sku_id\\":92276,\\"sku_num\\":1,\\"spu_id\\":1158895,\\"order_child_id\\":12990145532647736,\\"price\\":28,\\"price_new\\":0,\\"refunds_status\\":1,\\"json\\":\\"{\\\\\\"tag_list\\\\\\":[\\\\\\"\\\\\\\\u4e03\\\\\\\\u5929\\\\\\\\u65e0\\\\\\\\u7406\\\\\\\\u7531\\\\\\\\u9000\\\\\\\\u6362\\\\\\",\\\\\\"\\\\\\\\u5305\\\\\\\\u90ae\\\\\\",\\\\\\"24\\\\\\\\u5c0f\\\\\\\\u65f6\\\\\\\\u5185\\\\\\\\u53d1\\\\\\\\u8d27\\\\\\"],\\\\\\"goods_attributes\\\\\\":[{\\\\\\"id\\\\\\":21401,\\\\\\"name\\\\\\":\\\\\\"\\\\\\\\u5305\\\\\\\\u88c5\\\\\\\\u5c3a\\\\\\\\u5bf8\\\\\\\\uff08\\\\\\\\u957f\\\\\\\\uff09\\\\\\",\\\\\\"value\\\\\\":\\\\\\"2\\\\\\"},{\\\\\\"id\\\\\\":21402,\\\\\\"name\\\\\\":\\\\\\"\\\\\\\\u5305\\\\\\\\u88c5\\\\\\\\u5c3a\\\\\\\\u5bf8\\\\\\\\uff08\\\\\\\\u9ad8\\\\\\\\uff09\\\\\\",\\\\\\"value\\\\\\":\\\\\\"3\\\\\\"},{\\\\\\"id\\\\\\":21403,\\\\\\"name\\\\\\":\\\\\\"\\\\\\\\u5305\\\\\\\\u88c5\\\\\\\\u5c3a\\\\\\\\u5bf8\\\\\\\\uff08\\\\\\\\u5bbd\\\\\\\\uff09\\\\\\",\\\\\\"value\\\\\\":\\\\\\"3\\\\\\"}],\\\\\\"is_accept\\\\\\":1}\\",\\"activity_type\\":\\"N\\",\\"teams_id\\":0,\\"order_child_goods_sn\\":\\"XF3202302271459571412\\",\\"is_accept\\":1,\\"price_pay\\":0,\\"price_order_line\\":30,\\"status\\":2,\\"is_create_bill\\":0,\\"create_bill_error\\":null,\\"presell_amount\\":0,\\"goods_presale\\":null,\\"price_wholesale\\":28,\\"presell_split_account\\":null,\\"original_order_child_goods_sn\\":null,\\"price_im_equity\\":0,\\"im_equity_company\\":null,\\"is_wholesale\\":true}],\\"receivers_village\\":\\"*****\\",\\"merchant_id\\":1004}}","Desc":"[\\u8ba2\\u5355\\u4fe1\\u606f]","Ext":"{\\"type\\":2,\\"targetName\\":\\"administrator\\",\\"targetId\\":\\"administrator\\",\\"conversationType\\":\\"single\\"}","Sound":"4444"}}],"OfflinePushInfo":{"MsgType":"TIMCustomElem","MsgContent":"{\\"type\\":2,\\"targetName\\":\\"administrator\\",\\"targetId\\":\\"administrator\\",\\"conversationType\\":\\"single\\"}"}}',
@@ -288,7 +288,7 @@ export default {
           'wheat_group': null,
           'wheat_news_rocerd': {
             'id': 9933,
-            'contentType': '1',
+            'contentType': 1,
             'targetID': 'user_2103315655',
             'fromID': 'supplier_2103376451',
             'body': '{"ID":"144115242419884113-1677469269-51524668","conversationID":"C2Cuser_2103315655","conversationType":"C2C","time":1677469271,"sequence":1141080001,"clientSequence":1141080001,"random":51524668,"priority":"Normal","nick":"王涵品牌旗舰店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221221\/20221221013323-615.jpg","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMTextElem","content":{"text":"31"}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103376451","to":"user_2103315655","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"success","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1677469269,"senderTinyID":"144115242419884113","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"text":"31"},"type":"TIMTextElem"}',
@@ -406,6 +406,42 @@ export default {
         {
           '_index': 'news_record',
           '_type': '_doc',
+          '_id': '10431',
+          '_score': null,
+          '_source': {
+            'contentType': 2,
+            'body': '{"id":"user_2102961110","type":4,"orderInfo":{"id":"12924855527816696","describe":"\\u4eb2\\uff0c\\u8bf7\\u60a8\\u6838\\u5bf9\\u8ba2\\u5355\\u4fe1\\u606f","status":1,"shop_id":81756,"shop_name":"\\u738b\\u6db5\\u54c1\\u724c\\u65d7\\u8230\\u5e97","shop_image":"http:\\/\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\/product\\/20221221\\/20221221013323-615.jpg","order_sn":"XF2202303171523528375","created_at":"2023\\/3\\/17 15:23:52","receivers_names":"\\u5218**","receivers_phone":"186*****996","receivers_provinces":"\\u5317\\u4eac","receivers_citys":"\\u5317\\u4eac\\u5e02","receivers_districts":"***","receivers_address":"****","shop_goods":[{"id":12924855527987784,"title":"\\u826f\\u54c1\\u94fa\\u5b50\\u624b\\u6495\\u9762\\u53052\\u65a4\\u88c5","thumb":"http:\\/\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\/product\\/20221228\\/20221228064708-617.png","sku_id":92363,"sku_num":1,"spu_id":1158800,"order_child_id":12924855527816696,"price":10,"price_new":0,"refunds_status":1,"json":"{\\"tag_list\\":[\\"\\\\u4e03\\\\u5929\\\\u65e0\\\\u7406\\\\u7531\\\\u9000\\\\u6362\\",\\"\\\\u5305\\\\u90ae\\",\\"24\\\\u5c0f\\\\u65f6\\\\u5185\\\\u53d1\\\\u8d27\\"],\\"goods_attributes\\":[{\\"id\\":21679,\\"name\\":\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u957f\\\\uff09\\",\\"value\\":\\"1\\"},{\\"id\\":21680,\\"name\\":\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u9ad8\\\\uff09\\",\\"value\\":\\"1\\"},{\\"id\\":21681,\\"name\\":\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u5bbd\\\\uff09\\",\\"value\\":\\"1\\"},{\\"id\\":21691,\\"name\\":\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u957f\\\\uff09\\",\\"value\\":\\"1\\"},{\\"id\\":21692,\\"name\\":\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u9ad8\\\\uff09\\",\\"value\\":\\"1\\"},{\\"id\\":21693,\\"name\\":\\"\\\\u5305\\\\u88c5\\\\u5c3a\\\\u5bf8\\\\uff08\\\\u5bbd\\\\uff09\\",\\"value\\":\\"1\\"}],\\"is_accept\\":1}","activity_type":"N","teams_id":0,"order_child_goods_sn":"XF3202303171523521225","is_accept":1,"price_pay":0,"price_order_line":15,"status":2,"is_create_bill":0,"create_bill_error":null,"presell_amount":0,"goods_presale":null,"price_wholesale":0,"presell_split_account":null,"original_order_child_goods_sn":null,"price_im_equity":0,"im_equity_company":"","is_wholesale":false}],"receivers_village":"*****","merchant_id":1004}}',
+            'content': '',
+            'manufacturer': 'merchant',
+            'phoneModel': 'system_issued',
+            'uid': 2103376451,
+            'fromID': 'supplier_2103376451',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-03-17 15:03:54',
+            'platform': 'api',
+            'targetType': 'C2C',
+            'filePath': '',
+            'fromName': '王涵品牌旗舰店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1788698901_3527009_1679037834',
+            'targetAppkey': 'out',
+            'fromAppkey': '',
+            'source': 'api',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'updated_at': '2023-03-17 15:23:54',
+            'created_at': '2023-03-17 15:23:54',
+            'id': 10431
+          }, 'sort': ['2023-03-17 15:03:54']
+        },
+        {
+          '_index': 'news_record',
+          '_type': '_doc',
           '_id': '10187',
           '_score': null,
           '_source': {
@@ -450,10 +486,10 @@ export default {
   },
   mounted() {
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
-    console.log('方法', utils.ChatMessageUtils.getConversationList(this.list))
-    console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    // console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
+    // console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
     console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
-    console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
+    // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
     // for (let i = 0; i < this.message.length; i++) {
     //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
     // }
