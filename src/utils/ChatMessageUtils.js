@@ -1,13 +1,5 @@
 /**
  * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
- * todo 格式化Chat消息数据
  * todo 根据platform消息来源终端类型（ android、ios、web、api ）
  * todo 根据消息类型elemType（ 1.文本 2.自定义 3.图片 4.语音 7.位置）
  * @param data 消息数据
@@ -32,7 +24,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = bodyModel['faceURL']
           transformModel['nickName'] = bodyModel['nickName']
           transformModel['senderTimeMillis'] = bodyModel['timestamp']
-          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
           break
         case 'Android':
           transformModel['messageStatus'] = bodyModel['message']['messageStatus']
@@ -40,7 +32,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = bodyModel['message']['faceUrl']
           transformModel['nickName'] = bodyModel['message']['nickName']
           transformModel['senderTimeMillis'] = bodyModel['message']['serverTime']
-          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
           break
         case 'web':
         case 'h5':
@@ -49,7 +41,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = bodyModel['avatar']
           transformModel['nickName'] = bodyModel['nick']
           transformModel['senderTimeMillis'] = bodyModel['time']
-          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
           break
         case 'api':
           transformModel['messageStatus'] = 2
@@ -57,7 +49,7 @@ export function transformMessageList(data) {
           transformModel['faceUrl'] = ''
           transformModel['nickName'] = '系统通知'
           transformModel['senderTimeMillis'] = 0
-          transformModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+          transformModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
           break
 
       }
@@ -82,9 +74,12 @@ export function transformMessageList(data) {
  * @param filePath 文件路径
  * @param targetId 接受者ID
  * @param targetName 接受者昵称
+ * @param phoneModel 手机型号
+ * @param manufacturer 厂商
+ * @param appKey SDK ID
  * @returns {*}
  */
-export function pushChatMessageData(message, platform, filePath, targetId, targetName) {
+export function pushChatMessageData(message, platform, filePath, targetId, targetName, phoneModel, manufacturer, appKey) {
   return {
     'serverMessageId': message['ID'],
     'platform': platform,
@@ -97,10 +92,13 @@ export function pushChatMessageData(message, platform, filePath, targetId, targe
     'targetName': targetName,
     'createTimeInMillis': message['time'],
     'fromAppkey': message['conversationID'],
-    'targetAppkey': targetId,
+    'targetAppkey': appKey,
     'body': JSON.stringify(message),
     'cloudCustomData': '',
-    'isRevoked': ''
+    'isRevoked': '',
+    'manufacturer': manufacturer,
+    'phoneModel': phoneModel,
+    'content': 1 === transformElemType(message['type']) ? message['payload']['text'] : ''
   }
 }
 
@@ -133,7 +131,7 @@ export function getConversationList(data) {
       conversationModel['isDisturb'] = data[i]['is_disturb']
       conversationModel['senderTimeMillis'] = formatUtils.getTimestamp(messageModel['createTimeInMillis'])
       conversationModel['updateTime'] = data[i]['updated_at']
-      conversationModel['messageContent'] = getMessageContent(messageModel['platform'], messageModel['contentType'], messageModel['filePath'], bodyModel)
+      conversationModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
       switch (messageModel['platform']) {
         case 'IOS':
           conversationModel['messageContent']['faceUrl'] = bodyModel['faceURL']
@@ -478,27 +476,27 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
  * todo 11.文章消息 （ 用户发送文章类型消息 ）
  * todo 12.名片消息 （ 用户发送名片类型消息 ）
  * todo 13.存证消息 （ 汇存证链接消息 ）
- * @param messageModelElementElementElement 自定义消息体
+ * @param messageModelElement 自定义消息体
  * @returns {*}
  */
-function getCustomMessageContent(messageModelElementElementElement) {
-  switch (messageModelElementElementElement['type']) {
+function getCustomMessageContent(messageModelElement) {
+  switch (messageModelElement['type']) {
     case 1:
-      return messageModelElementElementElement['groupInfo']
+      return messageModelElement['groupInfo']
     case 2:
-      return messageModelElementElementElement['orderInfo']
+      return messageModelElement['orderInfo']
     case 3:
-      return messageModelElementElementElement['goodsInfo']
+      return messageModelElement['goodsInfo']
     case 4:
-      return messageModelElementElementElement['orderInfo']
+      return messageModelElement['orderInfo']
     case 5:
-      return messageModelElementElementElement['refundInfo']
+      return messageModelElement['refundInfo']
     case 10:
-      return messageModelElementElementElement['patientCardInfo']
+      return messageModelElement['patientCardInfo']
     case 11:
-      return messageModelElementElementElement['articleInfo']
+      return messageModelElement['articleInfo']
     case 12:
-      return messageModelElementElementElement['businessCardInfo']
+      return messageModelElement['businessCardInfo']
   }
 }
 

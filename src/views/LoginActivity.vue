@@ -477,6 +477,43 @@ export default {
           'sort': [
             '2023-03-10 13:38:31.000'
           ]
+        },
+        {
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '10429',
+          '_score': null,
+          '_source': {
+            'contentType': 10,
+            'body': '{"text":"\\u9ec4\\u79cb\\u68c9\\u52a0\\u5165\\u7fa4\\u7ec4","clientTime":1679036894,"type":"TIMTextElem"}',
+            'content': '黄秋棉加入群组',
+            'manufacturer': 'system',
+            'phoneModel': 'system',
+            'uid': 'supplier_2103376451',
+            'fromID': 'supplier_2103376451',
+            'targetID': '@TGS#23EGKMMMQ',
+            'createTimeInMillis': '2023-03-17 15:08:14.000',
+            'platform': 'api',
+            'targetType': 'group',
+            'filePath': '',
+            'fromName': '王涵品牌旗舰店',
+            'targetName': '测试韩豆',
+            'serverMessageId': 1679036894,
+            'targetAppkey': 'out',
+            'fromAppkey': '',
+            'source': 'api',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 1697109714,
+            'updated_at': '2023-03-17 15:08:14',
+            'created_at': '2023-03-17 15:08:14',
+            'id': 10429
+          },
+          'sort': ['2023-03-17 15:08:14.000']
         }
       ]
     }
