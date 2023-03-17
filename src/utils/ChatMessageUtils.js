@@ -317,7 +317,7 @@ export function getUserRoute(targetId) {
 /**
  * 获取消息体
  * @param platform 终端平台 ios、android、web、h5、api、receive
- * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 7.位置
+ * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 7.位置 10.群组消息
  * @param filePath 文件路径
  * @param bodyModel body数据
  * @returns {{}}
