@@ -8,10 +8,12 @@
 import FormatUtils from './FormatUtils'
 import ChatMessageUtils from '../utils/ChatMessageUtils'
 import CommonUtils from './CommonUtils'
+import NotificationUtils from './NotificationUtils'
 
 
 export default {
   ChatMessageUtils,
   FormatUtils,
-  CommonUtils
+  CommonUtils,
+  NotificationUtils
 }

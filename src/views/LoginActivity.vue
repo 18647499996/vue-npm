@@ -522,6 +522,7 @@ export default {
 
   },
   mounted() {
+    utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知','您有一条新的消息，请注意查收',0)
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
     // console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
     // console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
