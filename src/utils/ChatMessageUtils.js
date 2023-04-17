@@ -119,9 +119,9 @@ export function getConversationList(data) {
       const bodyModel = JSON.parse(messageModel['body'])
       conversationModel['platform'] = messageModel['platform']
       conversationModel['conversationType'] = 1 === data[i]['conversation_type'] ? 'single' : 'group'
-      conversationModel['showName'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['name'] : data[i]['wheat_user']['nickname']
-      conversationModel['faceUrl'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['avatar'] : data[i]['wheat_user']['head_portrait']
-      conversationModel['cid'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['im_biaoshi'] : data[i]['wheat_user']['username']
+      conversationModel['showName'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['name'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['nickname']
+      conversationModel['faceUrl'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['avatar'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['head_portrait']
+      conversationModel['cid'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['im_biaoshi'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['username']
       conversationModel['fromName'] = undefined === data[i]['fromName'] ? '' : data[i]['fromName']
       conversationModel['fromId'] = data[i]['userId']
       conversationModel['userId'] = data[i]['userId'].split('_')[1]
