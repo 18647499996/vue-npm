@@ -115,9 +115,7 @@ export function getConversationList(data) {
       const conversationModel = {
         messageContent: {}
       }
-      const messageModel = data[i]['wheat_news_rocerd']
-      const bodyModel = JSON.parse(messageModel['body'])
-      conversationModel['platform'] = messageModel['platform']
+
       conversationModel['conversationType'] = 1 === data[i]['conversation_type'] ? 'single' : 'group'
       conversationModel['showName'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['name'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['nickname']
       conversationModel['faceUrl'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['avatar'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['head_portrait']
@@ -129,27 +127,32 @@ export function getConversationList(data) {
       conversationModel['unreadCount'] = data[i]['unread']
       conversationModel['isTop'] = data[i]['sorts']
       conversationModel['isDisturb'] = data[i]['is_disturb']
-      conversationModel['senderTimeMillis'] = formatUtils.getTimestamp(messageModel['createTimeInMillis'])
       conversationModel['updateTime'] = data[i]['updated_at']
-      conversationModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
-      switch (messageModel['platform']) {
-        case 'IOS':
-          conversationModel['messageContent']['faceUrl'] = bodyModel['faceURL']
-          conversationModel['messageContent']['nickName'] = bodyModel['nickName']
-          break
-        case 'Android':
-          conversationModel['messageContent']['faceUrl'] = bodyModel['message']['faceUrl']
-          conversationModel['messageContent']['nickName'] = bodyModel['message']['nickName']
-          break
-        case 'web':
-        case 'h5':
-          conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
-          conversationModel['messageContent']['nickname'] = bodyModel['nick']
-          break
-        case 'api':
-          conversationModel['messageContent']['faceUrl'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['avatar'] : data[i]['wheat_user']['head_portrait']
-          conversationModel['messageContent']['nickname'] = 2 === data[i]['conversation_type'] ? data[i]['wheat_group']['name'] : data[i]['wheat_user']['nickname']
-          break
+      const messageModel = data[i]['wheat_news_rocerd']
+      const bodyModel = null === messageModel ? null : JSON.parse(messageModel['body'])
+      conversationModel['platform'] = null === messageModel ? 'unknown' : messageModel['platform']
+      conversationModel['senderTimeMillis'] = null === messageModel ? 0 : formatUtils.getTimestamp(messageModel['createTimeInMillis'])
+      conversationModel['messageContent'] = null === messageModel ? null : getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
+      if (null !== messageModel) {
+        switch (messageModel['platform']) {
+          case 'IOS':
+            conversationModel['messageContent']['faceUrl'] = bodyModel['faceURL']
+            conversationModel['messageContent']['nickName'] = bodyModel['nickName']
+            break
+          case 'Android':
+            conversationModel['messageContent']['faceUrl'] = bodyModel['message']['faceUrl']
+            conversationModel['messageContent']['nickName'] = bodyModel['message']['nickName']
+            break
+          case 'web':
+          case 'h5':
+            conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
+            conversationModel['messageContent']['nickname'] = bodyModel['nick']
+            break
+          case 'api':
+            conversationModel['messageContent']['faceUrl'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['avatar'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['head_portrait']
+            conversationModel['messageContent']['nickname'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['name'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['nickname']
+            break
+        }
       }
       conversationList.push(conversationModel)
     }
