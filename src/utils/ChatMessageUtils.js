@@ -178,6 +178,8 @@ export function getConversationContentDec(elemType, dec) {
       return '[图片]'
     case 'voice':
       return '[语音]'
+    case 'video':
+      return '[视频]'
     case 'location':
       return '[位置]'
   }
@@ -320,7 +322,7 @@ export function getUserRoute(targetId) {
 /**
  * 获取消息体
  * @param platform 终端平台 ios、android、web、h5、api、receive
- * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 7.位置 10.群组消息
+ * @param contentType 消息类型 1.文本 2.自定义 3.图片 4.语音 5.视频 7.位置 10.群组消息
  * @param filePath 文件路径
  * @param bodyModel body数据
  * @returns {{}}
@@ -353,6 +355,11 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
           messageContent['elemValue'] = filePath
           messageContent['duration'] = bodyModel['soundElem']['duration']
           break
+        case 5:
+          messageContent['elemType'] = 'video'
+          messageContent['elemValue'] = filePath
+          messageContent['elemCover'] = bodyModel['videoElem']['snapshotDownloadUrl']
+          break
         case 7:
           messageContent['elemType'] = 'location'
           messageContent['elemValue'] = ''
@@ -383,6 +390,11 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
           messageContent['elemType'] = 'voice'
           messageContent['elemValue'] = filePath
           messageContent['duration'] = bodyModel['message']['messageBaseElements'][0]['soundDuration']
+          break
+        case 5:
+          messageContent['elemType'] = 'video'
+          messageContent['elemValue'] = filePath
+          messageContent['elemCover'] = bodyModel['message']['messageBaseElements'][0]['snapshotDownloadUrl']
           break
         case 7:
           messageContent['elemType'] = 'location'
@@ -450,6 +462,11 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
           messageContent['elemType'] = 'voice'
           messageContent['elemValue'] = bodyModel['url']
           messageContent['duration'] = bodyModel['second']
+          break
+        case 5:
+          messageContent['elemType'] = 'video'
+          messageContent['elemValue'] =  bodyModel['videoUrl']
+          messageContent['elemCover'] = bodyModel['thumbUrl']
           break
         case 7:
           messageContent['elemType'] = 'location'
@@ -537,6 +554,8 @@ function transformElemType(elemType) {
       return 3
     case 'TIMSoundElem':
       return 4
+    case 'TIMVideoFileElem':
+      return 5
     case 'TIMLocationElem':
       return 7
     default:
