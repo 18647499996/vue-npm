@@ -342,7 +342,7 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
         case 2:
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
-          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel['customElem']['data']))
+          messageContent['customInfo'] = getCustomMessageContent(bodyModel['customElem']['data'])
           messageContent['customType'] = bodyModel['customElem']['data']['type']
           break
         case 3:
@@ -500,7 +500,7 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
  * @returns {*}
  */
 function getCustomMessageContent(messageModelElement) {
-  switch (messageModelElement['type']) {
+  switch (Number(messageModelElement['type'])) {
     case 1:
       return messageModelElement['groupInfo']
     case 2:
