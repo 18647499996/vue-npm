@@ -83,6 +83,7 @@
 import utils from '../utils/index'
 import { transformUTF8 } from '../utils/CommonUtils'
 import { showMessageTime } from '../utils/FormatUtils'
+import { addInterceptors, responseListener } from '../utils/AxiosManagerUtils'
 
 export default {
   components: {},
@@ -567,6 +568,15 @@ export default {
   },
   mounted() {
     utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
+
+    utils.AxiosManagerUtils
+      .baseApi()
+      .setConfig()
+      .setRequestHead()
+      .addInterceptors()
+      .responseListener()
+
+
     console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
     // console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))

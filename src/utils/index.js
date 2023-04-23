@@ -10,6 +10,7 @@ import ChatMessageUtils from '../utils/ChatMessageUtils'
 import CommonUtils from './CommonUtils'
 import NotificationUtils from './NotificationUtils'
 import DeviceManagerUtils from './DeviceManagerUtils'
+import AxiosManagerUtils from './AxiosManagerUtils'
 
 
 export default {
@@ -17,5 +18,6 @@ export default {
   FormatUtils,
   CommonUtils,
   NotificationUtils,
-  DeviceManagerUtils
+  DeviceManagerUtils,
+  AxiosManagerUtils
 }
