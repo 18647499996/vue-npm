@@ -567,22 +567,11 @@ export default {
   },
   mounted() {
     utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
-    utils.DeviceManagerUtils.getDeviceManagerListener(
-      iso => {
-        console.log('ios设备')
-      }, android => {
-        console.log('android设备')
-      }, wx => {
-        console.log('wx设备')
-      }, h5 => {
-        console.log('pc设备')
-      }
-    )
     console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
-    console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
-    console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
+    // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
+    // console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
     // console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
-    console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
+    // console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
     // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
     // for (let i = 0; i < this.message.length; i++) {
     //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
