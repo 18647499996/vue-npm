@@ -516,47 +516,47 @@ export default {
           'sort': ['2023-03-17 15:08:14.000']
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "11271",
-          "_score": null,
-          "_source": {
-            "contentType": 2,
-            "group_type": 1,
-            "body": "{\"random\":35811473,\"isExcludedFromLastMessage\":false,\"isExcludedFromContentModeration\":false,\"nickName\":\"刘大哥\",\"status\":2,\"isBroadcastMessage\":false,\"userID\":\"supplier_2103376451\",\"elemType\":2,\"customElem\":{\"data\":{\"id\":\"supplier_2103376451\",\"type\":\"3\",\"goodsInfo\":{\"goods_name\":\"手撕面包B1\",\"supplier_id\":\"81756\",\"supplier_head\":\"https:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221221\\\/20221221013323-615.jpg\",\"goods_config\":\"1,1,1\",\"goods_num\":0,\"supplier_name\":\"王涵品牌旗舰店\",\"goods_activity\":\"N\",\"goods_cover\":\"https:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20230330\\\/20230330085758-541.png\",\"tag_list\":[\"七天无理由退换\",\"包邮\",\"24小时内发货\"],\"is_wholesale\":false,\"spu_id\":\"LG_1158953\",\"goods_price\":\"29.8\"}}},\"isPeerRead\":false,\"isRead\":true,\"needReadReceipt\":false,\"supportMessageExtension\":false,\"isSelf\":true,\"priority\":2,\"timestamp\":1681786789,\"localCustomInt\":0,\"seq\":2412954757,\"sender\":\"user_2103345534\",\"offlinePushInfo\":{\"AndroidVIVOClassification\":1,\"ignoreIOSBadge\":false,\"iOSPushType\":0,\"ext\":\"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\"title\":\"刘大哥\",\"AndroidOPPOChannelID\":\"1000\",\"disablePush\":false,\"desc\":\"[商品消息]\"},\"faceURL\":\"https:\\\/\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\/APPLE\\\/Image\\\/Portrait\\\/1679881060085.jpg\",\"isExcludedFromUnreadCount\":false,\"msgID\":\"144115242430559263-1681786789-35811473\"}",
-            "content": "",
-            "manufacturer": "APPLE",
-            "phoneModel": "iPhone 12",
-            "uid": "2103345534",
-            "fromID": "user_2103345534",
-            "targetID": "supplier_2103376451",
-            "createTimeInMillis": "2023-04-18 10:59:49.000",
-            "platform": "IOS",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "刘大哥",
-            "targetName": "王涵品牌旗舰店",
-            "serverMessageId": "144115242430559263-1681786789-35811473",
-            "targetAppkey": "1400664826",
-            "fromAppkey": "c2c_supplier_2103376451",
-            "source": "api",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "",
-            "status": 1,
-            "is_latest": 1,
-            "ip": 1697109714,
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-04-18 10:59:50",
-            "created_at": "2023-04-18 10:59:50",
-            "id": 11271
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '11271',
+          '_score': null,
+          '_source': {
+            'contentType': 2,
+            'group_type': 1,
+            'body': '{"random":35811473,"isExcludedFromLastMessage":false,"isExcludedFromContentModeration":false,"nickName":"刘大哥","status":2,"isBroadcastMessage":false,"userID":"supplier_2103376451","elemType":2,"customElem":{"data":{"id":"supplier_2103376451","type":"3","goodsInfo":{"goods_name":"手撕面包B1","supplier_id":"81756","supplier_head":"https:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221221\\\/20221221013323-615.jpg","goods_config":"1,1,1","goods_num":0,"supplier_name":"王涵品牌旗舰店","goods_activity":"N","goods_cover":"https:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20230330\\\/20230330085758-541.png","tag_list":["七天无理由退换","包邮","24小时内发货"],"is_wholesale":false,"spu_id":"LG_1158953","goods_price":"29.8"}}},"isPeerRead":false,"isRead":true,"needReadReceipt":false,"supportMessageExtension":false,"isSelf":true,"priority":2,"timestamp":1681786789,"localCustomInt":0,"seq":2412954757,"sender":"user_2103345534","offlinePushInfo":{"AndroidVIVOClassification":1,"ignoreIOSBadge":false,"iOSPushType":0,"ext":"{\\"targetName\\":\\"刘大哥\\",\\"conversationType\\":\\"single\\",\\"type\\":\\"1\\",\\"targetId\\":\\"user_2103345534\\"}","title":"刘大哥","AndroidOPPOChannelID":"1000","disablePush":false,"desc":"[商品消息]"},"faceURL":"https:\\\/\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\/APPLE\\\/Image\\\/Portrait\\\/1679881060085.jpg","isExcludedFromUnreadCount":false,"msgID":"144115242430559263-1681786789-35811473"}',
+            'content': '',
+            'manufacturer': 'APPLE',
+            'phoneModel': 'iPhone 12',
+            'uid': '2103345534',
+            'fromID': 'user_2103345534',
+            'targetID': 'supplier_2103376451',
+            'createTimeInMillis': '2023-04-18 10:59:49.000',
+            'platform': 'IOS',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '刘大哥',
+            'targetName': '王涵品牌旗舰店',
+            'serverMessageId': '144115242430559263-1681786789-35811473',
+            'targetAppkey': '1400664826',
+            'fromAppkey': 'c2c_supplier_2103376451',
+            'source': 'api',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 1697109714,
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-04-18 10:59:50',
+            'created_at': '2023-04-18 10:59:50',
+            'id': 11271
           },
-          "sort": [
-            "2023-04-18 10:59:49.000"
+          'sort': [
+            '2023-04-18 10:59:49.000'
           ]
         }
       ]
@@ -566,7 +566,19 @@ export default {
 
   },
   mounted() {
-    utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知','您有一条新的消息，请注意查收',0)
+    utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
+    utils.DeviceManagerUtils.getDeviceManagerListener(
+      iso => {
+        console.log('ios设备')
+      }, android => {
+        console.log('android设备')
+      }, wx => {
+        console.log('wx设备')
+      }, h5 => {
+        console.log('pc设备')
+      }
+    )
+    console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
     console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
     console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
     // console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
