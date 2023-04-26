@@ -80,10 +80,7 @@
 
 <script>
 
-import utils from '../utils/index'
-import { transformUTF8 } from '../utils/CommonUtils'
-import { showMessageTime } from '../utils/FormatUtils'
-import { addInterceptors, responseListener } from '../utils/AxiosManagerUtils'
+import api from '@/api/HouseApi'
 
 export default {
   components: {},
@@ -567,17 +564,19 @@ export default {
 
   },
   mounted() {
-    utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
-
-    utils.AxiosManagerUtils
-      .baseApi()
-      .setConfig()
-      .setRequestHead()
-      .addInterceptors()
-      .responseListener()
-
-
-    console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
+    // utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
+    this.getLiveList()
+    // this.getOption()
+    // api.getAxiosManger()
+    //   .merger([
+    //     this.getLiveList(),
+    //     this.getOption()
+    //   ], data => {
+    //     console.log('-------：', data)
+    //   }, error => {
+    //
+    //   })
+    // console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
     // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
     // console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
     // console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
@@ -589,6 +588,31 @@ export default {
   },
 
   methods: {
+    getLiveList() {
+      let fromData = new FormData()
+      fromData.append('uid', 'user_2103415823')
+      fromData.append('page', '1')
+      fromData.append('types', '0')
+      return api.getLiveApi()
+        .transformSchedulers(data => {
+          console.log("转换：",data)
+          return data
+        })
+        .post('/home/getHomeIndex', fromData)
+    },
+    getOption() {
+      return api.getShopApi()
+        .isLoading(true)
+        .transformSchedulers(data => {
+          console.log('转换数据：',data)
+          data.data[0]['name'] = '转换数据'
+          return data
+        })
+        .get('/apiindex/get-navigation-location?', {
+          is_index: 1
+        })
+    },
+
     onClickLogin() {
       this.$router.push('HomeActivity')
     },
