@@ -69,8 +69,7 @@ export function addHeaders(headers) {
  */
 export function transformSchedulers(transformResponseListener) {
   axiosManager.interceptors.response.use(config => {
-    config.data = transformResponseListener(config.data)
-    return config
+    return transformResponseListener(config)
   })
   return this
 }
