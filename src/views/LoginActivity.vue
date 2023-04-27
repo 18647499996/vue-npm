@@ -81,6 +81,7 @@
 <script>
 
 import api from '@/api/HouseApi'
+import utils from '../utils/index'
 
 export default {
   components: {},
@@ -564,9 +565,20 @@ export default {
 
   },
   mounted() {
-    // utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
-    this.getLiveList()
-    // this.getOption()
+    utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
+    utils.StorageManagerUtils.saveCookies('cookies', 'liudonhan')
+    utils.StorageManagerUtils.saveCookies('cookiesObject', this.message)
+    utils.StorageManagerUtils.saveLocalStorage('localStorage', 'liudonghan')
+    utils.StorageManagerUtils.saveSessionStorage('sessionStorage', 'liudonghan')
+    console.log('cookies', utils.StorageManagerUtils.getCookies('cookies'))
+    console.log('cookiesObject', utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
+    // this.getLiveList()
+    this.getOption()
+      .then(data => {
+        console.log('最终数据：',data)
+      }).catch(error => {
+
+    })
     // api.getAxiosManger()
     //   .merger([
     //     this.getLiveList(),
@@ -595,7 +607,7 @@ export default {
       fromData.append('types', '0')
       return api.getLiveApi()
         .transformSchedulers(data => {
-          console.log("转换：",data)
+          console.log('转换：', data)
           return data
         })
         .post('/home/getHomeIndex', fromData)
@@ -604,8 +616,13 @@ export default {
       return api.getShopApi()
         .isLoading(true)
         .transformSchedulers(data => {
-          console.log('转换数据：',data)
           data.data[0]['name'] = '转换数据'
+          console.log('转换数据：', data.data[0]['name'])
+          return data
+        })
+        .transformSchedulers(data => {
+          data.data[0]['name'] = '二次转换数据'
+          console.log('二次转换数据：', data.data[0]['name'])
           return data
         })
         .get('/apiindex/get-navigation-location?', {

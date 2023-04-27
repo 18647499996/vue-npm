@@ -68,9 +68,10 @@ export function addHeaders(headers) {
  * @param transformResponseListener
  */
 export function transformSchedulers(transformResponseListener) {
-  axiosManager.defaults.transformResponse = [function(data) {
-    return transformResponseListener(data)
-  }]
+  axiosManager.interceptors.response.use(config => {
+    config.data = transformResponseListener(config.data)
+    return config
+  })
   return this
 }
 
@@ -153,21 +154,6 @@ export function merger(mergerRequest, onSucceed, onError) {
       onError(error)
     })
 }
-
-export async function asyncGet(url, params,flatMapListener) {
-  const data = await get(url, params)
-    .then(data => {
-
-    }).catch(error => {
-
-    })
-  return flatMap(data)
-}
-
-export function flatMap(data){
-
-}
-
 
 export default {
   createAxiosServer,

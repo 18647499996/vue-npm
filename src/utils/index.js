@@ -11,6 +11,7 @@ import CommonUtils from './CommonUtils'
 import NotificationUtils from './NotificationUtils'
 import DeviceManagerUtils from './DeviceManagerUtils'
 import AxiosManagerUtils from './AxiosManagerUtils'
+import StorageManagerUtils from './StorageManagerUtils'
 
 
 export default {
@@ -19,5 +20,6 @@ export default {
   CommonUtils,
   NotificationUtils,
   DeviceManagerUtils,
-  AxiosManagerUtils
+  AxiosManagerUtils,
+  StorageManagerUtils
 }

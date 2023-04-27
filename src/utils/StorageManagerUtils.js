@@ -15,7 +15,7 @@ export function saveCookies(key, value) {
  * @param value 值
  * @param expires 有效期
  */
-export function saveCookies(key, value, expires) {
+export function saveCookiesExpires(key, value, expires) {
   Cookies.set('key', 'value', { expires: expires })
 }
 
@@ -26,7 +26,7 @@ export function saveCookies(key, value, expires) {
  * @param expires
  * @param path
  */
-export function saveCookies(key, vale, expires, path) {
+export function saveCookiesPath(key, vale, expires, path) {
   Cookies.set('key', 'value', { expires: expires, path: path })
 }
 
@@ -128,6 +128,8 @@ export function getCookiesObject(key) {
 
 export default {
   saveCookies,
+  saveCookiesExpires,
+  saveCookiesPath,
   saveLocalStorage,
   saveSessionStorage,
   removeCookies,
@@ -138,5 +140,6 @@ export default {
   removeAll,
   getCookies,
   getLocalStorage,
-  getSessionStorage
+  getSessionStorage,
+  getCookiesObject
 }
