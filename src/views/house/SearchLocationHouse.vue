@@ -49,7 +49,6 @@
 <script>
 import { getRangeItem, getAllItemByName } from '@/api/HouseApi'
 import { getLocationInfo } from '@/utils/LocationUtils'
-import { getLocation } from '@/utils/auth'
 import { Notify } from 'vant'
 
 

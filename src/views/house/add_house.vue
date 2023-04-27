@@ -35,7 +35,6 @@
 
 <script>
 import { getItems, login } from '@/api/user'
-import { getToken, setToken, removeToken } from '@/utils/auth'
 import { regionData, CodeToText, TextToCode } from 'element-china-area-data'
 export default {
   name: 'AddHouse',

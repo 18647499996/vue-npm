@@ -154,6 +154,20 @@ export function merger(mergerRequest, onSucceed, onError) {
     })
 }
 
+export async function asyncGet(url, params,flatMapListener) {
+  const data = await get(url, params)
+    .then(data => {
+
+    }).catch(error => {
+
+    })
+  return flatMap(data)
+}
+
+export function flatMap(data){
+
+}
+
 
 export default {
   createAxiosServer,

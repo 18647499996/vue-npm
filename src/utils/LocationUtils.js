@@ -1,4 +1,3 @@
-import { setLocation } from '@/utils/auth'
 
 /**
  * 获取定位信息
@@ -14,7 +13,6 @@ export function getLocationInfo(succeedCallback, errorCallback) {
       console.log('定位信息：',r)
       geoc.getLocation(r.point, function(res) {
         console.log('精确定位：',res)
-        setLocation(JSON.stringify(res))
         succeedCallback(res)
       })
     } else {
