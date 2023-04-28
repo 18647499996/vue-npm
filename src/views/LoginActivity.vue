@@ -570,12 +570,21 @@ export default {
     utils.StorageManagerUtils.saveCookies('cookiesObject', this.message)
     utils.StorageManagerUtils.saveLocalStorage('localStorage', 'liudonghan')
     utils.StorageManagerUtils.saveSessionStorage('sessionStorage', 'liudonghan')
+    utils.EventBusManagerUtils.register('liudonghan', value => {
+      console.log('接收事件监听：', value)
+
+    })
+    utils.EventBusManagerUtils.unregister('liudonghan')
+    utils.EventBusManagerUtils.post('liudonghan', '哈哈哈哈哈')
+    utils.LocationManagerUtils.getCurrentLocation(result => {
+      console.log('定位数据：', result)
+    })
     console.log('cookies', utils.StorageManagerUtils.getCookies('cookies'))
     console.log('cookiesObject', utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
     // this.getLiveList()
     this.getOption()
       .then(data => {
-        console.log('最终数据：',data)
+        console.log('最终数据：', data)
       }).catch(error => {
 
     })

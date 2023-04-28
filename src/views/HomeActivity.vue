@@ -39,7 +39,6 @@
 
 <script>
 import { getUserInfo, getItemDetail, getActivityLink } from '@/api/UserApi'
-import { getLocationInfo } from '@/utils/LocationUtils'
 import { Dialog, Notify, Toast } from 'vant'
 
 export default {

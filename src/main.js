@@ -81,6 +81,9 @@ Vue.use(Steps);
 
 
 import BaiduMap from 'vue-baidu-map'
+import utils from '@/utils'
+utils.LocationManagerUtils.config.securityJsCode = 'c3f8f130c3b04cdc91ef6675d6d57df6'
+utils.LocationManagerUtils.config.key = '145a824b05ee52a2dd6fd4abbc1f6025'
 
 Vue.use(BaiduMap, {
   ak: 'N5C1SO5Wd2Q5RIQoNIPSpzGaynpjiYsV'

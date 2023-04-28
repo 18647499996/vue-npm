@@ -12,7 +12,8 @@ import NotificationUtils from './NotificationUtils'
 import DeviceManagerUtils from './DeviceManagerUtils'
 import AxiosManagerUtils from './AxiosManagerUtils'
 import StorageManagerUtils from './StorageManagerUtils'
-
+import EventBusManagerUtils from './EventBusManagerUtils'
+import LocationManagerUtils from './LocationManagerUtils'
 
 export default {
   ChatMessageUtils,
@@ -21,5 +22,7 @@ export default {
   NotificationUtils,
   DeviceManagerUtils,
   AxiosManagerUtils,
-  StorageManagerUtils
+  StorageManagerUtils,
+  EventBusManagerUtils,
+  LocationManagerUtils
 }
