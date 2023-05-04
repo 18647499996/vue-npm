@@ -572,22 +572,42 @@ export default {
     utils.StorageManagerUtils.saveSessionStorage('sessionStorage', 'liudonghan')
     utils.EventBusManagerUtils.register('liudonghan', value => {
       console.log('接收事件监听：', value)
-
     })
-    utils.EventBusManagerUtils.unregister('liudonghan')
     utils.EventBusManagerUtils.post('liudonghan', '哈哈哈哈哈')
+    utils.EventBusManagerUtils.unregister('liudonghan')
     utils.LocationManagerUtils.getCurrentLocation(result => {
-      console.log('定位数据：', result)
+      console.log('精确定位：', result)
+    })
+    utils.LocationManagerUtils.getCurrentCityLocation(result => {
+      console.log('IP定位：', result)
+    })
+    utils.LocationManagerUtils.getWeatherLive('北京市', result => {
+      console.log('天气数据：', result)
+    })
+    utils.LocationManagerUtils.getWeatherForecast('北京市', result => {
+      console.log('预报数据：', result)
+    })
+    utils.LocationManagerUtils.getPoiSearch({ keyword: '江城明珠', city: '武汉' }, result => {
+
     })
     console.log('cookies', utils.StorageManagerUtils.getCookies('cookies'))
     console.log('cookiesObject', utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
+    console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
+    console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
+    console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
+    console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
+    console.log('获取数据', utils.ChatMessageUtils.isConstraintMessageSend([], this.message, 'user_2103315655', 'supplier_2103376451', 'single'))
+    // for (let i = 0; i < this.message.length; i++) {
+    //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
+    // }
     // this.getLiveList()
-    this.getOption()
-      .then(data => {
-        console.log('最终数据：', data)
-      }).catch(error => {
-
-    })
+    // this.getOption()
+    //   .then(data => {
+    //     console.log('最终数据：', data)
+    //   }).catch(error => {
+    //
+    // })
     // api.getAxiosManger()
     //   .merger([
     //     this.getLiveList(),
@@ -597,15 +617,6 @@ export default {
     //   }, error => {
     //
     //   })
-    // console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
-    // console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
-    // console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
-    // console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
-    // console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
-    // console.log('获取数据',  utils.ChatMessageUtils.isConstraintMessageSend([],this.message,'user_2103315655','supplier_2103376451','single'))
-    // for (let i = 0; i < this.message.length; i++) {
-    //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
-    // }
   },
 
   methods: {
