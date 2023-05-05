@@ -14,6 +14,7 @@ import AxiosManagerUtils from './AxiosManagerUtils'
 import StorageManagerUtils from './StorageManagerUtils'
 import EventBusManagerUtils from './EventBusManagerUtils'
 import LocationManagerUtils from './LocationManagerUtils'
+import ConstantManagerUtils from './ConstantManagerUtils'
 
 export default {
   ChatMessageUtils,
@@ -24,5 +25,6 @@ export default {
   AxiosManagerUtils,
   StorageManagerUtils,
   EventBusManagerUtils,
-  LocationManagerUtils
+  LocationManagerUtils,
+  ConstantManagerUtils
 }

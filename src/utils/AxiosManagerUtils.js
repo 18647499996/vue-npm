@@ -82,7 +82,7 @@ export function addLogcatInterceptors() {
   let requestTime, responseTime
   axiosManager.interceptors.request.use(config => {
     requestTime = new Date().getTime()
-    console.log('请求数据：', config.baseURL + config.url, config.method, config.method === 'get' ? config.params : config.data)
+    console.warn('请求数据：', config.baseURL + config.url, config.method, config.method === 'get' ? config.params : config.data)
     return config
   }, error => {
     return Promise.reject(error)
@@ -90,7 +90,7 @@ export function addLogcatInterceptors() {
   // 响应拦截
   axiosManager.interceptors.response.use(config => {
     responseTime = new Date().getTime()
-    console.log('返回数据：', config.request.responseURL,(responseTime - requestTime) + 's', config.data)
+    console.warn('返回数据：', config.request.responseURL,(responseTime - requestTime) + 's', config.data)
     return config
   }, error => {
     return Promise.reject(error)

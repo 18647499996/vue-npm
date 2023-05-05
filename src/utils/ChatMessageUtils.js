@@ -1,3 +1,139 @@
+import TIM from 'tim-js-sdk'
+import TIMUploadPlugin from 'tim-upload-plugin'
+import ConstantManagerUtils from './ConstantManagerUtils'
+import commonUtils from '../utils/CommonUtils'
+import formatUtils from '../utils/FormatUtils'
+
+let chatSDK = null
+
+/**
+ * todo 创建腾讯IM实例
+ * @return {ChatSDK}
+ */
+export function createTimChat() {
+  if (null !== chatSDK) {
+    return chatSDK
+  }
+  // 创建 SDK 实例，`TIM.create()`方法对于同一个 `SDKAppID` 只会返回同一份实例
+  chatSDK = TIM.create({ SDKAppID: ConstantManagerUtils.config.timSdkId })
+  // '0' debug   普通级别，日志量较多，接入时建议使用
+  // '1' release 级别，SDK 输出关键信息，生产环境时建议使用
+  chatSDK.setLogLevel(ConstantManagerUtils.config.logLevel)
+  // 注册腾讯云即时通信 IM 上传插件
+  chatSDK.registerPlugin({ 'tim-upload-plugin': TIMUploadPlugin })
+  return chatSDK
+}
+
+/**
+ * todo 登录IM服务器
+ * @param userId
+ * @param userSig
+ * @param loginListener
+ */
+export function login(userId, userSig, loginListener) {
+  createTimChat().login({ userID: userId, userSig: userSig })
+    .then(response => {
+      loginListener(response)
+    }).catch(error => {
+    console.error('Tim Chat IM Server Login Error：', error)
+  })
+}
+
+/**
+ * todo 退出登录
+ */
+export function logout(logoutListener) {
+  createTimChat().logout()
+    .then(response => {
+      logoutListener(response)
+    }).catch(error => {
+    console.error('Tim Chat IM Server Logout Error：', error)
+  })
+}
+
+/**
+ * todo 销毁登录
+ * @param destroyListener
+ */
+export function destroy(destroyListener) {
+  createTimChat().destroy()
+    .then(response => {
+      chatSDK = null
+      destroyListener(response)
+    }).catch(error => {
+    console.error('Tim Chat IM Server Destroy Error：', error)
+  })
+}
+
+/**
+ * todo SDK 收到推送的单聊、群聊、群提示、群系统通知的新消息，接入侧可通过遍历 event.data 获取消息列表数据并渲染到页面
+ * @param onMessageReceived
+ * @return {this}
+ */
+export function onMessageReceived(onMessageReceived) {
+  createTimChat().on(TIM.EVENT.MESSAGE_RECEIVED, onMessageReceived)
+  return this
+}
+
+/**
+ * todo SDK 收到消息被撤回的通知，可通过遍历 event.data 获取被撤回的消息列表数据并渲染到页面，如单聊会话内可展示为 "对方撤回了一条消息"；群聊会话内可展示为 "XXX撤回了一条消息"。
+ * @param onMessageRevoked
+ * @return {this}
+ */
+export function onMessageRevoked(onMessageRevoked) {
+  createTimChat().on(TIM.EVENT.MESSAGE_REVOKED, onMessageRevoked)
+  return this
+}
+
+/**
+ * todo 群组管理功能指的是创建群组、加入群组、获取已加入的群组、退出群组和解散群组等。
+ * @param onGroupListUpdated
+ * @return {this}
+ */
+export function onGroupListUpdated(onGroupListUpdated) {
+  createTimChat().on(TIM.EVENT.GROUP_LIST_UPDATED, onGroupListUpdated)
+  return this
+}
+
+/**
+ * todo 群属性更新时触发，可通过 event.data 获取到更新后的群属性数据（v2.14.0起支持）
+ * @param onGroupAttributesUpdated
+ * @return {this}
+ */
+export function onGroupAttributesUpdated(onGroupAttributesUpdated) {
+  createTimChat().on(TIM.EVENT.GROUP_ATTRIBUTES_UPDATED, onGroupAttributesUpdated)
+  return this
+}
+
+/**
+ * todo 网络状态发生改变
+ * v2.5.0 起支持
+ * event.data.state 当前网络状态，枚举值及说明如下：
+ * TIM.TYPES.NET_STATE_CONNECTED - 已接入网络
+ * TIM.TYPES.NET_STATE_CONNECTING - 连接中。很可能遇到网络抖动，SDK 在重试。接入侧可根据此状态提示“当前网络不稳定”或“连接中”
+ * TIM.TYPES.NET_STATE_DISCONNECTED - 未接入网络。接入侧可根据此状态提示“当前网络不可用”。SDK 仍会继续重试，若用户网络恢复，SDK 会自动同步消息
+ * @param onNetStateChange
+ * @return {this}
+ */
+export function onNetWorkStateChange(onNetStateChange) {
+  createTimChat().on(TIM.EVENT.NET_STATE_CHANGE, onNetStateChange)
+  return this
+}
+
+/**
+ * todo 用户被踢下线时触发
+ * TIM.TYPES.KICKED_OUT_MULT_ACCOUNT(Web端，同一帐号，多页面登录被踢)
+ * TIM.TYPES.KICKED_OUT_MULT_DEVICE(同一帐号，多端登录被踢)
+ * TIM.TYPES.KICKED_OUT_USERSIG_EXPIRED(签名过期)
+ * TIM.TYPES.KICKED_OUT_REST_API(REST API kick 接口踢出。v2.20.0起支持)
+ * @param onKickedOut
+ * @return {this}
+ */
+export function onKickedOut(onKickedOut) {
+  createTimChat().on(TIM.EVENT.KICKED_OUT, onKickedOut)
+  return this
+}
+
 /**
  * todo 格式化Chat消息数据
  * todo 根据platform消息来源终端类型（ android、ios、web、api ）
@@ -61,7 +197,7 @@ export function transformMessageList(data) {
     }
     return transformList
   } catch (e) {
-    console.log('转换异常信息：', e)
+    console.error('Transform Message Error：', e)
   }
 }
 
@@ -156,7 +292,7 @@ export function getConversationList(data) {
     }
     return conversationList
   } catch (e) {
-    console.log('获取会话列表异常：', e)
+    console.error('Get Conversation Message Error：', e)
   }
 }
 
@@ -205,7 +341,7 @@ export function transformReceiveMessage(data) {
     transformReceiveModel['messageContent'] = getMessageContent('receive', transformElemType(data['type']), '', data['payload'])
     return transformReceiveModel
   } catch (e) {
-    console.log('接收消息转换异常：', e)
+    console.error('Transform Receive Message Error：', e)
   }
 }
 
@@ -241,16 +377,16 @@ export function isConstraintMessageSend(friendList, messageList, targetId, fromI
       let currentDate = formatUtils.getDateFormat(new Date().getTime(), 'yyyy-MM-dd')
       for (let i = 0; i < messageList.length; i++) {
         // 查询当日消息
-        console.log('当日时间：' + currentDate + ' ------- ' + '消息时间：' + formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd'))
+        console.warn('当日时间：' + currentDate + ' ------- ' + '消息时间：' + formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd'))
         if (currentDate === formatUtils.getDateFormat(messageList[i]['senderTimeMillis'] * 1000, 'yyyy-MM-dd')) {
           // 是否有接收消息
           if (messageList[i]['senderUserID'] === targetId) {
             isReceive = true
           }
-          console.log('发送人ID：' + messageList[i]['senderUserID'] + ' -------- 当前发送人ID：' + fromId)
+          console.warn('发送人ID：' + messageList[i]['senderUserID'] + ' -------- 当前发送人ID：' + fromId)
           if (messageList[i]['senderUserID'] === fromId) {
             // 是否有发送成功消息
-            console.log('消息状态：' + messageList[i]['messageStatus'])
+            console.warn('消息状态：' + messageList[i]['messageStatus'])
             if (messageList[i]['messageStatus'] === 2) {
               isFirst = false
             }
@@ -463,7 +599,7 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
           break
         case 5:
           messageContent['elemType'] = 'video'
-          messageContent['elemValue'] =  bodyModel['videoUrl']
+          messageContent['elemValue'] = bodyModel['videoUrl']
           messageContent['elemCover'] = bodyModel['thumbUrl']
           break
         case 7:
@@ -561,9 +697,6 @@ function transformElemType(elemType) {
   }
 }
 
-import commonUtils from '../utils/CommonUtils'
-import formatUtils from '../utils/FormatUtils'
-
 export default {
   transformMessageList,
   pushChatMessageData,
@@ -574,5 +707,15 @@ export default {
   getConversationContentDec,
   isConstraintMessageSend,
   isShowMessageTime,
-  getUserRoute
+  getUserRoute,
+  createTimChat,
+  login,
+  logout,
+  destroy,
+  onMessageReceived,
+  onMessageRevoked,
+  onGroupListUpdated,
+  onGroupAttributesUpdated,
+  onNetWorkStateChange,
+  onKickedOut
 }

@@ -589,6 +589,28 @@ export default {
     this.utils.LocationManagerUtils.getPoiSearch({ keyword: '江城明珠', city: '武汉' }, result => {
 
     })
+    this.utils.ChatMessageUtils.login('user_2103315655', 'eJwtjU0LgkAURf-LbAt5M*MbRWjhIoTIlRbUJoKZyZf4kY4hRP89U5f33Mu5H5YfM*9tOhYx4QHbzpm0qR1ZmvHQm*4mOEjJUSGuk16X97YlzSLuA2DIfYFLY8aWOjNxRBQAsFBH1Z*pUAo1WeRqocf0kGz6y6GOz1DGohoaZeuieZos2J*yNMxfQeqs01SMydXfse8PvKsz0g__', data => {
+      console.log('IM登录：', data)
+    })
+    this.utils.ChatMessageUtils
+      .onMessageReceived(data => {
+        console.log('onMessageReceived', data)
+      })
+      .onMessageRevoked(data => {
+
+      })
+      .onGroupListUpdated(data => {
+
+      })
+      .onGroupAttributesUpdated(data => {
+
+      })
+      .onNetWorkStateChange(data => {
+
+      })
+      .onKickedOut(data => {
+
+      })
     console.log('cookies', this.utils.StorageManagerUtils.getCookies('cookies'))
     console.log('cookiesObject', this.utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
     console.log('获取设备：', this.utils.DeviceManagerUtils.getDeviceManager())

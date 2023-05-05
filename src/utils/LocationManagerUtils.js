@@ -1,9 +1,5 @@
 import AMapLoader from '@amap/amap-jsapi-loader'
-
-const config = {
-  'key': '',
-  'securityJsCode': ''
-}
+import ConstantManagerUtils from './ConstantManagerUtils'
 
 const locationOption = {
   enableHighAccuracy: true,//是否使用高精度定位，默认:true
@@ -26,10 +22,10 @@ const locationOption = {
  */
 export function loadMap(plugins) {
   window._AMapSecurityConfig = {
-    securityJsCode: config.securityJsCode
+    securityJsCode: ConstantManagerUtils.config.mapSecurityCode
   }
   return AMapLoader.load({
-    'key': config.key,
+    'key': ConstantManagerUtils.config.mapKey,
     'version': '2.0',
     'plugins': plugins
   })
@@ -46,11 +42,11 @@ function getCurrentLocation(geocoderListener) {
           if (result.status === 0 && result.info === 'SUCCESS') {
             getGeocoder('', result.position.lng, result.position.lat, geocoderListener)
           } else {
-            console.log('get location status：', result)
+            console.error('get location status：', result)
           }
         })
     }).catch(error => {
-    console.log('get location error：', error)
+    console.error('get location error：', error)
   })
 }
 
@@ -89,11 +85,11 @@ export function getGeocoder(city, lng, lat, geocoderListener) {
         if (result.info === 'OK') {
           geocoderListener(result)
         } else {
-          console.log('get geocoder info status ', result)
+          console.error('get geocoder info status ', result)
         }
       })
     }).catch(error => {
-    console.log('get geocoder info error ', error)
+    console.error('get geocoder info error ', error)
   })
 }
 
@@ -177,7 +173,6 @@ export function getGDLocation() {
 }
 
 export default {
-  config,
   locationOption,
   getCurrentCityLocation,
   getCurrentLocation,

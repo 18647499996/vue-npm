@@ -1,6 +1,6 @@
 {
   "name": "liudonghan",
-  "version": "2.9.5",
+  "version": "3.0.1",
   "description": "刘冬涵专用npm包管理器",
   "author": "18647499996@sina.cn",
   "main": "src/utils/index.js",
@@ -40,6 +40,8 @@
     "lodash": "^4.17.15",
     "pdfh5": "^1.4.2",
     "regenerator-runtime": "^0.13.5",
+    "tim-js-sdk": "^2.27.1",
+    "tim-upload-plugin": "^1.2.0",
     "vant": "^2.10.2",
     "vue": "^2.6.11",
     "vue-amap": "^0.5.10",
