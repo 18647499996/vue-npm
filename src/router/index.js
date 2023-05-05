@@ -15,25 +15,20 @@ Vue.use(Router)
 
 const createRouter = () =>
   new Router({
-    // mode: 'history', // 如果你是 history模式 需要配置vue.config.js publicPath
+    mode: 'history', // 如果你是 history模式 需要配置vue.config.js publicPath 路由地址url取消#符号
     // base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
     routes: constantRouterMap, // 设置路由页面
-    // mode:'history', // 路由地址url取消#符号
   })
 
 const router = createRouter()
 
-// Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
-export function resetRouter() {
-  const newRouter = createRouter()
-  router.matcher = newRouter.matcher // reset router
-}
-
-// router.beforeEach((to, from, next) => {
-//   if (to.meta.title) {
-//     document.title = to.meta.title
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  /* 路由发生变化修改页面title */
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
+})
 
 export default router

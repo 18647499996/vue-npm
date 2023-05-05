@@ -81,7 +81,6 @@
 <script>
 
 import api from '@/api/HouseApi'
-import utils from '../utils/index'
 
 export default {
   components: {},
@@ -565,58 +564,57 @@ export default {
 
   },
   mounted() {
-    utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
-    utils.StorageManagerUtils.saveCookies('cookies', 'liudonhan')
-    utils.StorageManagerUtils.saveCookies('cookiesObject', this.message)
-    utils.StorageManagerUtils.saveLocalStorage('localStorage', 'liudonghan')
-    utils.StorageManagerUtils.saveSessionStorage('sessionStorage', 'liudonghan')
-    utils.EventBusManagerUtils.register('liudonghan', value => {
+    this.utils.NotificationUtils.applyNotificationPermissionDialog('新消息通知', '您有一条新的消息，请注意查收', 0)
+    this.utils.StorageManagerUtils.saveCookies('cookies', 'liudonhan')
+    this.utils.StorageManagerUtils.saveCookies('cookiesObject', this.message)
+    this.utils.StorageManagerUtils.saveLocalStorage('localStorage', 'liudonghan')
+    this.utils.StorageManagerUtils.saveSessionStorage('sessionStorage', 'liudonghan')
+    this.utils.EventBusManagerUtils.register('liudonghan', value => {
       console.log('接收事件监听：', value)
     })
-    utils.EventBusManagerUtils.post('liudonghan', '哈哈哈哈哈')
-    utils.EventBusManagerUtils.unregister('liudonghan')
-    utils.LocationManagerUtils.getCurrentLocation(result => {
+    this.utils.EventBusManagerUtils.post('liudonghan', '哈哈哈哈哈')
+    this.utils.EventBusManagerUtils.unregister('liudonghan')
+    this.utils.LocationManagerUtils.getCurrentLocation(result => {
       console.log('精确定位：', result)
     })
-    utils.LocationManagerUtils.getCurrentCityLocation(result => {
+    this.utils.LocationManagerUtils.getCurrentCityLocation(result => {
       console.log('IP定位：', result)
     })
-    utils.LocationManagerUtils.getWeatherLive('北京市', result => {
+    this.utils.LocationManagerUtils.getWeatherLive('北京市', result => {
       console.log('天气数据：', result)
     })
-    utils.LocationManagerUtils.getWeatherForecast('北京市', result => {
+    this.utils.LocationManagerUtils.getWeatherForecast('北京市', result => {
       console.log('预报数据：', result)
     })
-    utils.LocationManagerUtils.getPoiSearch({ keyword: '江城明珠', city: '武汉' }, result => {
+    this.utils.LocationManagerUtils.getPoiSearch({ keyword: '江城明珠', city: '武汉' }, result => {
 
     })
-    console.log('cookies', utils.StorageManagerUtils.getCookies('cookies'))
-    console.log('cookiesObject', utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
-    console.log('获取设备：', utils.DeviceManagerUtils.getDeviceManager())
-    console.log('组件', utils.FormatUtils.showMessageTime(1677821808 * 1000))
-    console.log('会话列表：', utils.ChatMessageUtils.getConversationList(this.list))
-    console.log('接收消息：', utils.ChatMessageUtils.transformReceiveMessage(this.rec))
-    console.log('消息列表：', utils.ChatMessageUtils.transformMessageList(this.messageList))
-    console.log('获取数据', utils.ChatMessageUtils.isConstraintMessageSend([], this.message, 'user_2103315655', 'supplier_2103376451', 'single'))
+    console.log('cookies', this.utils.StorageManagerUtils.getCookies('cookies'))
+    console.log('cookiesObject', this.utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
+    console.log('获取设备：', this.utils.DeviceManagerUtils.getDeviceManager())
+    console.log('组件', this.utils.FormatUtils.showMessageTime(1677821808 * 1000))
+    console.log('会话列表：', this.utils.ChatMessageUtils.getConversationList(this.list))
+    console.log('接收消息：', this.utils.ChatMessageUtils.transformReceiveMessage(this.rec))
+    console.log('消息列表：', this.utils.ChatMessageUtils.transformMessageList(this.messageList))
+    console.log('获取数据', this.utils.ChatMessageUtils.isConstraintMessageSend([], this.message, 'user_2103315655', 'supplier_2103376451', 'single'))
     // for (let i = 0; i < this.message.length; i++) {
     //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
     // }
-    // this.getLiveList()
     // this.getOption()
     //   .then(data => {
     //     console.log('最终数据：', data)
     //   }).catch(error => {
     //
     // })
-    // api.getAxiosManger()
-    //   .merger([
-    //     this.getLiveList(),
-    //     this.getOption()
-    //   ], data => {
-    //     console.log('-------：', data)
-    //   }, error => {
-    //
-    //   })
+    api.getAxiosManger()
+      .merger([
+        this.getLiveList(),
+        this.getOption()
+      ], data => {
+        console.log('-------：', data)
+      }, error => {
+
+      })
   },
 
   methods: {

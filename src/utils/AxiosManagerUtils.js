@@ -79,7 +79,9 @@ export function transformSchedulers(transformResponseListener) {
  */
 export function addLogcatInterceptors() {
   // 请求拦截
+  let requestTime, responseTime
   axiosManager.interceptors.request.use(config => {
+    requestTime = new Date().getTime()
     console.log('请求数据：', config.baseURL + config.url, config.method, config.method === 'get' ? config.params : config.data)
     return config
   }, error => {
@@ -87,7 +89,8 @@ export function addLogcatInterceptors() {
   })
   // 响应拦截
   axiosManager.interceptors.response.use(config => {
-    console.log('返回数据：', config.request.responseURL, config.data)
+    responseTime = new Date().getTime()
+    console.log('返回数据：', config.request.responseURL,(responseTime - requestTime) + 's', config.data)
     return config
   }, error => {
     return Promise.reject(error)

@@ -5,8 +5,6 @@
  * @param data 消息数据
  * @returns {*}
  */
-import fa from 'element-ui/src/locale/lang/fa'
-
 export function transformMessageList(data) {
   try {
     let transformList = []
