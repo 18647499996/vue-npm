@@ -44,4 +44,4 @@ Vue.use(Switch);
 Vue.use(Divider);
 Vue.use(Step);
 Vue.use(Steps);
-Vue.use(Button)
+Vue.use(Button);

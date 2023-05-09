@@ -594,22 +594,23 @@ export default {
     })
     this.utils.ChatMessageUtils
       .onMessageReceived(data => {
-        console.log('onMessageReceived', data)
+        JSON.stringify()
+        console.warn('onMessageReceived：', data)
       })
       .onMessageRevoked(data => {
-
+        console.warn('onMessageRevoked：', data)
       })
       .onGroupListUpdated(data => {
-
+        console.warn('onGroupListUpdated：', data)
       })
       .onGroupAttributesUpdated(data => {
-
+        console.warn('onGroupAttributesUpdated：', data)
       })
       .onNetWorkStateChange(data => {
-
+        console.warn('onNetWorkStateChange：', data)
       })
       .onKickedOut(data => {
-
+        console.warn('onKickedOut：', data)
       })
     console.log('cookies', this.utils.StorageManagerUtils.getCookies('cookies'))
     console.log('cookiesObject', this.utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
@@ -635,6 +636,7 @@ export default {
       ], data => {
         console.log('-------：', data)
       }, error => {
+        console.log('合并异常：：', error)
 
       })
   },
@@ -656,9 +658,9 @@ export default {
       return api.getShopApi()
         .isLoading(true)
         .transformSchedulers(data => {
-          data.data[0]['name'] = '转换数据'
-          console.log('转换数据：', data.data[0]['name'])
-          return data
+          data.data.data[0]['name'] = '转换数据'
+          console.log('转换数据：', data.data.data[0]['name'])
+          return data.data
         })
         .transformSchedulers(data => {
           data.data[0]['name'] = '二次转换数据'

@@ -9,13 +9,17 @@ export function getDeviceManagerListener(iosListener, androidListener, wxListene
   const device = getDeviceManager()
   switch (device) {
     case 'wechat':
-      wxListener()
+      if (isMiniProgram()) {
+        wxListener('miniProgram')
+      } else {
+        wxListener(device)
+      }
       break
     case 'android':
-      androidListener()
+      androidListener(device)
       break
     case 'ios':
-      iosListener()
+      iosListener(device)
       break
     case 'weibo':
       browserListener(device)
@@ -107,6 +111,14 @@ export function isWechat() {
 }
 
 /**
+ * 是否小程序
+ * @return {boolean}
+ */
+export function isMiniProgram() {
+  return getWindowNavigator().indexOf('Windows') > -1 // 是否在小程序
+}
+
+/**
  * 是否微博浏览器
  * @return {boolean}
  */
@@ -164,6 +176,7 @@ export function isFirefox() {
  * todo IOS                ： Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
  * todo Android            ： Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
  * todo wx                 ： Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.3 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1 wechatdevtools/1.06.2301160 MicroMessenger/8.0.5 Language/zh_CN webview/16822120470857426 webdebugger port/12484 token/6fe6f5dd064aedc55199106a81b067cc
+ * todo 小程序              ： Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.06.2301160 MicroMessenger/8.0.5 Language/zh_CN webview/18397_148 webdebugger miniprogramhtmlwebview miniProgram port/57892"
  * @return {string}
  */
 export function getWindowNavigator() {

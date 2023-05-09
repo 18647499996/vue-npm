@@ -15,7 +15,7 @@ import { $cdn } from '@/config'
 import '@/plugins/vant'
 // 移动端适配
 import 'lib-flexible/flexible.js'
-// 刘冬涵组件
+// 刘冬涵插件
 import utils from '@/utils'
 
 Vue.prototype.$cdn = $cdn
