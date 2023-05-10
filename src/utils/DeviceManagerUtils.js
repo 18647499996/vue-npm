@@ -3,17 +3,17 @@
  * @param iosListener IOS 回调
  * @param androidListener android 回调
  * @param wxListener wx回调
- * @param browserListener 浏览器回调
+ * @param miniProgramListener 小程序回调
+ * @param browserListener 浏览器回调（ weibo、qq、safari、google、microsoft（ 微软 ）、firefox ）
  */
-export function getDeviceManagerListener(iosListener, androidListener, wxListener, browserListener) {
+export function getDeviceManagerListener(iosListener, androidListener, wxListener, miniProgramListener, browserListener) {
   const device = getDeviceManager()
   switch (device) {
+    case 'miniProgram':
+      miniProgramListener(device)
+      break
     case 'wechat':
-      if (isMiniProgram()) {
-        wxListener('miniProgram')
-      } else {
-        wxListener(device)
-      }
+      wxListener(device)
       break
     case 'android':
       androidListener(device)
@@ -48,6 +48,10 @@ export function getDeviceManagerListener(iosListener, androidListener, wxListene
  */
 export function getDeviceManager() {
   console.log('设备终端：', getWindowNavigator())
+
+  if (isMiniProgram()){
+    return 'miniProgram'
+  }
 
   if (isWechat()) {
     return 'wechat'
@@ -115,7 +119,7 @@ export function isWechat() {
  * @return {boolean}
  */
 export function isMiniProgram() {
-  return getWindowNavigator().indexOf('Windows') > -1 // 是否在小程序
+  return getWindowNavigator().indexOf('miniProgram') > -1 // 是否在小程序
 }
 
 /**
