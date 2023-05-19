@@ -81,6 +81,7 @@
 <script>
 
 import api from '@/api/HouseApi'
+// import cryptoJs from 'crypto-js'
 
 export default {
   components: {},
@@ -639,9 +640,32 @@ export default {
         console.log('合并异常：：', error)
 
       })
+
+    // console.log('验签：', this.decrypt('a6uaCcsO4eh8Px15bAGsYi2ExVlo7ileNOU6DBRm6Ig=', '961110*^', '961110*^'))
   },
 
   methods: {
+
+    /**
+     * 解密
+     * @param message
+     * @param key
+     * @param iv
+     * @return {string}
+     */
+    decrypt(message, key = '114439*^', iv = '114439*^') {
+      const keyHex = cryptoJs.enc.Utf8.parse(key);
+      const decrypted = cryptoJs.TripleDES.decrypt({
+        // ciphertext: cryptoJs.enc.Hex.parse(ciphertext) // hex 编码解密
+        ciphertext: cryptoJs.enc.Base64.parse(message) // base64 编码解密
+      }, keyHex, {
+        mode: cryptoJs.mode.CBC, // CBC模式
+        padding: cryptoJs.pad.Pkcs7, // pkcs7padding 填充方式
+        iv: cryptoJs.enc.Utf8.parse(iv) // 设置偏移量（若 ECB 模式则删除该行）
+      });
+      return decrypted.toString(cryptoJs.enc.Utf8); // 返回 base64 编码格式
+    },
+
     getLiveList() {
       let fromData = new FormData()
       fromData.append('uid', 'user_2103415823')
@@ -673,7 +697,7 @@ export default {
     },
 
     onClickLogin() {
-      this.$router.push('HomeActivity')
+      this.$router.push('DemoActivity')
     },
 
     onClickDemo() {

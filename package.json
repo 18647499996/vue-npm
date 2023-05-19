@@ -38,7 +38,6 @@
     "js-cookie": "^2.2.1",
     "lib-flexible": "^0.3.2",
     "lodash": "^4.17.15",
-    "pdfh5": "^1.4.2",
     "regenerator-runtime": "^0.13.5",
     "tim-js-sdk": "^2.27.1",
     "tim-upload-plugin": "^1.2.0",
@@ -46,7 +45,6 @@
     "vue": "^2.6.11",
     "vue-amap": "^0.5.10",
     "vue-baidu-map": "^0.21.22",
-    "vue-pdf": "^4.3.0",
     "vue-router": "^3.5.1",
     "vuex": "^3.4.0",
     "weixin-js-sdk": "^1.6.0"

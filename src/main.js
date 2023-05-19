@@ -26,6 +26,8 @@ Vue.prototype.utils.ConstantManagerUtils.config.mapKey = '145a824b05ee52a2dd6fd4
 Vue.prototype.utils.ConstantManagerUtils.config.timSdkId = ''
 Vue.prototype.utils.ConstantManagerUtils.config.logLevel = 1
 Vue.use(ElementUI)
+// import vueEsign from 'vue-esign'
+// Vue.use(vueEsign)
 
 new Vue({
   el: '#app',
