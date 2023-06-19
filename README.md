@@ -589,7 +589,7 @@ export default service
 
 在`src/api` 文件夹下统一管理接口
 
-- 你可以建立多个模块对接接口, 比如 `HouseApi.js` 里是首页的接口这里讲解 `user.js`
+- 你可以建立多个模块对接接口, 比如 `BaseApi.js` 里是首页的接口这里讲解 `user.js`
 - `url` 接口地址，请求的时候会拼接上 `config` 下的 `baseApi`
 - `method` 请求方法
 - `data` 请求参数 `qs.stringify(params)` 是对数据系列化操作

@@ -38,8 +38,6 @@
 </template>
 
 <script>
-import { getUserInfo, getItemDetail, getActivityLink } from '@/api/UserApi'
-import { Dialog, Notify, Toast } from 'vant'
 
 export default {
   name: 'HomeActivity',
@@ -60,9 +58,7 @@ export default {
   },
 
   methods: {
-    onClickQuery(){
-      this.$router.push('ReportDetailsUserActivity')
-    }
+
   }
 }
 
