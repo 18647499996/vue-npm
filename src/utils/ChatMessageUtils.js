@@ -263,31 +263,36 @@ export function getConversationList(data) {
       conversationModel['isDisturb'] = data[i]['is_disturb']
       conversationModel['updateTime'] = data[i]['updated_at']
       const messageModel = data[i]['wheat_news_rocerd']
-      const bodyModel = null === messageModel ? null : JSON.parse(messageModel['body'])
-      conversationModel['platform'] = null === messageModel ? 'unknown' : messageModel['platform']
-      conversationModel['senderTimeMillis'] = null === messageModel ? 0 : formatUtils.getTimestamp(messageModel['createTimeInMillis'])
-      conversationModel['messageContent'] = null === messageModel ? null : getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
-      if (null !== messageModel) {
-        switch (messageModel['platform']) {
-          case 'IOS':
-            conversationModel['messageContent']['faceUrl'] = bodyModel['faceURL']
-            conversationModel['messageContent']['nickName'] = bodyModel['nickName']
-            break
-          case 'Android':
-            conversationModel['messageContent']['faceUrl'] = bodyModel['message']['faceUrl']
-            conversationModel['messageContent']['nickName'] = bodyModel['message']['nickName']
-            break
-          case 'web':
-          case 'h5':
-            conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
-            conversationModel['messageContent']['nickname'] = bodyModel['nick']
-            break
-          case 'api':
-            conversationModel['messageContent']['faceUrl'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['avatar'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['head_portrait']
-            conversationModel['messageContent']['nickname'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['name'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['nickname']
-            break
-        }
+      if (null == messageModel) {
+        conversationModel['messageContent'] = null
+      } else {
+        conversationModel['messageContent'] = getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filename'], JSON.parse(messageModel['body']))
       }
+      // const bodyModel = null === messageModel ? null : JSON.parse(messageModel['body'])
+      // conversationModel['platform'] = null === messageModel ? 'unknown' : messageModel['platform']
+      // conversationModel['senderTimeMillis'] = null === messageModel ? 0 : formatUtils.getTimestamp(messageModel['createTimeInMillis'])
+      // conversationModel['messageContent'] = null === messageModel ? null : getMessageContent(messageModel['platform'], parseInt(messageModel['contentType']), messageModel['filePath'], bodyModel)
+      // if (null !== messageModel) {
+      //   switch (messageModel['platform']) {
+      //     case 'IOS':
+      //       conversationModel['messageContent']['faceUrl'] = bodyModel['faceURL']
+      //       conversationModel['messageContent']['nickName'] = bodyModel['nickName']
+      //       break
+      //     case 'Android':
+      //       conversationModel['messageContent']['faceUrl'] = bodyModel['message']['faceUrl']
+      //       conversationModel['messageContent']['nickName'] = bodyModel['message']['nickName']
+      //       break
+      //     case 'web':
+      //     case 'h5':
+      //       conversationModel['messageContent']['faceUrl'] = bodyModel['avatar']
+      //       conversationModel['messageContent']['nickname'] = bodyModel['nick']
+      //       break
+      //     case 'api':
+      //       conversationModel['messageContent']['faceUrl'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['avatar'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['head_portrait']
+      //       conversationModel['messageContent']['nickname'] = 2 === data[i]['conversation_type'] ? null === data[i]['wheat_group'] ? '' : data[i]['wheat_group']['name'] : null === data[i]['wheat_user'] ? '' : data[i]['wheat_user']['nickname']
+      //       break
+      //   }
+      // }
       conversationList.push(conversationModel)
     }
     return conversationList
@@ -463,7 +468,7 @@ export function getUserRoute(targetId) {
  */
 function getMessageContent(platform, contentType, filePath, bodyModel) {
   const messageContent = {}
-  if (undefined === bodyModel) {
+  if (undefined === bodyModel || null == bodyModel) {
     return null
   }
   switch (platform) {
@@ -507,35 +512,36 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
       switch (contentType) {
         case 1:
           messageContent['elemType'] = 'text'
-          messageContent['elemValue'] = commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['textContentBytes'])
+          messageContent['elemValue'] = bodyModel[0]['MsgContent']['Text']
           break
         case 2:
           messageContent['elemType'] = 'custom'
           messageContent['elemValue'] = ''
-          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data'])))
-          messageContent['customType'] = JSON.parse(commonUtils.byteToString(bodyModel['message']['messageBaseElements'][0]['data']))['type']
+          messageContent['customInfo'] = getCustomMessageContent(JSON.parse(bodyModel[0]['MsgContent']['Data']))
+          messageContent['customType'] = JSON.parse(bodyModel[0]['MsgContent']['Data']['type'])
           break
         case 3:
           messageContent['elemType'] = 'image'
           messageContent['elemValue'] = filePath
-          messageContent['imageList'] = bodyModel['message']['messageBaseElements'][0]
+          messageContent['imageList'] = bodyModel[0]['MsgContent']['ImageInfoArray']
           break
         case 4:
           messageContent['elemType'] = 'voice'
-          messageContent['elemValue'] = filePath
-          messageContent['duration'] = bodyModel['message']['messageBaseElements'][0]['soundDuration']
+          messageContent['elemValue'] = bodyModel[0]['MsgContent']['Url']
+          messageContent['duration'] = bodyModel[0]['MsgContent']['Second']
           break
         case 5:
           messageContent['elemType'] = 'video'
-          messageContent['elemValue'] = filePath
-          messageContent['elemCover'] = bodyModel['message']['messageBaseElements'][0]['snapshotDownloadUrl']
+          messageContent['elemValue'] = bodyModel[0]['MsgContent']['VideoUrl']
+          messageContent['elemCover'] = bodyModel[0]['MsgContent']['ThumbUrl']
+          messageContent['duration'] = bodyModel[0]['MsgContent']['VideoSecond']
           break
         case 7:
           messageContent['elemType'] = 'location'
           messageContent['elemValue'] = ''
-          messageContent['locationInfo'] = JSON.parse(bodyModel['message']['messageBaseElements'][0]['description'])
-          messageContent['longitude'] = bodyModel['message']['messageBaseElements'][0]['longitude']
-          messageContent['latitude'] = bodyModel['message']['messageBaseElements'][0]['latitude']
+          messageContent['locationInfo'] = JSON.parse(bodyModel[0]['MsgContent']['Desc'])
+          messageContent['longitude'] = bodyModel[0]['MsgContent']['Longitude']
+          messageContent['latitude'] = bodyModel[0]['MsgContent']['Latitude']
           break
       }
       break
@@ -543,6 +549,7 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
     case 'h5':
       switch (contentType) {
         case 1:
+          console.warn('消息类型：', bodyModel)
           messageContent['elemType'] = 'text'
           messageContent['elemValue'] = bodyModel['payload']['text']
           break
@@ -717,5 +724,6 @@ export default {
   onGroupListUpdated,
   onGroupAttributesUpdated,
   onNetWorkStateChange,
-  onKickedOut
+  onKickedOut,
+  TIM
 }

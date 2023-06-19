@@ -56,6 +56,23 @@
       <van-button class='btn-login' color='#1970F3' round @click='onClickLogin'>登录</van-button>
     </van-row>
 
+    <!--    <videoPlayer class="video-player"-->
+    <!--                  ref="videoPlayer"-->
+    <!--                  :playsinline="true"-->
+    <!--                  :options="playerOptions"-->
+    <!--                  @play="onPlayerPlay($event)"-->
+    <!--                  @pause="onPlayerPause($event)"-->
+    <!--                  @ended="onPlayerEnded($event)"-->
+    <!--                  @waiting="onPlayerWaiting($event)"-->
+    <!--                  @playing="onPlayerPlaying($event)"-->
+    <!--                  @loadeddata="onPlayerLoadeddata($event)"-->
+    <!--                  @timeupdate="onPlayerTimeupdate($event)"-->
+    <!--                  @canplay="onPlayerCanplay($event)"-->
+    <!--                  @canplaythrough="onPlayerCanplaythrough($event)"-->
+    <!--                  @statechanged="playerStateChanged($event)"-->
+    <!--                  @ready="playerReadied">-->
+    <!--    </videoPlayer>-->
+
 
     <!--    底部背景-->
     <van-row class='row-bottom'>
@@ -81,10 +98,12 @@
 <script>
 
 import api from '@/api/HouseApi'
-// import cryptoJs from 'crypto-js'
+import cryptoJs from 'crypto-js'
 
 export default {
-  components: {},
+  components: {
+    // videoPlayer
+  },
   data() {
     return {
       index: 0,
@@ -558,6 +577,68 @@ export default {
             '2023-04-18 10:59:49.000'
           ]
         }
+      ],
+      conversationList: [
+        {
+          'id': 268,
+          'userId': 'supplier_2103291574',
+          'targetId': 'user_2102961110',
+          'status': 1,
+          'unread': 22,
+          'sorts': 0,
+          'is_online': 1,
+          'conversation_type': 1,
+          'main_id': 12330,
+          'updated_at': '2023-06-17 15:14:18',
+          'created_at': '2023-03-25 09:16:00',
+          'fromName': '张雷测试品牌专营店',
+          'targetName': '汇法-刘冬涵',
+          'manufacturer': '',
+          'phoneModel': '',
+          'is_disturb': 2,
+          'wheat_user': {
+            'nickname': '汇法-刘冬涵',
+            'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+            'uid': 1610,
+            'username': 'user_2102961110'
+          },
+          'wheat_group': null,
+          'wheat_news_rocerd': {
+            'id': 12330,
+            'group_type': 1,
+            'contentType': 1,
+            'targetID': 'supplier_2103291574',
+            'fromID': 'user_2102961110',
+            'content': '亲戚哈哈哈哈',
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"\\u4eb2\\u621a\\u54c8\\u54c8\\u54c8\\u54c8"}}]',
+            'createTimeInMillis': '2023-06-17 15:14:18.000',
+            'fromAppkey': 'C2Csupplier_2103291574',
+            'serverMessageId': '3274746417_108901543_1686986058',
+            'created_at': '2023-06-17 15:14:18',
+            'updated_at': '2023-06-17 15:14:18',
+            'cloudCustomData': '{"deviceId":"08311a53cbe2f5ac","manufacturer":"OPPO","message":{"message":{"clientTime":1686986058,"excludedFromContentModeration":false,"excludedFromLastMessage":false,"excludedFromUnreadCount":false,"hasSentReceipt":false,"isBroadcastMessage":false,"isF',
+            'targetType': 'single',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'filePath': '',
+            'fromName': '汇法-刘冬涵',
+            'targetName': '张雷测试品牌专营店',
+            'targetAppkey': '',
+            'source': 'callback',
+            'isRevoked': 0,
+            'priority': '',
+            'isPeerRead': 0,
+            'platform': 'Android',
+            'status': 1,
+            'is_latest': 1,
+            'manufacturer': 'OPPO',
+            'phoneModel': 'PCEM00',
+            'uid': '',
+            'ip': '',
+            'duration': ''
+          }
+        }
       ]
     }
   },
@@ -592,10 +673,10 @@ export default {
     })
     this.utils.ChatMessageUtils.login('user_2103315655', 'eJwtjU0LgkAURf-LbAt5M*MbRWjhIoTIlRbUJoKZyZf4kY4hRP89U5f33Mu5H5YfM*9tOhYx4QHbzpm0qR1ZmvHQm*4mOEjJUSGuk16X97YlzSLuA2DIfYFLY8aWOjNxRBQAsFBH1Z*pUAo1WeRqocf0kGz6y6GOz1DGohoaZeuieZos2J*yNMxfQeqs01SMydXfse8PvKsz0g__', data => {
       console.log('IM登录：', data)
+
     })
     this.utils.ChatMessageUtils
       .onMessageReceived(data => {
-        JSON.stringify()
         console.warn('onMessageReceived：', data)
       })
       .onMessageRevoked(data => {
@@ -613,11 +694,12 @@ export default {
       .onKickedOut(data => {
         console.warn('onKickedOut：', data)
       })
+    console.log('TIME', this.utils.ChatMessageUtils.TIM.TYPES)
     console.log('cookies', this.utils.StorageManagerUtils.getCookies('cookies'))
     console.log('cookiesObject', this.utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
     console.log('获取设备：', this.utils.DeviceManagerUtils.getDeviceManager())
     console.log('组件', this.utils.FormatUtils.showMessageTime(1677821808 * 1000))
-    console.log('会话列表：', this.utils.ChatMessageUtils.getConversationList(this.list))
+    console.log('会话列表：', this.utils.ChatMessageUtils.getConversationList(this.conversationList))
     console.log('接收消息：', this.utils.ChatMessageUtils.transformReceiveMessage(this.rec))
     console.log('消息列表：', this.utils.ChatMessageUtils.transformMessageList(this.messageList))
     console.log('获取数据', this.utils.ChatMessageUtils.isConstraintMessageSend([], this.message, 'user_2103315655', 'supplier_2103376451', 'single'))
@@ -641,7 +723,7 @@ export default {
 
       })
 
-    // console.log('验签：', this.decrypt('a6uaCcsO4eh8Px15bAGsYi2ExVlo7ileNOU6DBRm6Ig=', '961110*^', '961110*^'))
+    console.log('验签：', this.decrypt('PLto6ctVfxAFKWyYCH1AOJjg_B_mhuyesLgcNSb8F1s=', '033730*^', '033730*^'))
   },
 
   methods: {
@@ -654,7 +736,9 @@ export default {
      * @return {string}
      */
     decrypt(message, key = '114439*^', iv = '114439*^') {
-      const keyHex = cryptoJs.enc.Utf8.parse(key);
+      message = message.replaceAll('_', '/')
+      console.log('字符串：' + message)
+      const keyHex = cryptoJs.enc.Utf8.parse(key)
       const decrypted = cryptoJs.TripleDES.decrypt({
         // ciphertext: cryptoJs.enc.Hex.parse(ciphertext) // hex 编码解密
         ciphertext: cryptoJs.enc.Base64.parse(message) // base64 编码解密
@@ -662,8 +746,8 @@ export default {
         mode: cryptoJs.mode.CBC, // CBC模式
         padding: cryptoJs.pad.Pkcs7, // pkcs7padding 填充方式
         iv: cryptoJs.enc.Utf8.parse(iv) // 设置偏移量（若 ECB 模式则删除该行）
-      });
-      return decrypted.toString(cryptoJs.enc.Utf8); // 返回 base64 编码格式
+      })
+      return decrypted.toString(cryptoJs.enc.Utf8) // 返回 base64 编码格式
     },
 
     getLiveList() {
@@ -702,6 +786,61 @@ export default {
 
     onClickDemo() {
       this.$router.push('RulerActivity')
+    },
+
+    // 播放回调
+    onPlayerPlay(player) {
+      console.log('player play!', player)
+    },
+
+    // 暂停回调
+    onPlayerPause(player) {
+      console.log('player pause!', player)
+    },
+
+    // 视频播完回调
+    onPlayerEnded(player) {
+      console.log(player)
+    },
+
+    // DOM元素上的readyState更改导致播放停止
+    onPlayerWaiting(player) {
+      console.log(player)
+    },
+
+    // 已开始播放回调
+    onPlayerPlaying(player) {
+      console.log(player)
+    },
+
+    // 当播放器在当前播放位置下载数据时触发
+    onPlayerLoadeddata(player) {
+      console.log(player)
+    },
+
+    // 当前播放位置发生变化时触发。
+    onPlayerTimeupdate(player) {
+      console.log(player)
+    },
+
+    //媒体的readyState为HAVE_FUTURE_DATA或更高
+    onPlayerCanplay(player) {
+      // console.log('player Canplay!', player)
+    },
+
+    //媒体的readyState为HAVE_ENOUGH_DATA或更高。这意味着可以在不缓冲的情况下播放整个媒体文件。
+    onPlayerCanplaythrough(player) {
+      // console.log('player Canplaythrough!', player)
+    },
+
+    //播放状态改变回调
+    playerStateChanged(playerCurrentState) {
+      console.log('player current update state', playerCurrentState)
+    },
+
+    //将侦听器绑定到组件的就绪状态。与事件监听器的不同之处在于，如果ready事件已经发生，它将立即触发该函数。。
+    playerReadied(player) {
+      console.log('example player 1 readied', player)
     }
   }
 }
