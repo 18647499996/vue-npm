@@ -606,11 +606,11 @@ export default {
           'wheat_news_rocerd': {
             'id': 12330,
             'group_type': 1,
-            'contentType': 1,
+            'contentType': 2,
             'targetID': 'supplier_2103291574',
             'fromID': 'user_2102961110',
             'content': '亲戚哈哈哈哈',
-            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"\\u4eb2\\u621a\\u54c8\\u54c8\\u54c8\\u54c8"}}]',
+            'body': '[{"MsgType":"TIMCustomElem","MsgContent":{"Desc":"","Data":"{\\"id\\":\\"supplier_2103291574\\",\\"orderInfo\\":{\\"activity_type\\":\\"N\\",\\"created_at\\":\\"2023\\/6\\/17 11:34:53\\",\\"describe\\":\\"\u8bf7\u5c3d\u5feb\u5e2e\u6211\u53d1\u8d27\\",\\"id\\":\\"12592034906058856\\",\\"is_confirm\\":false,\\"json\\":\\"{\\\\\\"goods_attributes\\\\\\":[{\\\\\\"name\\\\\\":\\\\\\"\u9002\u7528\u5b63\u8282\\\\\\",\\\\\\"id\\\\\\":22822,\\\\\\"value\\\\\\":\\\\\\"\u56db\u5b63\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\u4f5c\u54c1\u7c7b\u578b\\\\\\",\\\\\\"id\\\\\\":22823,\\\\\\"value\\\\\\":\\\\\\"\u60ac\u7591\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\u578b\u53f7\\\\\\",\\\\\\"id\\\\\\":22824,\\\\\\"value\\\\\\":\\\\\\"69\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\u957f\u5ea6\\\\\\",\\\\\\"id\\\\\\":22825,\\\\\\"value\\\\\\":\\\\\\"\u957f\u5ea6\u5c5e\u6027\u540d\u79f01,\u957f\u5ea6\u5c5e\u6027\u503c2\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\u5bb9\u91cf\\\\\\",\\\\\\"id\\\\\\":22826,\\\\\\"value\\\\\\":\\\\\\"69\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\u82b1\u8272\\\\\\",\\\\\\"id\\\\\\":22827,\\\\\\"value\\\\\\":\\\\\\"\u5927\u9ec4\\\\\\"}],\\\\\\"is_accept\\\\\\":1,\\\\\\"tag_list\\\\\\":[\\\\\\"\u4e03\u5929\u65e0\u7406\u7531\u9000\u6362\\\\\\",\\\\\\"\u5305\u90ae\\\\\\",\\\\\\"24\u5c0f\u65f6\u5185\u53d1\u8d27\\\\\\"]}\\",\\"order_sn\\":\\"XF1202306171134533421\\",\\"price\\":\\"0.01\\",\\"shop_id\\":\\"81751\\",\\"shop_image\\":\\"https:\\/\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\/product\\/20221226\\/20221226012354-421.png\\",\\"shop_name\\":\\"\u5f20\u96f7\u6d4b\u8bd5\u54c1\u724c\u4e13\u8425\u5e97\\",\\"sku_num\\":\\"1\\",\\"status\\":\\"2\\",\\"thumb\\":\\"https:\\/\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\/product\\/20230330\\/20230330090357-668.jpg\\",\\"title\\":\\"\u6d4b\u8bd5001\u7535\u5f71\\"},\\"type\\":2}","Ext":"","Sound":""}}]',
             'createTimeInMillis': '2023-06-17 15:14:18.000',
             'fromAppkey': 'C2Csupplier_2103291574',
             'serverMessageId': '3274746417_108901543_1686986058',
@@ -638,6 +638,400 @@ export default {
             'ip': '',
             'duration': ''
           }
+        }
+      ],
+      messageRecord:[
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12405",
+          "_score": null,
+          "_source": {
+            "contentType": 4,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMSoundElem\",\"MsgContent\":{\"Size\":4550,\"Second\":2,\"Download_Flag\":2,\"UUID\":\"1400664826_user_2103345534_50d8473749202648c1388aa59a6754ea.amr\",\"Url\":\"https:\\\/\\\/cos.ap-shanghai.myqcloud.com\\\/0785-shanghai-007-sharedv4-04-1303031839\\\/b9e1-1400664826\\\/281f-user_2103345534\\\/50d8473749202648c1388aa59a6754ea.amr?im-report-marked\"}}]",
+            "content": "",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:43:41.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "https:\/\/cos.ap-shanghai.myqcloud.com\/0785-shanghai-007-sharedv4-04-1303031839\/b9e1-1400664826\/281f-user_2103345534\/50d8473749202648c1388aa59a6754ea.amr?im-report-marked",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812313004_131671815_1687160621",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"[语音]\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": "",
+            "file_width": "",
+            "coverPath": "",
+            "duration": 2,
+            "updated_at": "2023-06-19 15:43:42",
+            "created_at": "2023-06-19 15:43:42",
+            "id": 12405,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:43:41.000"
+          ]
+        },
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12403",
+          "_score": null,
+          "_source": {
+            "contentType": 2,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMCustomElem\",\"MsgContent\":{\"Desc\":\"\",\"Data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_name\\\":\\\"A1\\u624b\\u6495\\u9762\\u5305\\\",\\\"supplier_id\\\":\\\"81751\\\",\\\"supplier_head\\\":\\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20221226\\\\\\\/20221226012354-421.png\\\",\\\"goods_config\\\":\\\"\\u5305\\u88c5\\u5c3a\\u5bf8\\uff08\\u957f\\uff09 100...\\\",\\\"goods_num\\\":2,\\\"sku_id\\\":\\\"LK_92444\\\",\\\"supplier_name\\\":\\\"\\u5f20\\u96f7\\u6d4b\\u8bd5\\u54c1\\u724c\\u4e13\\u8425\\u5e97\\\",\\\"goods_activity\\\":\\\"N\\\",\\\"goods_cover\\\":\\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20230330\\\\\\\/20230330090134-995.jpg\\\",\\\"tag_list\\\":[\\\"\\u4e03\\u5929\\u65e0\\u7406\\u7531\\u9000\\u6362\\\",\\\"\\u5305\\u90ae\\\",\\\"24\\u5c0f\\u65f6\\u5185\\u53d1\\u8d27\\\"],\\\"goods_price\\\":\\\"0.01\\\",\\\"spu_id\\\":\\\"LG_1158952\\\",\\\"is_wholesale\\\":true}}\",\"Ext\":\"\",\"Sound\":\"\"}}]",
+            "content": "",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:43:24.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812313003_131671814_1687160604",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"[商品消息]\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": "",
+            "file_width": "",
+            "coverPath": "",
+            "duration": "",
+            "updated_at": "2023-06-19 15:43:24",
+            "created_at": "2023-06-19 15:43:24",
+            "id": 12403,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:43:24.000"
+          ]
+        },
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12401",
+          "_score": null,
+          "_source": {
+            "contentType": 7,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMLocationElem\",\"MsgContent\":{\"Desc\":\"{\\\"screenUrl\\\":\\\"https:\\\\\\\/\\\\\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\\\\\/APPLE\\\\\\\/Image\\\\\\\/1687160584207.jpg\\\",\\\"cityName\\\":\\\"\\u5317\\u4eac\\u5e02\\\",\\\"districtName\\\":\\\"\\u4e1c\\u57ce\\u533a\\\",\\\"street\\\":\\\"\\u9752\\u5e74\\u6e56\\u5317\\u88574\\u53f7\\\",\\\"addressName\\\":\\\"\\u541b\\u6f9c\\u5546\\u52a1\\\",\\\"provinceName\\\":\\\"\\u5317\\u4eac\\u5e02\\\"}\",\"Latitude\":39.96128,\"Longitude\":116.406399}}]",
+            "content": "",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:43:04.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "{\"screenUrl\":\"https:\\\/\\\/shops-1307611133.cos.ap-beijing.myqcloud.com\\\/APPLE\\\/Image\\\/1687160584207.jpg\",\"cityName\":\"北京市\",\"districtName\":\"东城区\",\"street\":\"青年湖北街4号\",\"addressName\":\"君澜商务\",\"provinceName\":\"北京市\"}",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812313002_131671813_1687160584",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"[位置]\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": 39.96128,
+            "file_width": 116.406399,
+            "coverPath": "",
+            "duration": "",
+            "updated_at": "2023-06-19 15:43:04",
+            "created_at": "2023-06-19 15:43:04",
+            "id": 12401,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:43:04.000"
+          ]
+        },
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12399",
+          "_score": null,
+          "_source": {
+            "contentType": 5,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMVideoFileElem\",\"MsgContent\":{\"VideoSize\":1241646,\"VideoSecond\":7,\"VideoFormat\":\"MP4\",\"ThumbSize\":17661,\"ThumbWidth\":108,\"ThumbHeight\":192,\"ThumbFormat\":\"\",\"VideoDownloadFlag\":2,\"VideoUUID\":\"1400664826_user_2103345534_2cdea80ef5b3d8acaa58267ae9957345.mp4\",\"VideoUrl\":\"https:\\\/\\\/cos.ap-shanghai.myqcloud.com\\\/0785-shanghai-007-sharedv4-04-1303031839\\\/b9e1-1400664826\\\/281f-user_2103345534\\\/2cdea80ef5b3d8acaa58267ae9957345.mp4?im-report-marked\",\"ThumbDownloadFlag\":2,\"ThumbUUID\":\"1400664826_user_2103345534_9ab9cbf3b9f09bc2544d7772091997e3\",\"ThumbUrl\":\"https:\\\/\\\/cos.ap-shanghai.myqcloud.com\\\/0785-shanghai-007-sharedv4-04-1303031839\\\/b9e1-1400664826\\\/281f-user_2103345534\\\/9ab9cbf3b9f09bc2544d7772091997e3?imageMogr2\\\/&im-report-marked\"}}]",
+            "content": "",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:42:59.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "https:\/\/cos.ap-shanghai.myqcloud.com\/0785-shanghai-007-sharedv4-04-1303031839\/b9e1-1400664826\/281f-user_2103345534\/2cdea80ef5b3d8acaa58267ae9957345.mp4?im-report-marked",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812313001_131671812_1687160579",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"[视频]\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": 192,
+            "file_width": 108,
+            "coverPath": "https:\/\/cos.ap-shanghai.myqcloud.com\/0785-shanghai-007-sharedv4-04-1303031839\/b9e1-1400664826\/281f-user_2103345534\/9ab9cbf3b9f09bc2544d7772091997e3?imageMogr2\/&im-report-marked",
+            "duration": 7,
+            "updated_at": "2023-06-19 15:42:59",
+            "created_at": "2023-06-19 15:42:59",
+            "id": 12399,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:42:59.000"
+          ]
+        },
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12397",
+          "_score": null,
+          "_source": {
+            "contentType": 1,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"\\u5c0f\\u65f6\\u5019\\uff0c\\u60a8\\u662f\\u5c71\\uff0c\\u5dcd\\u5ce8\\u800c\\u633a\\u62d4\\uff0c\\u4efb\\u5c81\\u6708\\u7684\\u6fc0\\u6d41\\u51b2\\u5237\\uff0c\\u5c06\\u6211\\u5475\\u62a4\\u5728\\u6000\\u91cc\\uff1b\\u957f\\u5927\\u4e86\\uff0c\\u60a8\\u662f\\u6d77\\uff0c\\u5bbd\\u5bb9\\u800c\\u6d69\\u701a\\uff0c\\u4efb\\u65f6\\u5149\\u7684\\u6c99\\u6ee9\\u963b\\u622a\\uff0c\\u628a\\u6211\\u5f15\\u5bfc\\u5411\\u7cbe\\u5f69\\u3002\\u5176\\u5b9e\\uff0c\\u60a8\\u662f\\u5929\\uff0c\\u6c89\\u9ed8\\u5374\\u6c38\\u6052\\uff0c\\u65e0\\u8bba\\u9634\\u6674\\u51b7\\u6696\\uff0c\\u4e0d\\u7ba1\\u805a\\u6563\\u79bb\\u5408\\uff0c\\u603b\\u628a\\u6211\\u7b3c\\u7f69\\u5176\\u4e2d\\u3002\\u7236\\u4eb2\\u8282\\u5230\\u4e86\\uff0c\\u53ea\\u60f3\\u795d\\u60a8\\u5065\\u5eb7\\u957f\\u5bff\\uff0c\\u5feb\\u4e50\\u65e0\\u5fe7\\uff01\"}}]",
+            "content": "小时候，您是山，巍峨而挺拔，任岁月的激流冲刷，将我呵护在怀里；长大了，您是海，宽容而浩瀚，任时光的沙滩阻截，把我引导向精彩。其实，您是天，沉默却永恒，无论阴晴冷暖，不管聚散离合，总把我笼罩其中。父亲节到了，只想祝您健康长寿，快乐无忧！",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:42:25.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812313000_131671811_1687160545",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"小时候，您是山，巍峨而挺拔，任岁月的激流冲刷，将我呵护在怀里；长大了，您是海，宽容而浩瀚，任时光的沙滩阻截，把我引导向精彩。其实，您是天，沉默却永恒，无论阴晴冷暖，不管聚散离合，总把我笼罩其中。父亲节到了，只想祝您健康长寿，快乐无忧！\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": "",
+            "file_width": "",
+            "coverPath": "",
+            "duration": "",
+            "updated_at": "2023-06-19 15:42:25",
+            "created_at": "2023-06-19 15:42:25",
+            "id": 12397,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:42:25.000"
+          ]
+        },
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12395",
+          "_score": null,
+          "_source": {
+            "contentType": 3,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMImageElem\",\"MsgContent\":{\"UUID\":\"1400664826_user_2103345534_bc6124f2095596a68bcdd28f229367b2\",\"ImageFormat\":1,\"ImageInfoArray\":[{\"Type\":1,\"Size\":84954,\"Width\":828,\"Height\":1792,\"URL\":\"https:\\\/\\\/cos.ap-shanghai.myqcloud.com\\\/0785-shanghai-007-sharedv4-04-1303031839\\\/b9e1-1400664826\\\/281f-user_2103345534\\\/bc6124f2095596a68bcdd28f229367b2?imageMogr2\\\/&im-report-marked\"},{\"Type\":2,\"Size\":0,\"Width\":0,\"Height\":0,\"URL\":\"https:\\\/\\\/cos.ap-shanghai.myqcloud.com\\\/0785-shanghai-007-sharedv4-04-1303031839\\\/b9e1-1400664826\\\/281f-user_2103345534\\\/bc6124f2095596a68bcdd28f229367b2?imageMogr2\\\/&im-report-marked&imageView2\\\/3\\\/w\\\/720\\\/h\\\/1558\"},{\"Type\":3,\"Size\":0,\"Width\":198,\"Height\":428,\"URL\":\"https:\\\/\\\/cos.ap-shanghai.myqcloud.com\\\/0785-shanghai-007-sharedv4-04-1303031839\\\/b9e1-1400664826\\\/281f-user_2103345534\\\/bc6124f2095596a68bcdd28f229367b2?imageMogr2\\\/&im-report-marked&imageView2\\\/3\\\/w\\\/198\\\/h\\\/428\"}]}}]",
+            "content": "",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:42:11.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "https:\/\/cos.ap-shanghai.myqcloud.com\/0785-shanghai-007-sharedv4-04-1303031839\/b9e1-1400664826\/281f-user_2103345534\/bc6124f2095596a68bcdd28f229367b2?imageMogr2\/&im-report-marked",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812312999_131671810_1687160531",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"[图片]\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": 1792,
+            "file_width": 828,
+            "coverPath": "",
+            "duration": "",
+            "updated_at": "2023-06-19 15:42:11",
+            "created_at": "2023-06-19 15:42:11",
+            "id": 12395,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:42:11.000"
+          ]
+        },
+        {
+          "_index": "news_record",
+          "_type": "_doc",
+          "_id": "12393",
+          "_score": null,
+          "_source": {
+            "contentType": 2,
+            "group_type": 1,
+            "body": "[{\"MsgType\":\"TIMCustomElem\",\"MsgContent\":{\"Desc\":\"\",\"Data\":\"{\\\"type\\\":2,\\\"orderInfo\\\":{\\\"id\\\":\\\"12584176866551168\\\",\\\"thumb\\\":\\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20230330\\\\\\\/20230330090357-668.jpg\\\",\\\"order_sn\\\":\\\"XF2202306191537240122\\\",\\\"json\\\":\\\"{\\\\\\\"goods_attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"\\u9002\\u7528\\u5b63\\u8282\\\\\\\",\\\\\\\"id\\\\\\\":22822,\\\\\\\"value\\\\\\\":\\\\\\\"\\u56db\\u5b63\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\u4f5c\\u54c1\\u7c7b\\u578b\\\\\\\",\\\\\\\"id\\\\\\\":22823,\\\\\\\"value\\\\\\\":\\\\\\\"\\u60ac\\u7591\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\u578b\\u53f7\\\\\\\",\\\\\\\"id\\\\\\\":22824,\\\\\\\"value\\\\\\\":\\\\\\\"69\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\u957f\\u5ea6\\\\\\\",\\\\\\\"id\\\\\\\":22825,\\\\\\\"value\\\\\\\":\\\\\\\"\\u957f\\u5ea6\\u5c5e\\u6027\\u540d\\u79f01,\\u957f\\u5ea6\\u5c5e\\u6027\\u503c2\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\u5bb9\\u91cf\\\\\\\",\\\\\\\"id\\\\\\\":22826,\\\\\\\"value\\\\\\\":\\\\\\\"69\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\u82b1\\u8272\\\\\\\",\\\\\\\"id\\\\\\\":22827,\\\\\\\"value\\\\\\\":\\\\\\\"\\u5927\\u9ec4\\\\\\\"}],\\\\\\\"is_accept\\\\\\\":1,\\\\\\\"tag_list\\\\\\\":[\\\\\\\"\\u4e03\\u5929\\u65e0\\u7406\\u7531\\u9000\\u6362\\\\\\\",\\\\\\\"\\u5305\\u90ae\\\\\\\",\\\\\\\"24\\u5c0f\\u65f6\\u5185\\u53d1\\u8d27\\\\\\\"]}\\\",\\\"shop_name\\\":\\\"\\u5f20\\u96f7\\u6d4b\\u8bd5\\u54c1\\u724c\\u4e13\\u8425\\u5e97\\\",\\\"describe\\\":\\\"\\u8bf7\\u5c3d\\u5feb\\u5e2e\\u6211\\u53d1\\u8d27\\\",\\\"created_at\\\":\\\"2023\\\\\\\/6\\\\\\\/19 15:37:24\\\",\\\"sku_num\\\":\\\"3\\\",\\\"title\\\":\\\"\\u6d4b\\u8bd5001\\u7535\\u5f71\\\",\\\"price\\\":\\\"0.01\\\",\\\"is_confirm\\\":false,\\\"activity_type\\\":\\\"N\\\",\\\"is_wholesale\\\":false,\\\"status\\\":\\\"2\\\",\\\"shop_image\\\":\\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20221226\\\\\\\/20221226012354-421.png\\\"}}\",\"Ext\":\"\",\"Sound\":\"\"}}]",
+            "content": "",
+            "manufacturer": "APPLE",
+            "phoneModel": "iPhone 12",
+            "uid": "",
+            "fromID": "user_2103345534",
+            "targetID": "supplier_2103291574",
+            "createTimeInMillis": "2023-06-19 15:41:45.000",
+            "platform": "IOS",
+            "targetType": "single",
+            "filePath": "",
+            "fromName": "刘大哥",
+            "targetName": "张雷测试品牌专营店",
+            "serverMessageId": "2812312998_131671809_1687160505",
+            "targetAppkey": "",
+            "fromAppkey": "C2Csupplier_2103291574",
+            "source": "callback",
+            "isRevoked": "",
+            "priority": "",
+            "isPeerRead": "",
+            "cloudCustomData": "{\n  \"deviceId\" : \"E9EF3C07-DA8F-4BF6-A69B-C6FA3E5694A2\",\n  \"versionName\" : \"4.0.123\",\n  \"manufacturer\" : \"APPLE\",\n  \"phoneModel\" : \"iPhone 12\",\n  \"platform\" : \"IOS\",\n  \"targetType\" : \"single\",\n  \"offlinePushInfo\" : {\n    \"AndroidVIVOClassification\" : 1,\n    \"ignoreIOSBadge\" : false,\n    \"iOSPushType\" : 0,\n    \"ext\" : \"{\\\"targetName\\\":\\\"刘大哥\\\",\\\"conversationType\\\":\\\"single\\\",\\\"type\\\":\\\"1\\\",\\\"targetId\\\":\\\"user_2103345534\\\"}\",\n    \"title\" : \"刘大哥\",\n    \"AndroidOPPOChannelID\" : \"1000\",\n    \"disablePush\" : false,\n    \"desc\" : \"[订单消息]\"\n  }\n}",
+            "status": 1,
+            "is_latest": 1,
+            "ip": "",
+            "file_height": "",
+            "file_width": "",
+            "coverPath": "",
+            "duration": "",
+            "updated_at": "2023-06-19 15:41:46",
+            "created_at": "2023-06-19 15:41:46",
+            "id": 12393,
+            "formUserInfo": {
+              "id": 210,
+              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/APPLE\/Image\/Portrait\/1679881060085.jpg",
+              "nickname": "刘大哥",
+              "username": "user_2103345534"
+            },
+            "targetUserInfo": {
+              "id": 300,
+              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
+              "nickname": "张雷测试品牌专营店",
+              "username": "supplier_2103291574"
+            }
+          },
+          "sort": [
+            "2023-06-19 15:41:45.000"
+          ]
         }
       ]
     }
@@ -698,10 +1092,10 @@ export default {
     console.log('cookies', this.utils.StorageManagerUtils.getCookies('cookies'))
     console.log('cookiesObject', this.utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
     console.log('获取设备：', this.utils.DeviceManagerUtils.getDeviceManager())
-    console.log('组件', this.utils.FormatUtils.showMessageTime(1677821808 * 1000))
+    console.log('组件', this.utils.FormatUtils.showMessageTime(1679706960 * 1000))
     console.log('会话列表：', this.utils.ChatMessageUtils.getConversationList(this.conversationList))
     console.log('接收消息：', this.utils.ChatMessageUtils.transformReceiveMessage(this.rec))
-    console.log('消息列表：', this.utils.ChatMessageUtils.transformMessageList(this.messageList))
+    console.log('消息列表：', this.utils.ChatMessageUtils.transformMessageList(this.messageRecord))
     console.log('获取数据', this.utils.ChatMessageUtils.isConstraintMessageSend([], this.message, 'user_2103315655', 'supplier_2103376451', 'single'))
     // for (let i = 0; i < this.message.length; i++) {
     //   console.log('是否显示：', utils.ChatMessageUtils.isShowMessageTime(i, this.message.length, this.message, this.message[i]['senderTimeMillis'] * 1000))
