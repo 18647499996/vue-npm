@@ -417,6 +417,7 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
     case 'web':
     case 'h5':
     case 'Android':
+    case 'api':
       switch (contentType) {
         case 1:
           messageContent['elemType'] = 'text'
@@ -451,19 +452,9 @@ function getMessageContent(platform, contentType, filePath, bodyModel) {
           messageContent['longitude'] = bodyModel[0]['MsgContent']['Longitude']
           messageContent['latitude'] = bodyModel[0]['MsgContent']['Latitude']
           break
-      }
-      break
-    case 'api':
-      switch (contentType) {
-        case 2:
-          messageContent['elemType'] = 'custom'
-          messageContent['elemValue'] = ''
-          messageContent['customInfo'] = getCustomMessageContent(bodyModel)
-          messageContent['customType'] = bodyModel['type']
-          break
         case 10:
           messageContent['elemType'] = 'groupTips'
-          messageContent['elemValue'] = bodyModel['text']
+          messageContent['elemValue'] = bodyModel[0]['MsgContent']['Text']
           messageContent['customInfo'] = ''
           messageContent['customType'] = ''
           break
