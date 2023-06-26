@@ -1270,7 +1270,7 @@ export default {
     // console.log('TIME', this.utils.ChatMessageUtils.TIM.TYPES)
     // console.log('cookies', this.utils.StorageManagerUtils.getCookies('cookies'))
     // console.log('cookiesObject', this.utils.StorageManagerUtils.getCookiesObject('cookiesObject'))
-    // console.log('获取设备：', this.utils.DeviceManagerUtils.getDeviceManager())
+    console.log('获取设备：', this.utils.DeviceManagerUtils.getDeviceManager())
     // console.log('组件', this.utils.FormatUtils.showMessageTime(1679706960 * 1000))
     // console.log('会话列表：', this.utils.ChatMessageUtils.getConversationList(this.conversationList))
     // console.log('接收消息：', this.utils.ChatMessageUtils.transformReceiveMessage(this.rec))
