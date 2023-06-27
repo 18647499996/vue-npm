@@ -47,9 +47,9 @@ export function getDeviceManagerListener(iosListener, androidListener, wxListene
  * @return {string}
  */
 export function getDeviceManager() {
-  console.log('设备终端：', getWindowNavigator())
+  console.warn('设备终端：', getWindowNavigator())
 
-  if (isMiniProgram()){
+  if (isMiniProgram()) {
     return 'miniProgram'
   }
 
@@ -59,10 +59,6 @@ export function getDeviceManager() {
 
   if (isSafari()) {
     return 'safari'
-  }
-
-  if (isGoogle()) {
-    return 'google'
   }
 
   if (isMicrosoft()) {
@@ -79,6 +75,10 @@ export function getDeviceManager() {
 
   if (isQQ()) {
     return 'qq'
+  }
+
+  if (isGoogle()) {
+    return 'google'
   }
 
   if (isAndroid()) {
@@ -103,7 +103,20 @@ export function isAndroid() {
  * @returns {boolean}
  */
 export function isIOS() {
-  return getWindowNavigator().match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) && !getWindowNavigator().indexOf('Safari') > -1 //是否ios终端
+  if (getWindowNavigator().indexOf('iPhone') > -1) {
+    if (getWindowNavigator().indexOf('MicroMessenger') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('miniProgram') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('Safari') > -1) {
+      return false
+    }
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
@@ -111,7 +124,11 @@ export function isIOS() {
  * @return {boolean}
  */
 export function isWechat() {
-  return getWindowNavigator().toLowerCase().match(/MicroMessenger/i) == 'micromessenger' //是否在微信浏览器
+  if (getWindowNavigator().indexOf('MicroMessenger') > -1) {
+    return getWindowNavigator().indexOf('miniProgram') <= -1
+  } else {
+    return false
+  }
 }
 
 /**
@@ -143,7 +160,29 @@ export function isQQ() {
  * @return {boolean}
  */
 export function isSafari() {
-  return getWindowNavigator().toLowerCase().match(/version\/([\d.]+).*safari/) || getWindowNavigator().indexOf('Macintosh; Intel Mac OS') > -1
+  if (getWindowNavigator().indexOf('Safari') > -1) {
+    if (getWindowNavigator().indexOf('Chrome') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('Edg') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('Android') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('iPhone') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('MicroMessenger') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('miniProgram') > -1) {
+      return false
+    }
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
@@ -151,7 +190,17 @@ export function isSafari() {
  * @return {boolean}
  */
 export function isGoogle() {
-  return getWindowNavigator().toLowerCase().match(/chrome\/([\d.]+)/) && (getWindowNavigator().indexOf('Macintosh; Intel Mac OS') > -1 || getWindowNavigator().indexOf('Windows') > -1)
+  if (getWindowNavigator().indexOf('Chrome') > -1) {
+    if (getWindowNavigator().indexOf('Edg') > -1) {
+      return false
+    }
+    if (getWindowNavigator().indexOf('Android') > -1) {
+      return false
+    }
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
@@ -159,7 +208,7 @@ export function isGoogle() {
  * @return {boolean}
  */
 export function isMicrosoft() {
-  return getWindowNavigator().toLowerCase().match(/edge\/([\d.]+)/) && getWindowNavigator().indexOf('Windows') > -1
+  return getWindowNavigator().indexOf('Edg') > -1
 }
 
 /**
@@ -167,16 +216,17 @@ export function isMicrosoft() {
  * @return {boolean}
  */
 export function isFirefox() {
-  return getWindowNavigator().toLowerCase().match(/firefox\/([\d.]+)/) && getWindowNavigator().indexOf('Windows') > -1
+  return getWindowNavigator().indexOf('Firefox') > -1
 }
 
 /**
  * 获取设备管理器
- * todo google ( Mac )     ： Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+ * todo google ( Mac )     ： Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
  * todo google ( windows ) ： Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
  * todo Firefox            ： Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0
  * todo IE                 ： Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48
- * todo Safari             ： Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15
+ * todo Safari ( Mac )     ： Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15
+ * todo Safari ( iPhone )  ： Mozilla/5.0 (iPhone; CPU iPhone OS 16_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Mobile/15E148 Safari/604.1
  * todo IOS                ： Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148
  * todo Android            ： Mozilla/5.0 (Linux; Android 8.0.0; SM-G955U Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
  * todo wx                 ： Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.3 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1 wechatdevtools/1.06.2301160 MicroMessenger/8.0.5 Language/zh_CN webview/16822120470857426 webdebugger port/12484 token/6fe6f5dd064aedc55199106a81b067cc
