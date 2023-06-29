@@ -170,9 +170,6 @@ export function isSafari() {
     if (getWindowNavigator().indexOf('Android') > -1) {
       return false
     }
-    if (getWindowNavigator().indexOf('iPhone') > -1) {
-      return false
-    }
     if (getWindowNavigator().indexOf('MicroMessenger') > -1) {
       return false
     }
