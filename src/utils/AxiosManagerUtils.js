@@ -69,7 +69,8 @@ export function addHeaders(headers) {
  */
 export function transformSchedulers(transformResponseListener) {
   axiosManager.interceptors.response.use(config => {
-    return transformResponseListener(config)
+    // todo 避免重复引用数据转换，保证数据结构唯一性（ 只返回服务器数据结构 ）
+    return transformResponseListener(undefined === config.config ? config : config.data)
   })
   return this
 }
@@ -90,7 +91,7 @@ export function addLogcatInterceptors() {
   // 响应拦截
   axiosManager.interceptors.response.use(config => {
     responseTime = new Date().getTime()
-    console.warn('返回数据：', config.request.responseURL,(responseTime - requestTime) + 's', config.data)
+    console.warn('返回数据：', config.request.responseURL, (responseTime - requestTime) + 's', config.data)
     return config
   }, error => {
     return Promise.reject(error)
@@ -142,10 +143,22 @@ export function get(url, params) {
 }
 
 /**
+ * todo 获取fromData格式
+ * @return {FormData}
+ */
+export function form(url, data) {
+  const formData = new FormData()
+  for (const item in data) {
+    formData.append(item, data[item])
+  }
+  return post(url, formData)
+}
+
+/**
  * todo 合并请求
- * @param mergerRequest
- * @param onSucceed
- * @param onError
+ * @param mergerRequest 合并请求（ 数组格式 ）
+ * @param onSucceed 请求成功回调
+ * @param onError 失败回调
  */
 export function merger(mergerRequest, onSucceed, onError) {
   axiosServer.all(mergerRequest)
@@ -156,6 +169,7 @@ export function merger(mergerRequest, onSucceed, onError) {
       onError(error)
     })
 }
+
 
 export default {
   createAxiosServer,
@@ -168,5 +182,6 @@ export default {
   addCodeInterceptors,
   post,
   get,
-  merger
+  merger,
+  form
 }

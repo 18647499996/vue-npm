@@ -640,577 +640,577 @@ export default {
           }
         }
       ],
-      messageRecord:[
+      messageRecord: [
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12496",
-          "_score": null,
-          "_source": {
-            "contentType": 2,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMCustomElem\",\"MsgContent\":{\"Desc\":\"[\\u8ba2\\u5355\\u6d88\\u606f]\",\"Data\":\"{\\\"id\\\":\\\"user_2102961110\\\",\\\"type\\\":4,\\\"orderInfo\\\":{\\\"id\\\":\\\"12581479107170024\\\",\\\"describe\\\":\\\"\\\\u4eb2\\\\uff0c\\\\u8bf7\\\\u60a8\\\\u6838\\\\u5bf9\\\\u8ba2\\\\u5355\\\\u4fe1\\\\u606f\\\",\\\"status\\\":1,\\\"shop_id\\\":81751,\\\"shop_name\\\":\\\"\\\\u5f20\\\\u96f7\\\\u6d4b\\\\u8bd5\\\\u54c1\\\\u724c\\\\u4e13\\\\u8425\\\\u5e97\\\",\\\"shop_image\\\":\\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20221226\\\\\\\/20221226012354-421.png\\\",\\\"order_sn\\\":\\\"XF2202306200929234263\\\",\\\"created_at\\\":\\\"2023\\\\\\\/6\\\\\\\/20 9:29:23\\\",\\\"receivers_names\\\":\\\"\\\\u5218**\\\",\\\"receivers_phone\\\":\\\"186*****996\\\",\\\"receivers_provinces\\\":\\\"\\\\u5317\\\\u4eac\\\",\\\"receivers_citys\\\":\\\"\\\\u5317\\\\u4eac\\\\u5e02\\\",\\\"receivers_districts\\\":\\\"***\\\",\\\"receivers_address\\\":\\\"****\\\",\\\"shop_goods\\\":[{\\\"id\\\":12581479107739984,\\\"title\\\":\\\"\\\\u6d4b\\\\u8bd5001\\\\u7535\\\\u5f71\\\",\\\"thumb\\\":\\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20230330\\\\\\\/20230330090357-668.jpg\\\",\\\"sku_id\\\":92446,\\\"sku_num\\\":2,\\\"spu_id\\\":1158954,\\\"order_child_id\\\":12581479107170024,\\\"price\\\":0.01,\\\"price_new\\\":0,\\\"refunds_status\\\":1,\\\"json\\\":\\\"{\\\\\\\"goods_attributes\\\\\\\":[{\\\\\\\"name\\\\\\\":\\\\\\\"\\\\u9002\\\\u7528\\\\u5b63\\\\u8282\\\\\\\",\\\\\\\"id\\\\\\\":22822,\\\\\\\"value\\\\\\\":\\\\\\\"\\\\u56db\\\\u5b63\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\\\u4f5c\\\\u54c1\\\\u7c7b\\\\u578b\\\\\\\",\\\\\\\"id\\\\\\\":22823,\\\\\\\"value\\\\\\\":\\\\\\\"\\\\u60ac\\\\u7591\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\\\u578b\\\\u53f7\\\\\\\",\\\\\\\"id\\\\\\\":22824,\\\\\\\"value\\\\\\\":\\\\\\\"69\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\\\u957f\\\\u5ea6\\\\\\\",\\\\\\\"id\\\\\\\":22825,\\\\\\\"value\\\\\\\":\\\\\\\"\\\\u957f\\\\u5ea6\\\\u5c5e\\\\u6027\\\\u540d\\\\u79f01,\\\\u957f\\\\u5ea6\\\\u5c5e\\\\u6027\\\\u503c2\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\\\u5bb9\\\\u91cf\\\\\\\",\\\\\\\"id\\\\\\\":22826,\\\\\\\"value\\\\\\\":\\\\\\\"69\\\\\\\"},{\\\\\\\"name\\\\\\\":\\\\\\\"\\\\u82b1\\\\u8272\\\\\\\",\\\\\\\"id\\\\\\\":22827,\\\\\\\"value\\\\\\\":\\\\\\\"\\\\u5927\\\\u9ec4\\\\\\\"}],\\\\\\\"is_accept\\\\\\\":1,\\\\\\\"tag_list\\\\\\\":[\\\\\\\"\\\\u4e03\\\\u5929\\\\u65e0\\\\u7406\\\\u7531\\\\u9000\\\\u6362\\\\\\\",\\\\\\\"\\\\u5305\\\\u90ae\\\\\\\",\\\\\\\"24\\\\u5c0f\\\\u65f6\\\\u5185\\\\u53d1\\\\u8d27\\\\\\\"]}\\\",\\\"activity_type\\\":\\\"N\\\",\\\"teams_id\\\":0,\\\"order_child_goods_sn\\\":\\\"XF3202306200929230101\\\",\\\"is_accept\\\":1,\\\"price_pay\\\":0,\\\"price_order_line\\\":198,\\\"status\\\":2,\\\"is_create_bill\\\":0,\\\"create_bill_error\\\":null,\\\"presell_amount\\\":0,\\\"goods_presale\\\":null,\\\"price_wholesale\\\":0,\\\"presell_split_account\\\":null,\\\"original_order_child_goods_sn\\\":null,\\\"price_im_equity\\\":0,\\\"im_equity_company\\\":\\\"\\\",\\\"is_complaint\\\":0,\\\"is_comment\\\":0,\\\"article_id\\\":0,\\\"pickuppoint_id\\\":\\\"0\\\",\\\"delivery_mode\\\":0,\\\"is_wholesale\\\":false}],\\\"receivers_village\\\":\\\"*****\\\",\\\"merchant_id\\\":918}}\",\"Ext\":\"{\\\"type\\\":1,\\\"targetName\\\":\\\"\\\\u5f20\\\\u96f7\\\\u6d4b\\\\u8bd5\\\\u54c1\\\\u724c\\\\u4e13\\\\u8425\\\\u5e97\\\",\\\"targetId\\\":\\\"supplier_2103291574\\\",\\\"conversationType\\\":\\\"single\\\"}\",\"Sound\":\"4444\"}}]",
-            "content": "",
-            "manufacturer": "",
-            "phoneModel": "",
-            "uid": "",
-            "fromID": "supplier_2103291574",
-            "targetID": "user_2102961110",
-            "createTimeInMillis": "2023-06-20 09:29:25.000",
-            "platform": "api",
-            "targetType": "",
-            "filePath": "",
-            "fromName": "张雷测试品牌专营店",
-            "targetName": "汇法-刘冬涵",
-            "serverMessageId": "1665493678_2736809915_1687224565",
-            "targetAppkey": "",
-            "fromAppkey": "C2Cuser_2102961110",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "",
-            "status": 1,
-            "is_latest": 1,
-            "ip": 173544961,
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "versionName": "",
-            "deviceId": "",
-            "size": "",
-            "updated_at": "2023-06-20 09:29:25",
-            "created_at": "2023-06-20 09:29:25",
-            "id": 12496,
-            "formUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12496',
+          '_score': null,
+          '_source': {
+            'contentType': 2,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMCustomElem","MsgContent":{"Desc":"[\\u8ba2\\u5355\\u6d88\\u606f]","Data":"{\\"id\\":\\"user_2102961110\\",\\"type\\":4,\\"orderInfo\\":{\\"id\\":\\"12581479107170024\\",\\"describe\\":\\"\\\\u4eb2\\\\uff0c\\\\u8bf7\\\\u60a8\\\\u6838\\\\u5bf9\\\\u8ba2\\\\u5355\\\\u4fe1\\\\u606f\\",\\"status\\":1,\\"shop_id\\":81751,\\"shop_name\\":\\"\\\\u5f20\\\\u96f7\\\\u6d4b\\\\u8bd5\\\\u54c1\\\\u724c\\\\u4e13\\\\u8425\\\\u5e97\\",\\"shop_image\\":\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20221226\\\\\\\/20221226012354-421.png\\",\\"order_sn\\":\\"XF2202306200929234263\\",\\"created_at\\":\\"2023\\\\\\\/6\\\\\\\/20 9:29:23\\",\\"receivers_names\\":\\"\\\\u5218**\\",\\"receivers_phone\\":\\"186*****996\\",\\"receivers_provinces\\":\\"\\\\u5317\\\\u4eac\\",\\"receivers_citys\\":\\"\\\\u5317\\\\u4eac\\\\u5e02\\",\\"receivers_districts\\":\\"***\\",\\"receivers_address\\":\\"****\\",\\"shop_goods\\":[{\\"id\\":12581479107739984,\\"title\\":\\"\\\\u6d4b\\\\u8bd5001\\\\u7535\\\\u5f71\\",\\"thumb\\":\\"https:\\\\\\\/\\\\\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\\\\\/product\\\\\\\/20230330\\\\\\\/20230330090357-668.jpg\\",\\"sku_id\\":92446,\\"sku_num\\":2,\\"spu_id\\":1158954,\\"order_child_id\\":12581479107170024,\\"price\\":0.01,\\"price_new\\":0,\\"refunds_status\\":1,\\"json\\":\\"{\\\\\\"goods_attributes\\\\\\":[{\\\\\\"name\\\\\\":\\\\\\"\\\\u9002\\\\u7528\\\\u5b63\\\\u8282\\\\\\",\\\\\\"id\\\\\\":22822,\\\\\\"value\\\\\\":\\\\\\"\\\\u56db\\\\u5b63\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\\\\u4f5c\\\\u54c1\\\\u7c7b\\\\u578b\\\\\\",\\\\\\"id\\\\\\":22823,\\\\\\"value\\\\\\":\\\\\\"\\\\u60ac\\\\u7591\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\\\\u578b\\\\u53f7\\\\\\",\\\\\\"id\\\\\\":22824,\\\\\\"value\\\\\\":\\\\\\"69\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\\\\u957f\\\\u5ea6\\\\\\",\\\\\\"id\\\\\\":22825,\\\\\\"value\\\\\\":\\\\\\"\\\\u957f\\\\u5ea6\\\\u5c5e\\\\u6027\\\\u540d\\\\u79f01,\\\\u957f\\\\u5ea6\\\\u5c5e\\\\u6027\\\\u503c2\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\\\\u5bb9\\\\u91cf\\\\\\",\\\\\\"id\\\\\\":22826,\\\\\\"value\\\\\\":\\\\\\"69\\\\\\"},{\\\\\\"name\\\\\\":\\\\\\"\\\\u82b1\\\\u8272\\\\\\",\\\\\\"id\\\\\\":22827,\\\\\\"value\\\\\\":\\\\\\"\\\\u5927\\\\u9ec4\\\\\\"}],\\\\\\"is_accept\\\\\\":1,\\\\\\"tag_list\\\\\\":[\\\\\\"\\\\u4e03\\\\u5929\\\\u65e0\\\\u7406\\\\u7531\\\\u9000\\\\u6362\\\\\\",\\\\\\"\\\\u5305\\\\u90ae\\\\\\",\\\\\\"24\\\\u5c0f\\\\u65f6\\\\u5185\\\\u53d1\\\\u8d27\\\\\\"]}\\",\\"activity_type\\":\\"N\\",\\"teams_id\\":0,\\"order_child_goods_sn\\":\\"XF3202306200929230101\\",\\"is_accept\\":1,\\"price_pay\\":0,\\"price_order_line\\":198,\\"status\\":2,\\"is_create_bill\\":0,\\"create_bill_error\\":null,\\"presell_amount\\":0,\\"goods_presale\\":null,\\"price_wholesale\\":0,\\"presell_split_account\\":null,\\"original_order_child_goods_sn\\":null,\\"price_im_equity\\":0,\\"im_equity_company\\":\\"\\",\\"is_complaint\\":0,\\"is_comment\\":0,\\"article_id\\":0,\\"pickuppoint_id\\":\\"0\\",\\"delivery_mode\\":0,\\"is_wholesale\\":false}],\\"receivers_village\\":\\"*****\\",\\"merchant_id\\":918}}","Ext":"{\\"type\\":1,\\"targetName\\":\\"\\\\u5f20\\\\u96f7\\\\u6d4b\\\\u8bd5\\\\u54c1\\\\u724c\\\\u4e13\\\\u8425\\\\u5e97\\",\\"targetId\\":\\"supplier_2103291574\\",\\"conversationType\\":\\"single\\"}","Sound":"4444"}}]',
+            'content': '',
+            'manufacturer': '',
+            'phoneModel': '',
+            'uid': '',
+            'fromID': 'supplier_2103291574',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-06-20 09:29:25.000',
+            'platform': 'api',
+            'targetType': '',
+            'filePath': '',
+            'fromName': '张雷测试品牌专营店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1665493678_2736809915_1687224565',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Cuser_2102961110',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 173544961,
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'versionName': '',
+            'deviceId': '',
+            'size': '',
+            'updated_at': '2023-06-20 09:29:25',
+            'created_at': '2023-06-20 09:29:25',
+            'id': 12496,
+            'formUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             },
-            "targetUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+            'targetUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             }
           },
-          "sort": [
-            "2023-06-20 09:29:25.000"
+          'sort': [
+            '2023-06-20 09:29:25.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12485",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"\\u8d70\\u7740\\u8d70\\u7740\"}}]",
-            "content": "走着走着",
-            "manufacturer": "OPPO",
-            "phoneModel": "PCEM00",
-            "uid": "",
-            "fromID": "user_2102961110",
-            "targetID": "supplier_2103291574",
-            "createTimeInMillis": "2023-06-19 17:46:48.000",
-            "platform": "Android",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "汇法-刘冬涵",
-            "targetName": "张雷测试品牌专营店",
-            "serverMessageId": "882792721_3838502213_1687168008",
-            "targetAppkey": "",
-            "fromAppkey": "C2Csupplier_2103291574",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"deviceId\":\"08311a53cbe2f5ac\",\"manufacturer\":\"OPPO\",\"offlinePushInfo\":{\"messageOfflinePushInfo\":{\"androidConfig\":{\"notifyMode\":0,\"oppoChannelID\":\"1000\",\"vivoClassification\":1},\"apnsConfig\":{\"badgeMode\":0,\"iOSPushType\":0},\"description\":\"走着走着\",\"extension\":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],\"pushFlag\":0,\"title\":\"汇法-刘冬涵\"}},\"phoneModel\":\"PCEM00\",\"platform\":\"Android\",\"targetType\":\"single\",\"versionName\":\"4.0.123\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": 173544961,
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "versionName": "4.0.123",
-            "deviceId": "08311a53cbe2f5ac",
-            "size": "",
-            "updated_at": "2023-06-19 17:46:49",
-            "created_at": "2023-06-19 17:46:49",
-            "id": 12485,
-            "formUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12485',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"\\u8d70\\u7740\\u8d70\\u7740"}}]',
+            'content': '走着走着',
+            'manufacturer': 'OPPO',
+            'phoneModel': 'PCEM00',
+            'uid': '',
+            'fromID': 'user_2102961110',
+            'targetID': 'supplier_2103291574',
+            'createTimeInMillis': '2023-06-19 17:46:48.000',
+            'platform': 'Android',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '汇法-刘冬涵',
+            'targetName': '张雷测试品牌专营店',
+            'serverMessageId': '882792721_3838502213_1687168008',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Csupplier_2103291574',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"deviceId":"08311a53cbe2f5ac","manufacturer":"OPPO","offlinePushInfo":{"messageOfflinePushInfo":{"androidConfig":{"notifyMode":0,"oppoChannelID":"1000","vivoClassification":1},"apnsConfig":{"badgeMode":0,"iOSPushType":0},"description":"走着走着","extension":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],"pushFlag":0,"title":"汇法-刘冬涵"}},"phoneModel":"PCEM00","platform":"Android","targetType":"single","versionName":"4.0.123"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 173544961,
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'versionName': '4.0.123',
+            'deviceId': '08311a53cbe2f5ac',
+            'size': '',
+            'updated_at': '2023-06-19 17:46:49',
+            'created_at': '2023-06-19 17:46:49',
+            'id': 12485,
+            'formUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             },
-            "targetUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+            'targetUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             }
           },
-          "sort": [
-            "2023-06-19 17:46:48.000"
+          'sort': [
+            '2023-06-19 17:46:48.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12484",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"\\u5566\\u5566\\u5566\\u5566\\u5566\"}}]",
-            "content": "啦啦啦啦啦",
-            "manufacturer": "OPPO",
-            "phoneModel": "PCEM00",
-            "uid": "",
-            "fromID": "user_2102961110",
-            "targetID": "supplier_2103291574",
-            "createTimeInMillis": "2023-06-19 17:44:10.000",
-            "platform": "Android",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "汇法-刘冬涵",
-            "targetName": "张雷测试品牌专营店",
-            "serverMessageId": "882792720_3838502212_1687167850",
-            "targetAppkey": "",
-            "fromAppkey": "C2Csupplier_2103291574",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"deviceId\":\"08311a53cbe2f5ac\",\"manufacturer\":\"OPPO\",\"offlinePushInfo\":{\"messageOfflinePushInfo\":{\"androidConfig\":{\"notifyMode\":0,\"oppoChannelID\":\"1000\",\"vivoClassification\":1},\"apnsConfig\":{\"badgeMode\":0,\"iOSPushType\":0},\"description\":\"啦啦啦啦啦\",\"extension\":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],\"pushFlag\":0,\"title\":\"汇法-刘冬涵\"}},\"phoneModel\":\"PCEM00\",\"platform\":\"Android\",\"targetType\":\"single\",\"versionName\":\"4.0.123\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": 173544961,
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "versionName": "4.0.123",
-            "deviceId": "08311a53cbe2f5ac",
-            "size": "",
-            "updated_at": "2023-06-19 17:44:10",
-            "created_at": "2023-06-19 17:44:10",
-            "id": 12484,
-            "formUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12484',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"\\u5566\\u5566\\u5566\\u5566\\u5566"}}]',
+            'content': '啦啦啦啦啦',
+            'manufacturer': 'OPPO',
+            'phoneModel': 'PCEM00',
+            'uid': '',
+            'fromID': 'user_2102961110',
+            'targetID': 'supplier_2103291574',
+            'createTimeInMillis': '2023-06-19 17:44:10.000',
+            'platform': 'Android',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '汇法-刘冬涵',
+            'targetName': '张雷测试品牌专营店',
+            'serverMessageId': '882792720_3838502212_1687167850',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Csupplier_2103291574',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"deviceId":"08311a53cbe2f5ac","manufacturer":"OPPO","offlinePushInfo":{"messageOfflinePushInfo":{"androidConfig":{"notifyMode":0,"oppoChannelID":"1000","vivoClassification":1},"apnsConfig":{"badgeMode":0,"iOSPushType":0},"description":"啦啦啦啦啦","extension":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],"pushFlag":0,"title":"汇法-刘冬涵"}},"phoneModel":"PCEM00","platform":"Android","targetType":"single","versionName":"4.0.123"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 173544961,
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'versionName': '4.0.123',
+            'deviceId': '08311a53cbe2f5ac',
+            'size': '',
+            'updated_at': '2023-06-19 17:44:10',
+            'created_at': '2023-06-19 17:44:10',
+            'id': 12484,
+            'formUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             },
-            "targetUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+            'targetUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             }
           },
-          "sort": [
-            "2023-06-19 17:44:10.000"
+          'sort': [
+            '2023-06-19 17:44:10.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12483",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"\\u51c4\\u51c4\\u5207\\u5207\"}}]",
-            "content": "凄凄切切",
-            "manufacturer": "OPPO",
-            "phoneModel": "PCEM00",
-            "uid": "",
-            "fromID": "user_2102961110",
-            "targetID": "supplier_2103291574",
-            "createTimeInMillis": "2023-06-19 17:41:45.000",
-            "platform": "Android",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "汇法-刘冬涵",
-            "targetName": "张雷测试品牌专营店",
-            "serverMessageId": "882792719_3838502211_1687167705",
-            "targetAppkey": "",
-            "fromAppkey": "C2Csupplier_2103291574",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"deviceId\":\"08311a53cbe2f5ac\",\"manufacturer\":\"OPPO\",\"offlinePushInfo\":{\"messageOfflinePushInfo\":{\"androidConfig\":{\"notifyMode\":0,\"oppoChannelID\":\"1000\",\"vivoClassification\":1},\"apnsConfig\":{\"badgeMode\":0,\"iOSPushType\":0},\"description\":\"凄凄切切\",\"extension\":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],\"pushFlag\":0,\"title\":\"汇法-刘冬涵\"}},\"phoneModel\":\"PCEM00\",\"platform\":\"Android\",\"targetType\":\"single\",\"versionName\":\"4.0.123\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": 173544961,
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "versionName": "4.0.123",
-            "deviceId": "08311a53cbe2f5ac",
-            "size": "",
-            "updated_at": "2023-06-19 17:41:45",
-            "created_at": "2023-06-19 17:41:45",
-            "id": 12483,
-            "formUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12483',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"\\u51c4\\u51c4\\u5207\\u5207"}}]',
+            'content': '凄凄切切',
+            'manufacturer': 'OPPO',
+            'phoneModel': 'PCEM00',
+            'uid': '',
+            'fromID': 'user_2102961110',
+            'targetID': 'supplier_2103291574',
+            'createTimeInMillis': '2023-06-19 17:41:45.000',
+            'platform': 'Android',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '汇法-刘冬涵',
+            'targetName': '张雷测试品牌专营店',
+            'serverMessageId': '882792719_3838502211_1687167705',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Csupplier_2103291574',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"deviceId":"08311a53cbe2f5ac","manufacturer":"OPPO","offlinePushInfo":{"messageOfflinePushInfo":{"androidConfig":{"notifyMode":0,"oppoChannelID":"1000","vivoClassification":1},"apnsConfig":{"badgeMode":0,"iOSPushType":0},"description":"凄凄切切","extension":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],"pushFlag":0,"title":"汇法-刘冬涵"}},"phoneModel":"PCEM00","platform":"Android","targetType":"single","versionName":"4.0.123"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': 173544961,
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'versionName': '4.0.123',
+            'deviceId': '08311a53cbe2f5ac',
+            'size': '',
+            'updated_at': '2023-06-19 17:41:45',
+            'created_at': '2023-06-19 17:41:45',
+            'id': 12483,
+            'formUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             },
-            "targetUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+            'targetUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             }
           },
-          "sort": [
-            "2023-06-19 17:41:45.000"
+          'sort': [
+            '2023-06-19 17:41:45.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12412",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"\\u554a\\u554a\\u554a\\u554a\"}}]",
-            "content": "啊啊啊啊",
-            "manufacturer": "OPPO",
-            "phoneModel": "PCEM00",
-            "uid": "",
-            "fromID": "user_2102961110",
-            "targetID": "supplier_2103291574",
-            "createTimeInMillis": "2023-06-19 16:49:08.000",
-            "platform": "Android",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "汇法-刘冬涵",
-            "targetName": "张雷测试品牌专营店",
-            "serverMessageId": "3992358192_4110809171_1687164548",
-            "targetAppkey": "",
-            "fromAppkey": "C2Csupplier_2103291574",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"deviceId\":\"08311a53cbe2f5ac\",\"manufacturer\":\"OPPO\",\"offlinePushInfo\":{\"messageOfflinePushInfo\":{\"androidConfig\":{\"notifyMode\":0,\"oppoChannelID\":\"1000\",\"vivoClassification\":1},\"apnsConfig\":{\"badgeMode\":0,\"iOSPushType\":0},\"description\":\"啊啊啊啊\",\"extension\":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],\"pushFlag\":0,\"title\":\"汇法-刘冬涵\"}},\"phoneModel\":\"PCEM00\",\"platform\":\"Android\",\"targetType\":\"single\",\"versionName\":\"4.0.123\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": "",
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-06-19 16:49:08",
-            "created_at": "2023-06-19 16:49:08",
-            "id": 12412,
-            "formUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12412',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"\\u554a\\u554a\\u554a\\u554a"}}]',
+            'content': '啊啊啊啊',
+            'manufacturer': 'OPPO',
+            'phoneModel': 'PCEM00',
+            'uid': '',
+            'fromID': 'user_2102961110',
+            'targetID': 'supplier_2103291574',
+            'createTimeInMillis': '2023-06-19 16:49:08.000',
+            'platform': 'Android',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '汇法-刘冬涵',
+            'targetName': '张雷测试品牌专营店',
+            'serverMessageId': '3992358192_4110809171_1687164548',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Csupplier_2103291574',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"deviceId":"08311a53cbe2f5ac","manufacturer":"OPPO","offlinePushInfo":{"messageOfflinePushInfo":{"androidConfig":{"notifyMode":0,"oppoChannelID":"1000","vivoClassification":1},"apnsConfig":{"badgeMode":0,"iOSPushType":0},"description":"啊啊啊啊","extension":[123,34,97,112,112,75,101,121,34,58,34,34,44,34,99,111,110,118,101,114,115,97,116,105,111,110,84,121,112,101,34,58,34,115,105,110,103,108,101,34,44,34,116,97,114,103,101,116,73,100,34,58,34,117,115,101,114,95,50,49,48,50,57,54,49,49,49,48,34,44,34,116,97,114,103,101,116,78,97,109,101,34,58,34,-26,-79,-121,-26,-77,-107,45,-27,-120,-104,-27,-122,-84,-26,-74,-75,34,44,34,116,121,112,101,34,58,49,125],"pushFlag":0,"title":"汇法-刘冬涵"}},"phoneModel":"PCEM00","platform":"Android","targetType":"single","versionName":"4.0.123"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-06-19 16:49:08',
+            'created_at': '2023-06-19 16:49:08',
+            'id': 12412,
+            'formUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             },
-            "targetUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+            'targetUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             }
           },
-          "sort": [
-            "2023-06-19 16:49:08.000"
+          'sort': [
+            '2023-06-19 16:49:08.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12372",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"[\\u767d\\u773c]\"}}]",
-            "content": "[白眼]",
-            "manufacturer": "google",
-            "phoneModel": "",
-            "uid": "",
-            "fromID": "supplier_2103291574",
-            "targetID": "user_2102961110",
-            "createTimeInMillis": "2023-06-19 14:20:45.000",
-            "platform": "web",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "张雷测试品牌专营店",
-            "targetName": "汇法-刘冬涵",
-            "serverMessageId": "1419200004_74038849_1687155645",
-            "targetAppkey": "",
-            "fromAppkey": "C2Cuser_2102961110",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"message\":{\"ID\":\"144115242433425274-1687155645-74038849\",\"conversationID\":\"C2Cuser_2102961110\",\"conversationType\":\"C2C\",\"time\":1687155644,\"sequence\":1419200004,\"clientSequence\":1419200004,\"random\":74038849,\"priority\":\"Normal\",\"nick\":\"张雷测试品牌专营店\",\"avatar\":\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\",\"isPeerRead\":false,\"nameCard\":\"\",\"_elements\":[{\"type\":\"TIMTextElem\",\"content\":{\"text\":\"[白眼]\"}}],\"isPlaceMessage\":0,\"isRevoked\":false,\"from\":\"supplier_2103291574\",\"to\":\"user_2102961110\",\"flow\":\"out\",\"isSystemMessage\":false,\"protocol\":\"JSON\",\"isResend\":false,\"isRead\":true,\"status\":\"unSend\",\"_onlineOnlyFlag\":false,\"_groupAtInfoList\":[],\"_relayFlag\":false,\"atUserList\":[],\"cloudCustomData\":\"\",\"isDeleted\":false,\"isModified\":false,\"_isExcludedFromUnreadCount\":false,\"_isExcludedFromLastMessage\":false,\"clientTime\":1687155645,\"senderTinyID\":\"144115242433425274\",\"readReceiptInfo\":{},\"needReadReceipt\":false,\"version\":0,\"isBroadcastMessage\":false,\"isSupportExtension\":false,\"revoker\":null,\"payload\":{\"text\":\"[白眼]\"},\"type\":\"TIMTextElem\"},\"offlinePushInfo\":{\"title\":\"张雷\",\"androidOPPOChannelID\":\"1000\",\"extension\":\"{\\\"type\\\":1,\\\"targetId\\\":\\\"supplier_2103291574\\\",\\\"targetName\\\":\\\"张雷\\\",\\\"conversationType\\\":\\\"single\\\"}\"},\"manufacturer\":\"google\",\"deviceId\":\"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36\",\"platform\":\"web\",\"targetType\":\"single\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": "",
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-06-19 14:20:45",
-            "created_at": "2023-06-19 14:20:45",
-            "id": 12372,
-            "formUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12372',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"[\\u767d\\u773c]"}}]',
+            'content': '[白眼]',
+            'manufacturer': 'google',
+            'phoneModel': '',
+            'uid': '',
+            'fromID': 'supplier_2103291574',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-06-19 14:20:45.000',
+            'platform': 'web',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '张雷测试品牌专营店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1419200004_74038849_1687155645',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Cuser_2102961110',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"message":{"ID":"144115242433425274-1687155645-74038849","conversationID":"C2Cuser_2102961110","conversationType":"C2C","time":1687155644,"sequence":1419200004,"clientSequence":1419200004,"random":74038849,"priority":"Normal","nick":"张雷测试品牌专营店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMTextElem","content":{"text":"[白眼]"}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103291574","to":"user_2102961110","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"unSend","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1687155645,"senderTinyID":"144115242433425274","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"text":"[白眼]"},"type":"TIMTextElem"},"offlinePushInfo":{"title":"张雷","androidOPPOChannelID":"1000","extension":"{\\"type\\":1,\\"targetId\\":\\"supplier_2103291574\\",\\"targetName\\":\\"张雷\\",\\"conversationType\\":\\"single\\"}"},"manufacturer":"google","deviceId":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36","platform":"web","targetType":"single"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-06-19 14:20:45',
+            'created_at': '2023-06-19 14:20:45',
+            'id': 12372,
+            'formUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             },
-            "targetUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+            'targetUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             }
           },
-          "sort": [
-            "2023-06-19 14:20:45.000"
+          'sort': [
+            '2023-06-19 14:20:45.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12369",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"fsf\"}}]",
-            "content": "fsf",
-            "manufacturer": "google",
-            "phoneModel": "",
-            "uid": "",
-            "fromID": "supplier_2103291574",
-            "targetID": "user_2102961110",
-            "createTimeInMillis": "2023-06-19 14:19:55.000",
-            "platform": "web",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "张雷测试品牌专营店",
-            "targetName": "汇法-刘冬涵",
-            "serverMessageId": "1419200003_862724_1687155595",
-            "targetAppkey": "",
-            "fromAppkey": "C2Cuser_2102961110",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"message\":{\"ID\":\"144115242433425274-1687155595-862724\",\"conversationID\":\"C2Cuser_2102961110\",\"conversationType\":\"C2C\",\"time\":1687155594,\"sequence\":1419200003,\"clientSequence\":1419200003,\"random\":862724,\"priority\":\"Normal\",\"nick\":\"张雷测试品牌专营店\",\"avatar\":\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\",\"isPeerRead\":false,\"nameCard\":\"\",\"_elements\":[{\"type\":\"TIMTextElem\",\"content\":{\"text\":\"fsf\"}}],\"isPlaceMessage\":0,\"isRevoked\":false,\"from\":\"supplier_2103291574\",\"to\":\"user_2102961110\",\"flow\":\"out\",\"isSystemMessage\":false,\"protocol\":\"JSON\",\"isResend\":false,\"isRead\":true,\"status\":\"unSend\",\"_onlineOnlyFlag\":false,\"_groupAtInfoList\":[],\"_relayFlag\":false,\"atUserList\":[],\"cloudCustomData\":\"\",\"isDeleted\":false,\"isModified\":false,\"_isExcludedFromUnreadCount\":false,\"_isExcludedFromLastMessage\":false,\"clientTime\":1687155595,\"senderTinyID\":\"144115242433425274\",\"readReceiptInfo\":{},\"needReadReceipt\":false,\"version\":0,\"isBroadcastMessage\":false,\"isSupportExtension\":false,\"revoker\":null,\"payload\":{\"text\":\"fsf\"},\"type\":\"TIMTextElem\"},\"offlinePushInfo\":{\"title\":\"张雷\",\"androidOPPOChannelID\":\"1000\",\"extension\":\"{\\\"type\\\":1,\\\"targetId\\\":\\\"supplier_2103291574\\\",\\\"targetName\\\":\\\"张雷\\\",\\\"conversationType\\\":\\\"single\\\"}\"},\"manufacturer\":\"google\",\"deviceId\":\"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36\",\"platform\":\"web\",\"targetType\":\"single\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": "",
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-06-19 14:19:55",
-            "created_at": "2023-06-19 14:19:55",
-            "id": 12369,
-            "formUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12369',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"fsf"}}]',
+            'content': 'fsf',
+            'manufacturer': 'google',
+            'phoneModel': '',
+            'uid': '',
+            'fromID': 'supplier_2103291574',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-06-19 14:19:55.000',
+            'platform': 'web',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '张雷测试品牌专营店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1419200003_862724_1687155595',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Cuser_2102961110',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"message":{"ID":"144115242433425274-1687155595-862724","conversationID":"C2Cuser_2102961110","conversationType":"C2C","time":1687155594,"sequence":1419200003,"clientSequence":1419200003,"random":862724,"priority":"Normal","nick":"张雷测试品牌专营店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMTextElem","content":{"text":"fsf"}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103291574","to":"user_2102961110","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"unSend","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1687155595,"senderTinyID":"144115242433425274","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"text":"fsf"},"type":"TIMTextElem"},"offlinePushInfo":{"title":"张雷","androidOPPOChannelID":"1000","extension":"{\\"type\\":1,\\"targetId\\":\\"supplier_2103291574\\",\\"targetName\\":\\"张雷\\",\\"conversationType\\":\\"single\\"}"},"manufacturer":"google","deviceId":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36","platform":"web","targetType":"single"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-06-19 14:19:55',
+            'created_at': '2023-06-19 14:19:55',
+            'id': 12369,
+            'formUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             },
-            "targetUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+            'targetUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             }
           },
-          "sort": [
-            "2023-06-19 14:19:55.000"
+          'sort': [
+            '2023-06-19 14:19:55.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12368",
-          "_score": null,
-          "_source": {
-            "contentType": 2,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMCustomElem\",\"MsgContent\":{\"Desc\":\"\",\"Data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_activity\\\":\\\"N\\\",\\\"goods_config\\\":\\\"\\u9002\\u7528\\u5b63\\u8282: \\u590f\\u5b63 , \\u4f5c\\u54c1\\u7c7b\\u578b: \\u559c\\u5267 , \\u578b\\u53f7: 12213 , \\u957f\\u5ea6: \\u957f\\u5ea6\\u5c5e\\u6027\\u540d\\u79f01,\\u957f\\u5ea6\\u5c5e\\u6027\\u503c2 , \\u5bb9\\u91cf: 32 , \\u82b1\\u8272: 12\\\",\\\"goods_cover\\\":\\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221206\\\/20221206052248-557.jpg\\\",\\\"goods_name\\\":\\\"\\u5929\\u7f8e\\u65f6\\uff08TIMEX\\uff09\\u7537\\u8868T2N721\\u591a\\u529f\\u80fd\\u6237\\u5916\\u8fd0\\u52a8\\u6f6e\\u6c50\\u624b\\u8868\\u7535\\u5f71100\\u7c73\\u9632\\u6c34\\u591c\\u5149\\u77f3\\u82f1\\u8868\\\/\\u751f\\u65e5\\u793c\\u7269\\\",\\\"goods_num\\\":1,\\\"goods_price\\\":\\\"8.00\\\",\\\"sku_id\\\":92248,\\\"spu_id\\\":1158879,\\\"supplier_head\\\":\\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221226\\\/20221226012354-421.png\\\",\\\"supplier_id\\\":81751,\\\"supplier_name\\\":\\\"\\u5f20\\u96f7\\u6d4b\\u8bd5\\u54c1\\u724c\\u4e13\\u8425\\u5e97\\\",\\\"tag_list\\\":[\\\"\\u4e03\\u5929\\u65e0\\u7406\\u7531\\u9000\\u6362\\\",\\\"\\u5305\\u90ae\\\",\\\"12\\u5c0f\\u65f6\\u5185\\u53d1\\u8d27\\\"]}}\",\"Ext\":\"\",\"Sound\":\"\"}}]",
-            "content": "",
-            "manufacturer": "google",
-            "phoneModel": "",
-            "uid": "",
-            "fromID": "supplier_2103291574",
-            "targetID": "user_2102961110",
-            "createTimeInMillis": "2023-06-19 14:19:47.000",
-            "platform": "web",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "张雷测试品牌专营店",
-            "targetName": "汇法-刘冬涵",
-            "serverMessageId": "1419200002_37042846_1687155587",
-            "targetAppkey": "",
-            "fromAppkey": "C2Cuser_2102961110",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"message\":{\"ID\":\"144115242433425274-1687155587-37042846\",\"conversationID\":\"C2Cuser_2102961110\",\"conversationType\":\"C2C\",\"time\":1687155586,\"sequence\":1419200002,\"clientSequence\":1419200002,\"random\":37042846,\"priority\":\"Normal\",\"nick\":\"张雷测试品牌专营店\",\"avatar\":\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\",\"isPeerRead\":false,\"nameCard\":\"\",\"_elements\":[{\"type\":\"TIMCustomElem\",\"content\":{\"data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_activity\\\":\\\"N\\\",\\\"goods_config\\\":\\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\\",\\\"goods_cover\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\\",\\\"goods_name\\\":\\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\\",\\\"goods_num\\\":1,\\\"goods_price\\\":\\\"8.00\\\",\\\"sku_id\\\":92248,\\\"spu_id\\\":1158879,\\\"supplier_head\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\\",\\\"supplier_id\\\":81751,\\\"supplier_name\\\":\\\"张雷测试品牌专营店\\\",\\\"tag_list\\\":[\\\"七天无理由退换\\\",\\\"包邮\\\",\\\"12小时内发货\\\"]}}\",\"description\":\"\",\"extension\":\"\"}}],\"isPlaceMessage\":0,\"isRevoked\":false,\"from\":\"supplier_2103291574\",\"to\":\"user_2102961110\",\"flow\":\"out\",\"isSystemMessage\":false,\"protocol\":\"JSON\",\"isResend\":false,\"isRead\":true,\"status\":\"unSend\",\"_onlineOnlyFlag\":false,\"_groupAtInfoList\":[],\"_relayFlag\":false,\"atUserList\":[],\"cloudCustomData\":\"\",\"isDeleted\":false,\"isModified\":false,\"_isExcludedFromUnreadCount\":false,\"_isExcludedFromLastMessage\":false,\"clientTime\":1687155587,\"senderTinyID\":\"144115242433425274\",\"readReceiptInfo\":{},\"needReadReceipt\":false,\"version\":0,\"isBroadcastMessage\":false,\"isSupportExtension\":false,\"revoker\":null,\"payload\":{\"data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_activity\\\":\\\"N\\\",\\\"goods_config\\\":\\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\\",\\\"goods_cover\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\\",\\\"goods_name\\\":\\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\\",\\\"goods_num\\\":1,\\\"goods_price\\\":\\\"8.00\\\",\\\"sku_id\\\":92248,\\\"spu_id\\\":1158879,\\\"supplier_head\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\\",\\\"supplier_id\\\":81751,\\\"supplier_name\\\":\\\"张雷测试品牌专营店\\\",\\\"tag_list\\\":[\\\"七天无理由退换\\\",\\\"包邮\\\",\\\"12小时内发货\\\"]}}\",\"description\":\"\",\"extension\":\"\"},\"type\":\"TIMCustomElem\"},\"offlinePushInfo\":{\"title\":\"张雷\",\"description\":\"[自定义消息]\",\"androidOPPOChannelID\":\"1000\",\"extension\":\"{\\\"type\\\":1,\\\"targetId\\\":\\\"supplier_2103291574\\\",\\\"targetName\\\":\\\"张雷\\\",\\\"conversationType\\\":\\\"single\\\"}\"},\"manufacturer\":\"google\",\"deviceId\":\"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36\",\"platform\":\"web\",\"targetType\":\"single\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": "",
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-06-19 14:19:47",
-            "created_at": "2023-06-19 14:19:47",
-            "id": 12368,
-            "formUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12368',
+          '_score': null,
+          '_source': {
+            'contentType': 2,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMCustomElem","MsgContent":{"Desc":"","Data":"{\\"type\\":3,\\"goodsInfo\\":{\\"goods_activity\\":\\"N\\",\\"goods_config\\":\\"\\u9002\\u7528\\u5b63\\u8282: \\u590f\\u5b63 , \\u4f5c\\u54c1\\u7c7b\\u578b: \\u559c\\u5267 , \\u578b\\u53f7: 12213 , \\u957f\\u5ea6: \\u957f\\u5ea6\\u5c5e\\u6027\\u540d\\u79f01,\\u957f\\u5ea6\\u5c5e\\u6027\\u503c2 , \\u5bb9\\u91cf: 32 , \\u82b1\\u8272: 12\\",\\"goods_cover\\":\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221206\\\/20221206052248-557.jpg\\",\\"goods_name\\":\\"\\u5929\\u7f8e\\u65f6\\uff08TIMEX\\uff09\\u7537\\u8868T2N721\\u591a\\u529f\\u80fd\\u6237\\u5916\\u8fd0\\u52a8\\u6f6e\\u6c50\\u624b\\u8868\\u7535\\u5f71100\\u7c73\\u9632\\u6c34\\u591c\\u5149\\u77f3\\u82f1\\u8868\\\/\\u751f\\u65e5\\u793c\\u7269\\",\\"goods_num\\":1,\\"goods_price\\":\\"8.00\\",\\"sku_id\\":92248,\\"spu_id\\":1158879,\\"supplier_head\\":\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221226\\\/20221226012354-421.png\\",\\"supplier_id\\":81751,\\"supplier_name\\":\\"\\u5f20\\u96f7\\u6d4b\\u8bd5\\u54c1\\u724c\\u4e13\\u8425\\u5e97\\",\\"tag_list\\":[\\"\\u4e03\\u5929\\u65e0\\u7406\\u7531\\u9000\\u6362\\",\\"\\u5305\\u90ae\\",\\"12\\u5c0f\\u65f6\\u5185\\u53d1\\u8d27\\"]}}","Ext":"","Sound":""}}]',
+            'content': '',
+            'manufacturer': 'google',
+            'phoneModel': '',
+            'uid': '',
+            'fromID': 'supplier_2103291574',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-06-19 14:19:47.000',
+            'platform': 'web',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '张雷测试品牌专营店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1419200002_37042846_1687155587',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Cuser_2102961110',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"message":{"ID":"144115242433425274-1687155587-37042846","conversationID":"C2Cuser_2102961110","conversationType":"C2C","time":1687155586,"sequence":1419200002,"clientSequence":1419200002,"random":37042846,"priority":"Normal","nick":"张雷测试品牌专营店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMCustomElem","content":{"data":"{\\"type\\":3,\\"goodsInfo\\":{\\"goods_activity\\":\\"N\\",\\"goods_config\\":\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\",\\"goods_cover\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\",\\"goods_name\\":\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\",\\"goods_num\\":1,\\"goods_price\\":\\"8.00\\",\\"sku_id\\":92248,\\"spu_id\\":1158879,\\"supplier_head\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\",\\"supplier_id\\":81751,\\"supplier_name\\":\\"张雷测试品牌专营店\\",\\"tag_list\\":[\\"七天无理由退换\\",\\"包邮\\",\\"12小时内发货\\"]}}","description":"","extension":""}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103291574","to":"user_2102961110","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"unSend","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1687155587,"senderTinyID":"144115242433425274","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"data":"{\\"type\\":3,\\"goodsInfo\\":{\\"goods_activity\\":\\"N\\",\\"goods_config\\":\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\",\\"goods_cover\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\",\\"goods_name\\":\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\",\\"goods_num\\":1,\\"goods_price\\":\\"8.00\\",\\"sku_id\\":92248,\\"spu_id\\":1158879,\\"supplier_head\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\",\\"supplier_id\\":81751,\\"supplier_name\\":\\"张雷测试品牌专营店\\",\\"tag_list\\":[\\"七天无理由退换\\",\\"包邮\\",\\"12小时内发货\\"]}}","description":"","extension":""},"type":"TIMCustomElem"},"offlinePushInfo":{"title":"张雷","description":"[自定义消息]","androidOPPOChannelID":"1000","extension":"{\\"type\\":1,\\"targetId\\":\\"supplier_2103291574\\",\\"targetName\\":\\"张雷\\",\\"conversationType\\":\\"single\\"}"},"manufacturer":"google","deviceId":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36","platform":"web","targetType":"single"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-06-19 14:19:47',
+            'created_at': '2023-06-19 14:19:47',
+            'id': 12368,
+            'formUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             },
-            "targetUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+            'targetUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             }
           },
-          "sort": [
-            "2023-06-19 14:19:47.000"
+          'sort': [
+            '2023-06-19 14:19:47.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12366",
-          "_score": null,
-          "_source": {
-            "contentType": 1,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMTextElem\",\"MsgContent\":{\"Text\":\"[\\u5472\\u7259]\"}}]",
-            "content": "[呲牙]",
-            "manufacturer": "google",
-            "phoneModel": "",
-            "uid": "",
-            "fromID": "supplier_2103291574",
-            "targetID": "user_2102961110",
-            "createTimeInMillis": "2023-06-19 14:19:22.000",
-            "platform": "web",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "张雷测试品牌专营店",
-            "targetName": "汇法-刘冬涵",
-            "serverMessageId": "1419200001_82493201_1687155562",
-            "targetAppkey": "",
-            "fromAppkey": "C2Cuser_2102961110",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"message\":{\"ID\":\"144115242433425274-1687155562-82493201\",\"conversationID\":\"C2Cuser_2102961110\",\"conversationType\":\"C2C\",\"time\":1687155561,\"sequence\":1419200001,\"clientSequence\":1419200001,\"random\":82493201,\"priority\":\"Normal\",\"nick\":\"张雷测试品牌专营店\",\"avatar\":\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\",\"isPeerRead\":false,\"nameCard\":\"\",\"_elements\":[{\"type\":\"TIMTextElem\",\"content\":{\"text\":\"[呲牙]\"}}],\"isPlaceMessage\":0,\"isRevoked\":false,\"from\":\"supplier_2103291574\",\"to\":\"user_2102961110\",\"flow\":\"out\",\"isSystemMessage\":false,\"protocol\":\"JSON\",\"isResend\":false,\"isRead\":true,\"status\":\"unSend\",\"_onlineOnlyFlag\":false,\"_groupAtInfoList\":[],\"_relayFlag\":false,\"atUserList\":[],\"cloudCustomData\":\"\",\"isDeleted\":false,\"isModified\":false,\"_isExcludedFromUnreadCount\":false,\"_isExcludedFromLastMessage\":false,\"clientTime\":1687155562,\"senderTinyID\":\"144115242433425274\",\"readReceiptInfo\":{},\"needReadReceipt\":false,\"version\":0,\"isBroadcastMessage\":false,\"isSupportExtension\":false,\"revoker\":null,\"payload\":{\"text\":\"[呲牙]\"},\"type\":\"TIMTextElem\"},\"offlinePushInfo\":{\"title\":\"张雷\",\"androidOPPOChannelID\":\"1000\",\"extension\":\"{\\\"type\\\":1,\\\"targetId\\\":\\\"supplier_2103291574\\\",\\\"targetName\\\":\\\"张雷\\\",\\\"conversationType\\\":\\\"single\\\"}\"},\"manufacturer\":\"google\",\"deviceId\":\"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36\",\"platform\":\"web\",\"targetType\":\"single\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": "",
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-06-19 14:19:22",
-            "created_at": "2023-06-19 14:19:22",
-            "id": 12366,
-            "formUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12366',
+          '_score': null,
+          '_source': {
+            'contentType': 1,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMTextElem","MsgContent":{"Text":"[\\u5472\\u7259]"}}]',
+            'content': '[呲牙]',
+            'manufacturer': 'google',
+            'phoneModel': '',
+            'uid': '',
+            'fromID': 'supplier_2103291574',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-06-19 14:19:22.000',
+            'platform': 'web',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '张雷测试品牌专营店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1419200001_82493201_1687155562',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Cuser_2102961110',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"message":{"ID":"144115242433425274-1687155562-82493201","conversationID":"C2Cuser_2102961110","conversationType":"C2C","time":1687155561,"sequence":1419200001,"clientSequence":1419200001,"random":82493201,"priority":"Normal","nick":"张雷测试品牌专营店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMTextElem","content":{"text":"[呲牙]"}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103291574","to":"user_2102961110","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"unSend","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1687155562,"senderTinyID":"144115242433425274","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"text":"[呲牙]"},"type":"TIMTextElem"},"offlinePushInfo":{"title":"张雷","androidOPPOChannelID":"1000","extension":"{\\"type\\":1,\\"targetId\\":\\"supplier_2103291574\\",\\"targetName\\":\\"张雷\\",\\"conversationType\\":\\"single\\"}"},"manufacturer":"google","deviceId":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36","platform":"web","targetType":"single"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-06-19 14:19:22',
+            'created_at': '2023-06-19 14:19:22',
+            'id': 12366,
+            'formUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             },
-            "targetUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+            'targetUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             }
           },
-          "sort": [
-            "2023-06-19 14:19:22.000"
+          'sort': [
+            '2023-06-19 14:19:22.000'
           ]
         },
         {
-          "_index": "news_record",
-          "_type": "_doc",
-          "_id": "12359",
-          "_score": null,
-          "_source": {
-            "contentType": 2,
-            "group_type": 1,
-            "body": "[{\"MsgType\":\"TIMCustomElem\",\"MsgContent\":{\"Desc\":\"\",\"Data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_activity\\\":\\\"N\\\",\\\"goods_config\\\":\\\"\\u9002\\u7528\\u5b63\\u8282: \\u590f\\u5b63 , \\u4f5c\\u54c1\\u7c7b\\u578b: \\u559c\\u5267 , \\u578b\\u53f7: 12213 , \\u957f\\u5ea6: \\u957f\\u5ea6\\u5c5e\\u6027\\u540d\\u79f01,\\u957f\\u5ea6\\u5c5e\\u6027\\u503c2 , \\u5bb9\\u91cf: 32 , \\u82b1\\u8272: 12\\\",\\\"goods_cover\\\":\\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221206\\\/20221206052248-557.jpg\\\",\\\"goods_name\\\":\\\"\\u5929\\u7f8e\\u65f6\\uff08TIMEX\\uff09\\u7537\\u8868T2N721\\u591a\\u529f\\u80fd\\u6237\\u5916\\u8fd0\\u52a8\\u6f6e\\u6c50\\u624b\\u8868\\u7535\\u5f71100\\u7c73\\u9632\\u6c34\\u591c\\u5149\\u77f3\\u82f1\\u8868\\\/\\u751f\\u65e5\\u793c\\u7269\\\",\\\"goods_num\\\":1,\\\"goods_price\\\":\\\"8.00\\\",\\\"sku_id\\\":92248,\\\"spu_id\\\":1158879,\\\"supplier_head\\\":\\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221226\\\/20221226012354-421.png\\\",\\\"supplier_id\\\":81751,\\\"supplier_name\\\":\\\"\\u5f20\\u96f7\\u6d4b\\u8bd5\\u54c1\\u724c\\u4e13\\u8425\\u5e97\\\",\\\"tag_list\\\":[\\\"\\u4e03\\u5929\\u65e0\\u7406\\u7531\\u9000\\u6362\\\",\\\"\\u5305\\u90ae\\\",\\\"12\\u5c0f\\u65f6\\u5185\\u53d1\\u8d27\\\"]}}\",\"Ext\":\"\",\"Sound\":\"\"}}]",
-            "content": "",
-            "manufacturer": "google",
-            "phoneModel": "",
-            "uid": "",
-            "fromID": "supplier_2103291574",
-            "targetID": "user_2102961110",
-            "createTimeInMillis": "2023-06-19 13:41:54.000",
-            "platform": "web",
-            "targetType": "single",
-            "filePath": "",
-            "fromName": "张雷测试品牌专营店",
-            "targetName": "汇法-刘冬涵",
-            "serverMessageId": "1338070002_20060550_1687153314",
-            "targetAppkey": "",
-            "fromAppkey": "C2Cuser_2102961110",
-            "source": "callback",
-            "isRevoked": "",
-            "priority": "",
-            "isPeerRead": "",
-            "cloudCustomData": "{\"message\":{\"ID\":\"144115242433425274-1687153314-20060550\",\"conversationID\":\"C2Cuser_2102961110\",\"conversationType\":\"C2C\",\"time\":1687153313,\"sequence\":1338070002,\"clientSequence\":1338070002,\"random\":20060550,\"priority\":\"Normal\",\"nick\":\"张雷测试品牌专营店\",\"avatar\":\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\",\"isPeerRead\":false,\"nameCard\":\"\",\"_elements\":[{\"type\":\"TIMCustomElem\",\"content\":{\"data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_activity\\\":\\\"N\\\",\\\"goods_config\\\":\\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\\",\\\"goods_cover\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\\",\\\"goods_name\\\":\\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\\",\\\"goods_num\\\":1,\\\"goods_price\\\":\\\"8.00\\\",\\\"sku_id\\\":92248,\\\"spu_id\\\":1158879,\\\"supplier_head\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\\",\\\"supplier_id\\\":81751,\\\"supplier_name\\\":\\\"张雷测试品牌专营店\\\",\\\"tag_list\\\":[\\\"七天无理由退换\\\",\\\"包邮\\\",\\\"12小时内发货\\\"]}}\",\"description\":\"\",\"extension\":\"\"}}],\"isPlaceMessage\":0,\"isRevoked\":false,\"from\":\"supplier_2103291574\",\"to\":\"user_2102961110\",\"flow\":\"out\",\"isSystemMessage\":false,\"protocol\":\"JSON\",\"isResend\":false,\"isRead\":true,\"status\":\"unSend\",\"_onlineOnlyFlag\":false,\"_groupAtInfoList\":[],\"_relayFlag\":false,\"atUserList\":[],\"cloudCustomData\":\"\",\"isDeleted\":false,\"isModified\":false,\"_isExcludedFromUnreadCount\":false,\"_isExcludedFromLastMessage\":false,\"clientTime\":1687153314,\"senderTinyID\":\"144115242433425274\",\"readReceiptInfo\":{},\"needReadReceipt\":false,\"version\":0,\"isBroadcastMessage\":false,\"isSupportExtension\":false,\"revoker\":null,\"payload\":{\"data\":\"{\\\"type\\\":3,\\\"goodsInfo\\\":{\\\"goods_activity\\\":\\\"N\\\",\\\"goods_config\\\":\\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\\",\\\"goods_cover\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\\",\\\"goods_name\\\":\\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\\",\\\"goods_num\\\":1,\\\"goods_price\\\":\\\"8.00\\\",\\\"sku_id\\\":92248,\\\"spu_id\\\":1158879,\\\"supplier_head\\\":\\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\\",\\\"supplier_id\\\":81751,\\\"supplier_name\\\":\\\"张雷测试品牌专营店\\\",\\\"tag_list\\\":[\\\"七天无理由退换\\\",\\\"包邮\\\",\\\"12小时内发货\\\"]}}\",\"description\":\"\",\"extension\":\"\"},\"type\":\"TIMCustomElem\"},\"offlinePushInfo\":{\"title\":\"张雷\",\"description\":\"[自定义消息]\",\"androidOPPOChannelID\":\"1000\",\"extension\":\"{\\\"type\\\":1,\\\"targetId\\\":\\\"supplier_2103291574\\\",\\\"targetName\\\":\\\"张雷\\\",\\\"conversationType\\\":\\\"single\\\"}\"},\"manufacturer\":\"google\",\"deviceId\":\"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36\",\"platform\":\"web\",\"targetType\":\"single\"}",
-            "status": 1,
-            "is_latest": 1,
-            "ip": "",
-            "file_height": "",
-            "file_width": "",
-            "coverPath": "",
-            "duration": "",
-            "updated_at": "2023-06-19 13:41:55",
-            "created_at": "2023-06-19 13:41:55",
-            "id": 12359,
-            "formUserInfo": {
-              "id": 300,
-              "head_portrait": "http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png",
-              "nickname": "张雷测试品牌专营店",
-              "username": "supplier_2103291574"
+          '_index': 'news_record',
+          '_type': '_doc',
+          '_id': '12359',
+          '_score': null,
+          '_source': {
+            'contentType': 2,
+            'group_type': 1,
+            'body': '[{"MsgType":"TIMCustomElem","MsgContent":{"Desc":"","Data":"{\\"type\\":3,\\"goodsInfo\\":{\\"goods_activity\\":\\"N\\",\\"goods_config\\":\\"\\u9002\\u7528\\u5b63\\u8282: \\u590f\\u5b63 , \\u4f5c\\u54c1\\u7c7b\\u578b: \\u559c\\u5267 , \\u578b\\u53f7: 12213 , \\u957f\\u5ea6: \\u957f\\u5ea6\\u5c5e\\u6027\\u540d\\u79f01,\\u957f\\u5ea6\\u5c5e\\u6027\\u503c2 , \\u5bb9\\u91cf: 32 , \\u82b1\\u8272: 12\\",\\"goods_cover\\":\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221206\\\/20221206052248-557.jpg\\",\\"goods_name\\":\\"\\u5929\\u7f8e\\u65f6\\uff08TIMEX\\uff09\\u7537\\u8868T2N721\\u591a\\u529f\\u80fd\\u6237\\u5916\\u8fd0\\u52a8\\u6f6e\\u6c50\\u624b\\u8868\\u7535\\u5f71100\\u7c73\\u9632\\u6c34\\u591c\\u5149\\u77f3\\u82f1\\u8868\\\/\\u751f\\u65e5\\u793c\\u7269\\",\\"goods_num\\":1,\\"goods_price\\":\\"8.00\\",\\"sku_id\\":92248,\\"spu_id\\":1158879,\\"supplier_head\\":\\"http:\\\/\\\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\\\/product\\\/20221226\\\/20221226012354-421.png\\",\\"supplier_id\\":81751,\\"supplier_name\\":\\"\\u5f20\\u96f7\\u6d4b\\u8bd5\\u54c1\\u724c\\u4e13\\u8425\\u5e97\\",\\"tag_list\\":[\\"\\u4e03\\u5929\\u65e0\\u7406\\u7531\\u9000\\u6362\\",\\"\\u5305\\u90ae\\",\\"12\\u5c0f\\u65f6\\u5185\\u53d1\\u8d27\\"]}}","Ext":"","Sound":""}}]',
+            'content': '',
+            'manufacturer': 'google',
+            'phoneModel': '',
+            'uid': '',
+            'fromID': 'supplier_2103291574',
+            'targetID': 'user_2102961110',
+            'createTimeInMillis': '2023-06-19 13:41:54.000',
+            'platform': 'web',
+            'targetType': 'single',
+            'filePath': '',
+            'fromName': '张雷测试品牌专营店',
+            'targetName': '汇法-刘冬涵',
+            'serverMessageId': '1338070002_20060550_1687153314',
+            'targetAppkey': '',
+            'fromAppkey': 'C2Cuser_2102961110',
+            'source': 'callback',
+            'isRevoked': '',
+            'priority': '',
+            'isPeerRead': '',
+            'cloudCustomData': '{"message":{"ID":"144115242433425274-1687153314-20060550","conversationID":"C2Cuser_2102961110","conversationType":"C2C","time":1687153313,"sequence":1338070002,"clientSequence":1338070002,"random":20060550,"priority":"Normal","nick":"张雷测试品牌专营店","avatar":"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png","isPeerRead":false,"nameCard":"","_elements":[{"type":"TIMCustomElem","content":{"data":"{\\"type\\":3,\\"goodsInfo\\":{\\"goods_activity\\":\\"N\\",\\"goods_config\\":\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\",\\"goods_cover\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\",\\"goods_name\\":\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\",\\"goods_num\\":1,\\"goods_price\\":\\"8.00\\",\\"sku_id\\":92248,\\"spu_id\\":1158879,\\"supplier_head\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\",\\"supplier_id\\":81751,\\"supplier_name\\":\\"张雷测试品牌专营店\\",\\"tag_list\\":[\\"七天无理由退换\\",\\"包邮\\",\\"12小时内发货\\"]}}","description":"","extension":""}}],"isPlaceMessage":0,"isRevoked":false,"from":"supplier_2103291574","to":"user_2102961110","flow":"out","isSystemMessage":false,"protocol":"JSON","isResend":false,"isRead":true,"status":"unSend","_onlineOnlyFlag":false,"_groupAtInfoList":[],"_relayFlag":false,"atUserList":[],"cloudCustomData":"","isDeleted":false,"isModified":false,"_isExcludedFromUnreadCount":false,"_isExcludedFromLastMessage":false,"clientTime":1687153314,"senderTinyID":"144115242433425274","readReceiptInfo":{},"needReadReceipt":false,"version":0,"isBroadcastMessage":false,"isSupportExtension":false,"revoker":null,"payload":{"data":"{\\"type\\":3,\\"goodsInfo\\":{\\"goods_activity\\":\\"N\\",\\"goods_config\\":\\"适用季节: 夏季 , 作品类型: 喜剧 , 型号: 12213 , 长度: 长度属性名称1,长度属性值2 , 容量: 32 , 花色: 12\\",\\"goods_cover\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221206\/20221206052248-557.jpg\\",\\"goods_name\\":\\"天美时（TIMEX）男表T2N721多功能户外运动潮汐手表电影100米防水夜光石英表\/生日礼物\\",\\"goods_num\\":1,\\"goods_price\\":\\"8.00\\",\\"sku_id\\":92248,\\"spu_id\\":1158879,\\"supplier_head\\":\\"http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png\\",\\"supplier_id\\":81751,\\"supplier_name\\":\\"张雷测试品牌专营店\\",\\"tag_list\\":[\\"七天无理由退换\\",\\"包邮\\",\\"12小时内发货\\"]}}","description":"","extension":""},"type":"TIMCustomElem"},"offlinePushInfo":{"title":"张雷","description":"[自定义消息]","androidOPPOChannelID":"1000","extension":"{\\"type\\":1,\\"targetId\\":\\"supplier_2103291574\\",\\"targetName\\":\\"张雷\\",\\"conversationType\\":\\"single\\"}"},"manufacturer":"google","deviceId":"Mozilla\/5.0 (Windows NT 10.0; WOW64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/72.0.3626.121 Safari\/537.36","platform":"web","targetType":"single"}',
+            'status': 1,
+            'is_latest': 1,
+            'ip': '',
+            'file_height': '',
+            'file_width': '',
+            'coverPath': '',
+            'duration': '',
+            'updated_at': '2023-06-19 13:41:55',
+            'created_at': '2023-06-19 13:41:55',
+            'id': 12359,
+            'formUserInfo': {
+              'id': 300,
+              'head_portrait': 'http:\/\/shanghaipc-1307611133.cos.ap-shanghai.myqcloud.com\/product\/20221226\/20221226012354-421.png',
+              'nickname': '张雷测试品牌专营店',
+              'username': 'supplier_2103291574'
             },
-            "targetUserInfo": {
-              "id": 224,
-              "head_portrait": "https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795",
-              "nickname": "汇法-刘冬涵",
-              "username": "user_2102961110"
+            'targetUserInfo': {
+              'id': 224,
+              'head_portrait': 'https:\/\/shops-1307611133.cos.ap-beijing.myqcloud.com\/Android\/Image\/Portrait\/1670233196795',
+              'nickname': '汇法-刘冬涵',
+              'username': 'user_2102961110'
             }
           },
-          "sort": [
-            "2023-06-19 13:41:54.000"
+          'sort': [
+            '2023-06-19 13:41:54.000'
           ]
         }
       ]
@@ -1285,16 +1285,16 @@ export default {
     //   }).catch(error => {
     //
     // })
-    // api.getAxiosManger()
-    //   .merger([
-    //     this.getLiveList(),
-    //     this.getOption()
-    //   ], data => {
-    //     console.log('-------：', data)
-    //   }, error => {
-    //     console.log('合并异常：：', error)
-    //
-    //   })
+    api.getAxiosManger()
+      .merger([
+        this.getLiveList(),
+        this.getOption()
+      ], data => {
+        console.log('-------：', data)
+      }, error => {
+        console.log('合并异常：：', error)
+
+      })
 
     console.log('验签：', this.decrypt('PLto6ctVfxAFKWyYCH1AOJjg_B_mhuyesLgcNSb8F1s=', '033730*^', '033730*^'))
   },
@@ -1324,24 +1324,19 @@ export default {
     },
 
     getLiveList() {
-      let fromData = new FormData()
-      fromData.append('uid', 'user_2103415823')
-      fromData.append('page', '1')
-      fromData.append('types', '0')
       return api.getLiveApi()
         .transformSchedulers(data => {
-          console.log('转换：', data)
           return data
         })
-        .post('/home/getHomeIndex', fromData)
+        .form('/home/getHomeIndex', { 'uid': 'user_2103415823', 'page': '1', 'types': '0' })
     },
     getOption() {
       return api.getShopApi()
         .isLoading(true)
         .transformSchedulers(data => {
-          data.data.data[0]['name'] = '转换数据'
-          console.log('转换数据：', data.data.data[0]['name'])
-          return data.data
+          data.data[0]['name'] = '转换数据'
+          console.log('转换数据：', data.data[0]['name'])
+          return data
         })
         .transformSchedulers(data => {
           data.data[0]['name'] = '二次转换数据'
@@ -1358,7 +1353,7 @@ export default {
 
     onClickDemo() {
 
-    },
+    }
   }
 }
 </script>
