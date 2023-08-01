@@ -1285,17 +1285,17 @@ export default {
     //   }).catch(error => {
     //
     // })
-    api.getAxiosManger()
-      .merger([
-        this.getLiveList(),
-        this.getOption()
-      ], data => {
-        console.log('-------：', data)
-      }, error => {
-        console.log('合并异常：：', error)
-
-      })
-
+    // api.getAxiosManger()
+    //   .merger([
+    //     this.getLiveList(),
+    //     this.getOption()
+    //   ], data => {
+    //     console.log('-------：', data)
+    //   }, error => {
+    //     console.log('合并异常：：', error)
+    //
+    //   })
+    this.flatMap()
     console.log('验签：', this.decrypt('PLto6ctVfxAFKWyYCH1AOJjg_B_mhuyesLgcNSb8F1s=', '033730*^', '033730*^'))
   },
 
@@ -1345,6 +1345,21 @@ export default {
         })
         .get('/apiindex/get-navigation-location?', {
           is_index: 1
+        })
+    },
+
+    flatMap() {
+      api.getShopApi().flatMap('get', '/apiindex/get-navigation-location?', { is_index: 1 })
+        .then(succeed => {
+          console.log('第一', succeed)
+          return api.getLiveApi().flatMap('form', '/home/getHomeIndex', {
+            'uid': 'user_2103415823',
+            'page': '1',
+            'types': '0'
+          })
+        })
+        .then(succeed => {
+          console.log('第二', succeed)
         })
     },
 
