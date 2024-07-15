@@ -12,6 +12,21 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [
+    "wxmp",
+    "rsa",
+    "jsencrypt",
+    "js",
+    "long"
+  ],
+  "license": "MIT",
+  "files": [
+    "src/utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/18647499996/vue3-npm.git"
+  },
   "dependencies": {
     "ant-design-vue": "^4.2.3",
     "axios": "^1.7.2",
