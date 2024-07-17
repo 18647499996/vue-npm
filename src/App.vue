@@ -1,10 +1,10 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 import AxiosManagerUtils from './utils/AxiosManagerUtils';
 import DeviceManagerUtils from './utils/DeviceManagerUtils';
 import EventBusManagerUtils from './utils/EventBusManagerUtils';
@@ -14,9 +14,6 @@ import StorageManagerUtils from './utils/StorageManagerUtils';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  },
   created() {
     console.log('终端设备：', DeviceManagerUtils.getDeviceManager());
     StorageManagerUtils.saveLocalStorage('liudonghan', '刘冬涵');
@@ -50,12 +47,12 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
 </style>
